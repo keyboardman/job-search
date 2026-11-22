@@ -1,0 +1,69 @@
+[
+  {
+    "job_id": "1",
+    "employer_name": "Studio Pixel",
+    "job_title": "Graphiste print / digital",
+    "job_description": "Création de supports print et digital pour des marques. Travail en équipe avec le DA.",
+    "job_city": "Paris",
+    "job_state": "Île-de-France",
+    "job_country": "FR",
+    "job_is_remote": false,
+    "job_posted_at_datetime_utc": "2026-11-22T07:00:00.000Z",
+    "job_publisher": "Indeed",
+    "job_apply_link": "https://fr.indeed.com/viewjob?jk=abc",
+    "job_employment_type": "FULLTIME"
+  },
+  {
+    "job_id": "2",
+    "employer_name": "Studio Pixel",
+    "job_title": "Graphiste print / digital",
+    "job_description": "Création de supports print et digital pour des marques. Travail en équipe avec le DA.",
+    "job_city": "Paris",
+    "job_state": "Île-de-France",
+    "job_country": "FR",
+    "job_is_remote": false,
+    "job_posted_at_datetime_utc": "2026-11-22T07:00:00.000Z",
+    "job_publisher": "Welcome to the Jungle",
+    "job_apply_link": "https://www.welcometothejungle.com/fr/companies/studio/jobs/graphiste",
+    "job_employment_type": "FULLTIME"
+  },
+  {
+    "job_id": "3",
+    "employer_name": "Remote Co",
+    "job_title": "Directeur artistique senior",
+    "job_description": "Pilotage de la direction artistique. Full remote France. Anglais courant apprécié.",
+    "job_city": "Lyon",
+    "job_country": "FR",
+    "job_is_remote": true,
+    "job_posted_at_datetime_utc": "2026-11-21T18:00:00.000Z",
+    "job_publisher": "LinkedIn",
+    "job_apply_link": "https://www.linkedin.com/jobs/view/123",
+    "job_employment_type": "FULLTIME"
+  },
+  {
+    "job_id": "4",
+    "employer_name": "Agence Sud",
+    "job_title": "Graphiste",
+    "job_description": "Poste en présentiel à Lyon.",
+    "job_city": "Lyon",
+    "job_country": "FR",
+    "job_is_remote": false,
+    "job_posted_at_datetime_utc": "2026-11-22T06:00:00.000Z",
+    "job_publisher": "Hellowork",
+    "job_apply_link": "https://www.hellowork.com/fr-fr/emplois/1.html",
+    "job_employment_type": "FULLTIME"
+  },
+  {
+    "job_id": "5",
+    "employer_name": "École Design",
+    "job_title": "Graphiste stage",
+    "job_description": "Stage de 6 mois en PAO.",
+    "job_city": "Paris",
+    "job_country": "FR",
+    "job_is_remote": false,
+    "job_posted_at_datetime_utc": "2026-11-22T05:00:00.000Z",
+    "job_publisher": "Apec",
+    "job_apply_link": "https://www.apec.fr/stage",
+    "job_employment_type": "INTERN"
+  }
+]

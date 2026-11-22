@@ -1,0 +1,30 @@
+{
+  "name": "job-search-veille",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "test": "tsx --test test/**/*.test.ts",
+    "veille": "tsx src/run.ts",
+    "veille:jsearch": "tsx src/run.ts",
+    "veille:dry": "tsx src/run.ts --dry-run",
+    "veille:summary-demo": "tsx src/run.ts --summary-demo",
+    "jsearch:verify": "tsx src/jsearch/verify.ts"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "exceljs": "^4.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
+  }
+}
