@@ -1,5 +1,86 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-22T12:27:29.597Z",
-  "offers": []
+  "updatedAt": "2026-11-22T14:38:05.345Z",
+  "offers": [
+    {
+      "id": "16cec56c4115cf11",
+      "company": "SIGIDURS",
+      "title": "Graphiste - S.I. Gestion Incinération des Déchets Urbains de la Région de Sarcelles H/F",
+      "location": "Sarcelles (95), Île-de-France",
+      "date": "2026-11-22",
+      "urls": [
+        "https://www.hellowork.com/fr-fr/emplois/84713172.html"
+      ]
+    },
+    {
+      "id": "c943e927c8d1f1cc",
+      "company": "Ville d'Asnières-sur-Seine",
+      "title": "Graphiste - Maquettiste - Asnières-Sur-Seine H/F",
+      "location": "Asnières-sur-Seine (92), Île-de-France",
+      "date": "2026-11-22",
+      "urls": [
+        "https://www.hellowork.com/fr-fr/emplois/84675885.html"
+      ]
+    },
+    {
+      "id": "b51b929c2d7b8fdc",
+      "company": "Brevo",
+      "title": "Senior Creative Designer",
+      "location": "Paris, Île-de-France",
+      "date": "2026-11-22",
+      "urls": [
+        "https://fr.linkedin.com/jobs/view/senior-creative-designer-at-brevo-4490834588"
+      ]
+    },
+    {
+      "id": "3f3f8dc06e550eb5",
+      "company": "JACQUEMUS",
+      "title": "CDI - CREATIVE DESIGNER - BRAND CONCEPTS (H/F)",
+      "location": "Paris 8e, Île-de-France",
+      "date": "2026-11-21",
+      "urls": [
+        "https://fr.linkedin.com/jobs/view/cdi-creative-designer-brand-concepts-h-f-at-jacquemus-4476297552"
+      ]
+    },
+    {
+      "id": "452929a40588d19f",
+      "company": "We Are Social",
+      "title": "CDI - Content Creator & Directeur.trice Artitique",
+      "location": "Paris, Île-de-France",
+      "date": "2026-11-22",
+      "urls": [
+        "https://fr.linkedin.com/jobs/view/cdi-content-creator-directeur-trice-artitique-at-we-are-social-4485913200"
+      ]
+    },
+    {
+      "id": "e7229bee795d318c",
+      "company": "We Are Social",
+      "title": "CDI - Team Directeur.trice Artistique + Copywriter",
+      "location": "Paris, Île-de-France",
+      "date": "2026-11-22",
+      "urls": [
+        "https://fr.linkedin.com/jobs/view/cdi-team-directeur-trice-artistique-%2B-copywriter-at-we-are-social-4485904488"
+      ]
+    },
+    {
+      "id": "4140db3772ff8b06",
+      "company": "non précisé",
+      "title": "Graphiste Chef (fe) de Production (H/F)",
+      "location": "Paris (75), Île-de-France",
+      "date": "2026-11-21",
+      "urls": [
+        "https://candidat.francetravail.fr/offres/recherche/detail/9072130"
+      ]
+    },
+    {
+      "id": "14566d942b14ecef",
+      "company": "Manpower",
+      "title": "Maquettiste Graphiste Opérateur Machine H/F",
+      "location": "Compiègne (60), Oise",
+      "date": "2026-11-21",
+      "urls": [
+        "https://candidat.francetravail.fr/offres/recherche/detail/9046783"
+      ]
+    }
+  ]
 }

@@ -1,7 +1,7 @@
 import type { JobOffer, RemoteKind } from "./types.js";
 
 const TITLE_OK =
-  /\b(graphiste|directeur(?:rice)?\s+artistique|directrice\s+artistique|\bda\b|direction\s+artistique|pao|mise\s+en\s+page)\b/i;
+  /\b(graphiste|directeur(?:[\s.·•-]+t?rice)?[\s.·•-]+arti(?:s)?ti\w*|directrice[\s.·•-]+arti(?:s)?ti\w*|direction[\s.·•-]+artistique|\bda\b|art\s+director|graphic\s+designer|creative\s+designer|pao|mise\s+en\s+page)\b/i;
 
 const EXCLUDE =
   /\b(stage|stagiaire|alternance|alternant|apprentissage|apprenti|contrat\s+de\s+professionnalisation|intern(?:ship)?)\b/i;

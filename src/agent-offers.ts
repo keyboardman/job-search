@@ -5,12 +5,12 @@ import { offerId } from "./normalize.js";
 import type { JobOffer, ObligatorySource, SourceStatus } from "./types.js";
 import { OBLIGATORY_SOURCES } from "./types.js";
 
+/** Sites parcourus par le modèle Cursor (pas Indeed / Apec : RapidAPI, créneau 08:00). */
 export const AGENT_SOURCES = [
   "Welcome to the Jungle",
   "LinkedIn Emplois",
   "France Travail",
   "Hellowork",
-  "Apec",
   "ProfilCulture",
   "JobCulture",
 ] as const;

@@ -4,7 +4,15 @@ import { PATHS, ROOT } from "./config.js";
 import { writeWorkbook, workbookFileName, toSheetCsvPayload } from "./excel.js";
 import { activeRecipients, emailBody, emailSubject } from "./mail.js";
 import { loadMemory, markNewOffers, saveMemory } from "./memory.js";
-import { collectAndFilter, mergeFixtureAndAgent, processRawJobs } from "./pipeline.js";
+import { loadAgentOffers } from "./agent-offers.js";
+import { dedupeOffers } from "./dedupe.js";
+import {
+  collectAndFilter,
+  filterAgentOffers,
+  mergeFixtureAndAgent,
+  processRawJobs,
+  recountSourcesForOffers,
+} from "./pipeline.js";
 import { loadPrompt } from "./prompt.js";
 import { buildSourceStatuses } from "./sources.js";
 import { buildSummary } from "./summary.js";
@@ -23,6 +31,7 @@ function parseArgs(argv: string[]) {
     summaryDemo: argv.includes("--summary-demo"),
     skipSave: argv.includes("--skip-save"),
     jsearchOnly: argv.includes("--jsearch-only"),
+    agentOnly: argv.includes("--agent-only"),
   };
 }
 
@@ -43,7 +52,9 @@ async function main(): Promise<void> {
   const prompt = loadPrompt();
   console.log(`Prompt chargé (${prompt.length} caractères) depuis ${PATHS.prompt}`);
   console.log(
-    "Répartition : modèle Cursor → 7 sites (offres-agent.json) ; JSearch → Indeed uniquement.",
+    args.agentOnly
+      ? "Créneau agent : offres-agent.json uniquement, sans RapidAPI (Indeed / Apec)."
+      : "Répartition : modèle Cursor → offres-agent.json ; RapidAPI → Indeed et Apec (créneau 08:00).",
   );
 
   if (args.summaryDemo) {
@@ -64,6 +75,11 @@ async function main(): Promise<void> {
     const merged = mergeFixtureAndAgent(loadFixtureJobs());
     offers = merged.offers;
     sources = merged.sources;
+  } else if (args.agentOnly) {
+    console.log("Mode agent : fusion de data/offres-agent.json, sans appel RapidAPI.");
+    const agent = loadAgentOffers();
+    offers = dedupeOffers(filterAgentOffers(agent.offers));
+    sources = recountSourcesForOffers(offers, agent.sources);
   } else {
     const { collect, offers: o, sources: s } = await collectAndFilter();
     offers = o;

@@ -1,14 +1,126 @@
 {
   "schemaVersion": 1,
-  "collectedAt": null,
+  "collectedAt": "2026-11-22T14:37:19Z",
   "sourcesStatus": [
-    { "source": "Welcome to the Jungle", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "LinkedIn Emplois", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "France Travail", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "Hellowork", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "Apec", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "ProfilCulture", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "JobCulture", "count": 0, "remark": "en attente collecte modèle Cursor" }
+    {
+      "source": "Welcome to the Jungle",
+      "count": 0,
+      "remark": "Recherche et fiche Savana : HTTP 202, corps vide. Illisible ce créneau."
+    },
+    {
+      "source": "LinkedIn Emplois",
+      "count": 4,
+      "remark": "Filtre 24 h (graphiste à Paris, directeur artistique en France). Stages et hors métier écartés. L'annonce We Are Social « Directeur.trice Artistique » (il y a 1 jour) n'est plus dans le filtre 24 h."
+    },
+    {
+      "source": "France Travail",
+      "count": 2,
+      "remark": "Filtre date de création « un jour » (libellé « publié hier », heure non affichée). Fiches détail sans corps : texte pris sur la liste. Mot-clé directeur artistique : ouvrages d'art, pas de DA graphique dans la fenêtre."
+    },
+    {
+      "source": "Hellowork",
+      "count": 2,
+      "remark": "Tri par date, fiches ouvertes. Lieusaint (directeur·rice artistique de la Marge, 22/11) écarté : programmation d'un lieu culturel. Sisley publiée le 20/11, Ivry le 21/11 sans heure : hors fenêtre confirmée."
+    },
+    {
+      "source": "ProfilCulture",
+      "count": 0,
+      "remark": "Liste des contrats et fiche récente (Centquatre) : aucune publication au 21 ou 22/11/2026 visible (échéances en décembre)."
+    },
+    {
+      "source": "JobCulture",
+      "count": 0,
+      "remark": "Listes graphiste et art-design. Fiche Choisy-le-Roi publiée le 17/11/2026 ; DA senior web/print publiée le 19/10/2026. Rien au 21 ou 22/11."
+    }
   ],
-  "offers": []
+  "offers": [
+    {
+      "company": "SIGIDURS",
+      "title": "Graphiste - S.I. Gestion Incinération des Déchets Urbains de la Région de Sarcelles H/F",
+      "summary": "Le Sigidurs recrute un ou une graphiste chargé·e de communication pour concevoir les supports print et digitaux (affiches, brochures, site, infographies). Télétravail de 2 à 3 jours par semaine.",
+      "location": "Sarcelles (95), Île-de-France",
+      "remote": "partiel",
+      "languages": "non précisé",
+      "date": "2026-11-22",
+      "sources": ["Hellowork"],
+      "urls": ["https://www.hellowork.com/fr-fr/emplois/84713172.html"]
+    },
+    {
+      "company": "Ville d'Asnières-sur-Seine",
+      "title": "Graphiste - Maquettiste - Asnières-Sur-Seine H/F",
+      "summary": "Au sein de la direction de la communication, création et mise en page des supports print et web de la ville (magazine, affiches, réseaux sociaux), sur la suite Adobe.",
+      "location": "Asnières-sur-Seine (92), Île-de-France",
+      "remote": "non précisé",
+      "languages": "non précisé",
+      "date": "2026-11-22",
+      "sources": ["Hellowork"],
+      "urls": ["https://www.hellowork.com/fr-fr/emplois/84675885.html"]
+    },
+    {
+      "company": "Brevo",
+      "title": "Senior Creative Designer",
+      "summary": "Au sein de l'équipe de marque à Paris, évolution de l'identité visuelle et création des supports de campagne (digital, social, print, événementiel). Organisation présentée comme remote-friendly.",
+      "location": "Paris, Île-de-France",
+      "remote": "partiel",
+      "languages": "anglais professionnel (C1)",
+      "date": "2026-11-22",
+      "sources": ["LinkedIn Emplois"],
+      "urls": ["https://fr.linkedin.com/jobs/view/senior-creative-designer-at-brevo-4490834588"]
+    },
+    {
+      "company": "JACQUEMUS",
+      "title": "CDI - CREATIVE DESIGNER - BRAND CONCEPTS (H/F)",
+      "summary": "Recherches créatives et graphiques pour le studio image, rue de Lisbonne à Paris 8e. Maîtrise de Photoshop, Illustrator, InDesign, After Effects et Premiere.",
+      "location": "Paris 8e, Île-de-France",
+      "remote": "non précisé",
+      "languages": "non précisé",
+      "date": "2026-11-21",
+      "sources": ["LinkedIn Emplois"],
+      "urls": ["https://fr.linkedin.com/jobs/view/cdi-creative-designer-brand-concepts-h-f-at-jacquemus-4476297552"]
+    },
+    {
+      "company": "We Are Social",
+      "title": "CDI - Content Creator & Directeur.trice Artitique",
+      "summary": "Direction artistique et création de contenus social media à Paris, de la conception à la publication, avec une part de contenus en facecam. Télétravail de 2 jours par semaine.",
+      "location": "Paris, Île-de-France",
+      "remote": "partiel",
+      "languages": "anglais courant (C1)",
+      "date": "2026-11-22",
+      "sources": ["LinkedIn Emplois"],
+      "urls": ["https://fr.linkedin.com/jobs/view/cdi-content-creator-directeur-trice-artitique-at-we-are-social-4485913200"]
+    },
+    {
+      "company": "We Are Social",
+      "title": "CDI - Team Directeur.trice Artistique + Copywriter",
+      "summary": "Recrutement d'un binôme directeur·rice artistique et copywriter pour concevoir et produire des contenus sociaux à Paris. Télétravail de 2 jours par semaine.",
+      "location": "Paris, Île-de-France",
+      "remote": "partiel",
+      "languages": "anglais (oral et écrit)",
+      "date": "2026-11-22",
+      "sources": ["LinkedIn Emplois"],
+      "urls": ["https://fr.linkedin.com/jobs/view/cdi-team-directeur-trice-artistique-%2B-copywriter-at-we-are-social-4485904488"]
+    },
+    {
+      "company": "non précisé",
+      "title": "Graphiste Chef (fe) de Production (H/F)",
+      "summary": "CDI à Paris. Le graphiste ou la graphiste chef·fe de production contribue à la réalisation de contenus visuels, de leur préparation à leur finalisation. Société non affichée sur la liste.",
+      "location": "Paris (75), Île-de-France",
+      "remote": "non précisé",
+      "languages": "non précisé",
+      "date": "2026-11-21",
+      "sources": ["France Travail"],
+      "urls": ["https://candidat.francetravail.fr/offres/recherche/detail/9072130"]
+    },
+    {
+      "company": "Manpower",
+      "title": "Maquettiste Graphiste Opérateur Machine H/F",
+      "summary": "Manpower à Compiègne recrute pour un acteur de l'édition et de la presse un ou une maquettiste graphiste opérateur machine. Le corps de la fiche détail ne s'est pas chargé.",
+      "location": "Compiègne (60), Oise",
+      "remote": "non précisé",
+      "languages": "non précisé",
+      "date": "2026-11-21",
+      "sources": ["France Travail"],
+      "urls": ["https://candidat.francetravail.fr/offres/recherche/detail/9046783"]
+    }
+  ]
 }
