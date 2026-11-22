@@ -1,5 +1,26 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-22T12:27:29.597Z",
-  "offers": []
+  "updatedAt": "2026-11-22T20:08:20.442Z",
+  "offers": [
+    {
+      "id": "cf564982217b0819",
+      "company": "We Are Social",
+      "title": "Content Creator & Directeur artistique",
+      "location": "Paris",
+      "date": "2026-11-22",
+      "urls": [
+        "https://fr.linkedin.com/jobs/view/cdi-content-creator-directeur-trice-artitique-at-we-are-social-4485913200"
+      ]
+    },
+    {
+      "id": "83d5f21b1e99936f",
+      "company": "We Are Social",
+      "title": "Team Directeur artistique + Copywriter",
+      "location": "Paris",
+      "date": "2026-11-22",
+      "urls": [
+        "https://fr.linkedin.com/jobs/view/cdi-team-directeur-trice-artistique-%2B-copywriter-at-we-are-social-4485904488"
+      ]
+    }
+  ]
 }

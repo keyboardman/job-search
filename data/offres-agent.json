@@ -1,13 +1,64 @@
 {
   "schemaVersion": 1,
-  "collectedAt": null,
+  "collectedAt": "2026-11-22T20:08:02Z",
   "sourcesStatus": [
-    { "source": "Welcome to the Jungle", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "LinkedIn Emplois", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "France Travail", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "Hellowork", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "ProfilCulture", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "JobCulture", "count": 0, "remark": "en attente collecte modèle Cursor" }
+    {
+      "source": "Welcome to the Jungle",
+      "count": 0,
+      "remark": "Recherche publique sans liste d'offres (page marketing). Aucune fiche datée des 8 dernières heures."
+    },
+    {
+      "source": "LinkedIn Emplois",
+      "count": 2,
+      "remark": "Filtre 8 h (Île-de-France, France, direction artistique). 2 CDI retenus ; stages, alternances et intitulés hors périmètre écartés."
+    },
+    {
+      "source": "France Travail",
+      "count": 0,
+      "remark": "Tri par date : graphiste, directeur artistique, maquettiste. Plus récent « publié hier », rien dans les 8 dernières heures."
+    },
+    {
+      "source": "Hellowork",
+      "count": 0,
+      "remark": "Tri par date, graphiste et directeur artistique (Île-de-France et France). Plus récent à 12 heures, hors fenêtre de 8 h."
+    },
+    {
+      "source": "ProfilCulture",
+      "count": 0,
+      "remark": "Liste des annonces : dernière date vue le 20/11/2026, rien le 22/11 dans les 8 dernières heures."
+    },
+    {
+      "source": "JobCulture",
+      "count": 0,
+      "remark": "Recherches graphiste et directeur artistique : aucune annonce du 22/11/2026 (plus récente vue : graphiste à Choisy-le-Roi, publiée le 17/11/2026)."
+    }
   ],
-  "offers": []
+  "offers": [
+    {
+      "company": "We Are Social",
+      "title": "Content Creator & Directeur artistique",
+      "summary": "L'agence recrute un·e content creator et directeur·rice artistique pour concevoir, scénariser et produire des contenus social media (TikTok, Instagram, Facebook, YouTube), de la conception à la publication. Profil de 2 à 5 ans ; anglais courant (C1).",
+      "location": "Paris",
+      "remote": "partiel",
+      "languages": "anglais courant (C1)",
+      "date": "2026-11-22",
+      "sources": ["LinkedIn Emplois"],
+      "urls": [
+        "https://fr.linkedin.com/jobs/view/cdi-content-creator-directeur-trice-artitique-at-we-are-social-4485913200"
+      ]
+    },
+    {
+      "company": "We Are Social",
+      "title": "Team Directeur artistique + Copywriter",
+      "summary": "Recrutement d'un binôme directeur·rice artistique et copywriter pour élaborer et déployer des campagnes et stratégies social media. Le volet direction artistique couvre la conception, la scénarisation et la production quotidienne des contenus ; anglais exigé à l'oral et à l'écrit.",
+      "location": "Paris",
+      "remote": "partiel",
+      "languages": "anglais (oral et écrit)",
+      "date": "2026-11-22",
+      "sources": ["LinkedIn Emplois"],
+      "urls": [
+        "https://fr.linkedin.com/jobs/view/cdi-team-directeur-trice-artistique-%2B-copywriter-at-we-are-social-4485904488"
+      ]
+    }
+  ]
 }
