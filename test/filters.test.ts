@@ -31,6 +31,27 @@ describe("filters", () => {
     assert.equal(locationAllowed("Lyon", "complet"), true);
   });
 
+  it("accepte un intitulé inclusif et un creative designer", () => {
+    assert.equal(
+      passesFilters({
+        title: "CDI - Directeur.trice Artistique",
+        summary: "Agence à Paris",
+        location: "Paris, Île-de-France",
+        remote: "partiel",
+      }),
+      true,
+    );
+    assert.equal(
+      passesFilters({
+        title: "Senior Creative Designer",
+        summary: "Identité visuelle",
+        location: "Paris",
+        remote: "partiel",
+      }),
+      true,
+    );
+  });
+
   it("rejette présentiel Lyon", () => {
     assert.equal(
       passesFilters({
