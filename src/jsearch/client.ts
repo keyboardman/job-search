@@ -12,8 +12,16 @@ export interface SearchParams {
 
 export interface SearchResponse {
   status: string;
-  data?: JSearchJob[];
+  /** Ancien format (tableau) ou search-v2 (`{ jobs, cursor }`). */
+  data?: JSearchJob[] | { jobs?: JSearchJob[]; cursor?: string | null };
   error?: { message?: string; code?: string };
+}
+
+/** Extrait la liste d’offres quel que soit le format de `data`. */
+export function extractJobs(data: SearchResponse["data"]): JSearchJob[] {
+  if (Array.isArray(data)) return data;
+  if (data && Array.isArray(data.jobs)) return data.jobs;
+  return [];
 }
 
 export class JSearchError extends Error {
@@ -63,7 +71,7 @@ export async function searchJobs(params: SearchParams, fetchImpl: typeof fetch =
     if (json.status && json.status !== "OK") {
       throw new JSearchError(json.error?.message ?? `status=${json.status}`, params.query);
     }
-    return Array.isArray(json.data) ? json.data : [];
+    return extractJobs(json.data);
   } catch (err) {
     if (err instanceof JSearchError) throw err;
     const name = err instanceof Error ? err.name : "Error";
