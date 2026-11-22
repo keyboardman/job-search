@@ -32,6 +32,16 @@ export function mapPublisherToSource(publisher?: string, url?: string): string {
   return cleaned || "non précisé";
 }
 
+/** Statuts Indeed / Apec quand RapidAPI n’est pas appelé (créneaux 13 h / 18 h). */
+export function buildSkippedRapidApiStatuses(): SourceStatus[] {
+  return OBLIGATORY_SOURCES.map((source) => {
+    if (source === "Indeed" || source === "Apec") {
+      return { source, count: 0, remark: "non interrogée (créneau hors matin)" };
+    }
+    return { source, count: 0, remark: "" };
+  });
+}
+
 /** Statuts Apec issus d’APEC API by API.SH (RapidAPI). */
 export function buildApecSourceStatuses(collect: ApecCollectResult): SourceStatus[] {
   const apecCount = collect.offers.filter((o) => o.sources.includes("Apec")).length;

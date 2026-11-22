@@ -23,6 +23,7 @@ function parseArgs(argv: string[]) {
     summaryDemo: argv.includes("--summary-demo"),
     skipSave: argv.includes("--skip-save"),
     jsearchOnly: argv.includes("--jsearch-only"),
+    skipRapidApi: argv.includes("--skip-rapidapi"),
   };
 }
 
@@ -43,7 +44,9 @@ async function main(): Promise<void> {
   const prompt = loadPrompt();
   console.log(`Prompt chargé (${prompt.length} caractères) depuis ${PATHS.prompt}`);
   console.log(
-    "Répartition : modèle Cursor → 6 sites (dont Hellowork) ; JSearch → Indeed ; APEC API by API.SH → Apec.",
+    args.skipRapidApi
+      ? "Répartition : modèle Cursor → 6 sites ; RapidAPI (Indeed / Apec) ignorée ce créneau."
+      : "Répartition : modèle Cursor → 6 sites (dont Hellowork) ; JSearch → Indeed ; APEC API by API.SH → Apec.",
   );
 
   if (args.summaryDemo) {
@@ -66,20 +69,26 @@ async function main(): Promise<void> {
     offers = merged.offers;
     sources = merged.sources;
   } else {
-    const { collect, apec, offers: o, sources: s } = await collectAndFilter();
+    const { collect, apec, offers: o, sources: s } = await collectAndFilter({
+      skipRapidApi: args.skipRapidApi,
+    });
     offers = o;
     sources = s;
     collectErrors = collect.errors;
     apecErrors = apec.errors;
-    if (collect.retriedQueries.length) {
-      console.log(`Requêtes Indeed retentées : ${collect.retriedQueries.join(" | ")}`);
+    if (args.skipRapidApi) {
+      console.log("RapidAPI ignorée (créneau hors matin) — fusion offres-agent uniquement.");
+    } else {
+      if (collect.retriedQueries.length) {
+        console.log(`Requêtes Indeed retentées : ${collect.retriedQueries.join(" | ")}`);
+      }
+      if (collect.failedQueries.length) {
+        console.log(`Requêtes Indeed encore en échec : ${collect.failedQueries.join(" | ")}`);
+      }
+      console.log(
+        `Apec (API.SH) : ${apec.jobsSeen} offre(s) vues, ${apec.pagesFetched} page(s), ${apec.detailsFetched} détail(s), ${apec.offers.length} retenue(s).`,
+      );
     }
-    if (collect.failedQueries.length) {
-      console.log(`Requêtes Indeed encore en échec : ${collect.failedQueries.join(" | ")}`);
-    }
-    console.log(
-      `Apec (API.SH) : ${apec.jobsSeen} offre(s) vues, ${apec.pagesFetched} page(s), ${apec.detailsFetched} détail(s), ${apec.offers.length} retenue(s).`,
-    );
   }
 
   const previous = loadMemory();

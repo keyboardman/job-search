@@ -7,6 +7,7 @@
     "build": "tsc",
     "test": "tsx --test test/**/*.test.ts",
     "veille": "tsx src/run.ts",
+    "veille:agent": "tsx src/run.ts --skip-rapidapi",
     "veille:jsearch": "tsx src/run.ts",
     "veille:dry": "tsx src/run.ts --dry-run",
     "veille:summary-demo": "tsx src/run.ts --summary-demo",

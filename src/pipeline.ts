@@ -4,8 +4,29 @@ import { dedupeOffers } from "./dedupe.js";
 import { passesFilters } from "./filters.js";
 import { collectJobs } from "./jsearch/queries.js";
 import { fromJSearchJob } from "./normalize.js";
-import { buildApecSourceStatuses, buildIndeedJSearchStatuses, buildSourceStatuses } from "./sources.js";
+import {
+  buildApecSourceStatuses,
+  buildIndeedJSearchStatuses,
+  buildSkippedRapidApiStatuses,
+  buildSourceStatuses,
+} from "./sources.js";
 import type { ApecCollectResult, CollectResult, JobOffer, JSearchJob, SourceStatus } from "./types.js";
+
+const EMPTY_COLLECT: CollectResult = {
+  rawJobs: [],
+  failedQueries: [],
+  retriedQueries: [],
+  errors: [],
+};
+
+const EMPTY_APEC: ApecCollectResult = {
+  offers: [],
+  jobsSeen: 0,
+  pagesFetched: 0,
+  detailsFetched: 0,
+  failedSearches: [],
+  errors: [],
+};
 
 export function processRawJobs(rawJobs: JSearchJob[]): JobOffer[] {
   const mapped = rawJobs.map(fromJSearchJob);
@@ -49,21 +70,31 @@ export function recountSourcesForOffers(offers: JobOffer[], base: SourceStatus[]
   });
 }
 
-export async function collectAndFilter(options?: Parameters<typeof collectJobs>[0]): Promise<{
+export async function collectAndFilter(
+  options?: Parameters<typeof collectJobs>[0] & { skipRapidApi?: boolean },
+): Promise<{
   collect: CollectResult;
   apec: ApecCollectResult;
   offers: JobOffer[];
   sources: SourceStatus[];
 }> {
-  const collect = await collectJobs(options);
+  const { skipRapidApi, ...collectOptions } = options ?? {};
+  const agent = loadAgentOffers();
+  const agentOffers = filterAgentOffers(agent.offers);
+
+  if (skipRapidApi) {
+    const skipped = buildSkippedRapidApiStatuses();
+    const offers = dedupeOffers(agentOffers);
+    const sources = recountSourcesForOffers(offers, mergeSourceStatuses([agent.sources, skipped]));
+    return { collect: EMPTY_COLLECT, apec: EMPTY_APEC, offers, sources };
+  }
+
+  const collect = await collectJobs(collectOptions);
   const jsearchOffers = processRawJobs(collect.rawJobs);
   const indeedStatuses = buildIndeedJSearchStatuses(collect.rawJobs, collect.failedQueries);
 
   const apec = await collectApecOffers();
   const apecStatuses = buildApecSourceStatuses(apec);
-
-  const agent = loadAgentOffers();
-  const agentOffers = filterAgentOffers(agent.offers);
 
   const offers = dedupeOffers([...agentOffers, ...jsearchOffers, ...apec.offers]);
   const mergedBase = mergeSourceStatuses([agent.sources, indeedStatuses, apecStatuses]);

@@ -7,7 +7,7 @@ import { parisDateString } from "./excel.js";
  * Décommenter Stella quand elle doit recevoir le fichier.
  */
 export const EMAIL_TO = [
-  // "stella.moisan@gmail.com",
+  "stella.moisan@gmail.com",
   "luc.moisan@gmail.com",
 ] as const;
 
