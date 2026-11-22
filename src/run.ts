@@ -77,7 +77,7 @@ async function main(): Promise<void> {
     collectErrors = collect.errors;
     apecErrors = apec.errors;
     if (args.skipRapidApi) {
-      console.log("RapidAPI ignorée (créneau hors matin) — fusion offres-agent uniquement.");
+      console.log("RapidAPI ignorée (créneau hors 04:00) — fusion offres-agent uniquement.");
     } else {
       if (collect.retriedQueries.length) {
         console.log(`Requêtes Indeed retentées : ${collect.retriedQueries.join(" | ")}`);

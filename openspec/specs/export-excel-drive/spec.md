@@ -6,12 +6,20 @@ Définit le livrable Excel daté de la veille et son dépôt dans le dossier Goo
 
 ## Requirements
 
-### Requirement: Classeur Excel daté
-Le système MUST produire un fichier Excel nommé `Veille graphiste-DA AAAA-MM-JJ.xlsx` (date du run, fuseau Europe/Paris).
+### Requirement: Classeur Excel daté + créneau
+Le système MUST produire un fichier Excel nommé `Veille graphiste-DA AAAA-MM-JJ-HH.xlsx` (date et créneau 04 / 12 / 20 du run, fuseau Europe/Paris).
 
-#### Scenario: Nom du fichier du jour
-- **WHEN** le run s’exécute le 22 novembre 2026 (Europe/Paris)
-- **THEN** le fichier s’appelle `Veille graphiste-DA 2026-11-22.xlsx`
+#### Scenario: Nom du fichier du créneau 04:00
+- **WHEN** le run s’exécute le 22 novembre 2026 à 04:00 Europe/Paris
+- **THEN** le fichier s’appelle `Veille graphiste-DA 2026-11-22-04.xlsx`
+
+#### Scenario: Nom du fichier du créneau 12:00
+- **WHEN** le run s’exécute le 22 novembre 2026 à 12:00 Europe/Paris
+- **THEN** le fichier s’appelle `Veille graphiste-DA 2026-11-22-12.xlsx`
+
+#### Scenario: Nom du fichier du créneau 20:00
+- **WHEN** le run s’exécute le 22 novembre 2026 à 20:00 Europe/Paris
+- **THEN** le fichier s’appelle `Veille graphiste-DA 2026-11-22-20.xlsx`
 
 ### Requirement: Onglet Offres
 Le classeur MUST contenir un onglet « Offres » avec colonnes pour tous les champs requis, liens cliquables, filtres activés, et tri par date décroissante.

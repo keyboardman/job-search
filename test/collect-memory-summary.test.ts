@@ -104,12 +104,13 @@ describe("summary & excel", () => {
     assert.match(withOffers, /drive\.example/);
   });
 
-  it("écrit un xlsx nommé correctement", async () => {
+  it("écrit un xlsx nommé correctement avec créneau", async () => {
     const dir = fs.mkdtempSync(path.join(os.tmpdir(), "veille-xlsx-"));
-    const d = new Date("2026-11-22T10:00:00Z");
+    // 03:00 UTC = 04:00 Europe/Paris (CET en novembre)
+    const d = new Date("2026-11-22T03:00:00Z");
     const file = await writeWorkbook([], [], dir, d);
     assert.equal(path.basename(file), workbookFileName(d));
-    assert.match(workbookFileName(d), new RegExp(parisDateString(d)));
+    assert.equal(workbookFileName(d), `Veille graphiste-DA ${parisDateString(d)}-04.xlsx`);
     assert.ok(fs.existsSync(file));
     assert.ok(fs.statSync(file).size > 1000);
   });

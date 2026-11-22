@@ -2,7 +2,7 @@
 
 ## Objectif
 
-Après création de `output/Veille graphiste-DA AAAA-MM-JJ.xlsx`, envoyer un email depuis le compte Gmail authentifié (MCP Gmail) aux destinataires actifs.
+Après création de `output/Veille graphiste-DA AAAA-MM-JJ-HH.xlsx` (`HH` = 04 / 12 / 20), envoyer un email depuis le compte Gmail authentifié (MCP Gmail) aux destinataires actifs.
 
 ## Destinataires
 
@@ -19,7 +19,7 @@ Pour (ré)activer Stella : décommenter sa ligne dans `EMAIL_TO`.
 2. Si la liste est vide : ne pas envoyer.
 3. Appeler MCP Gmail `send_message` avec :
    - `to` : destinataires actifs
-   - `subject` : `Veille emploi graphiste-DA — AAAA-MM-JJ` (date Europe/Paris)
+   - `subject` : `Veille emploi graphiste-DA — AAAA-MM-JJ HHh` (date + créneau 04 / 12 / 20 Europe/Paris)
    - `body` : résumé texte + lien Drive + mention de la pièce jointe (pas de Markdown)
    - `attachments` : un élément
      - `filename` : nom du `.xlsx`

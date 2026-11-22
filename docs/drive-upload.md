@@ -2,7 +2,7 @@
 
 ## Objectif
 
-Déposer `output/Veille graphiste-DA AAAA-MM-JJ.xlsx` dans le dossier Drive **Veille emploi graphiste-DA**.
+Déposer `output/Veille graphiste-DA AAAA-MM-JJ-HH.xlsx` (`HH` = 04 / 12 / 20) dans le dossier Drive **Veille emploi graphiste-DA**.
 
 Dossier déjà résolu (session apply) :
 

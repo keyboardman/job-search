@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import { parisDateString } from "./excel.js";
+import { parisDateString, parisScheduleSlot } from "./excel.js";
 
 /**
  * Destinataires du mail de veille (envoi via MCP Gmail par l’agent Cursor).
@@ -12,7 +12,8 @@ export const EMAIL_TO = [
 ] as const;
 
 export function emailSubject(d = new Date()): string {
-  return `Veille emploi graphiste-DA — ${parisDateString(d)}`;
+  const slot = String(parisScheduleSlot(d)).padStart(2, "0");
+  return `Veille emploi graphiste-DA — ${parisDateString(d)} ${slot}h`;
 }
 
 export function emailBody(summary: string, driveLink?: string | null): string {

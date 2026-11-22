@@ -14,10 +14,14 @@ Le système MUST produire tout le contenu livré à l’utilisateur en français
 - **THEN** le bref descriptif et tout texte produit par l’agent sont en français
 
 ### Requirement: Périmètre des postes
-Le système MUST retenir uniquement les offres de graphiste (print, digital, PAO) et de directeur·rice artistique (junior, senior, direction artistique) publiées ou mises à jour au cours des dernières 24 heures en France et encore ouvertes. Le système MUST exclure stages, alternances, apprentissages et contrats de professionnalisation.
+Le système MUST retenir uniquement les offres de graphiste (print, digital, PAO) et de directeur·rice artistique (junior, senior, direction artistique) publiées ou mises à jour récemment en France et encore ouvertes. Pour les sources parcourues par le modèle Cursor, la fenêtre MUST être les **8 dernières heures**. Pour RapidAPI (Indeed JSearch + Apec, créneau 04:00), la fenêtre MUST être les **24 dernières heures**. Le système MUST exclure stages, alternances, apprentissages et contrats de professionnalisation.
 
-#### Scenario: Offre DA senior ouverte hier
-- **WHEN** une offre « directeur artistique senior » ouverte a été publiée il y a moins de 24 heures en France
+#### Scenario: Offre DA senior récente (modèle Cursor)
+- **WHEN** une offre « directeur artistique senior » ouverte a été publiée il y a moins de 8 heures en France sur une source modèle
+- **THEN** l’offre est retenue
+
+#### Scenario: Offre Indeed dans les 24 h
+- **WHEN** une offre graphiste ouverte a été publiée il y a moins de 24 heures et remonte via JSearch au créneau 04:00
 - **THEN** l’offre est retenue
 
 #### Scenario: Stage exclu

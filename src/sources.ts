@@ -32,11 +32,11 @@ export function mapPublisherToSource(publisher?: string, url?: string): string {
   return cleaned || "non précisé";
 }
 
-/** Statuts Indeed / Apec quand RapidAPI n’est pas appelé (créneaux 13 h / 18 h). */
+/** Statuts Indeed / Apec quand RapidAPI n’est pas appelé (créneaux 12 h / 20 h). */
 export function buildSkippedRapidApiStatuses(): SourceStatus[] {
   return OBLIGATORY_SOURCES.map((source) => {
     if (source === "Indeed" || source === "Apec") {
-      return { source, count: 0, remark: "non interrogée (créneau hors matin)" };
+      return { source, count: 0, remark: "non interrogée (créneau hors 04:00)" };
     }
     return { source, count: 0, remark: "" };
   });
