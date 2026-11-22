@@ -18,7 +18,9 @@ export function isRelevantTitle(title: string): boolean {
 }
 
 export function isInternshipOrAlternance(text: string, employmentType?: string): boolean {
-  if (employmentType && /\bintern\b/i.test(employmentType)) return true;
+  if (employmentType && /\bintern(?:ship)?\b|apprentice|alternance|stage/i.test(employmentType)) {
+    return true;
+  }
   return EXCLUDE.test(text);
 }
 

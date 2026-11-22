@@ -4,7 +4,7 @@ import type { JobOffer, JSearchJob, RemoteKind } from "./types.js";
 
 const NON_PRECISE = "non précisé";
 
-function firstSentences(text: string, max = 2): string {
+export function firstSentences(text: string, max = 2): string {
   const cleaned = text.replace(/\s+/g, " ").trim();
   if (!cleaned) return NON_PRECISE;
   const parts = cleaned.split(/(?<=[.!?])\s+/).filter(Boolean);

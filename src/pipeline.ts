@@ -1,10 +1,11 @@
 import { loadAgentOffers, mergeSourceStatuses } from "./agent-offers.js";
+import { collectApecOffers } from "./apec/queries.js";
 import { dedupeOffers } from "./dedupe.js";
 import { passesFilters } from "./filters.js";
 import { collectJobs } from "./jsearch/queries.js";
 import { fromJSearchJob } from "./normalize.js";
-import { buildIndeedJSearchStatuses, buildSourceStatuses } from "./sources.js";
-import type { CollectResult, JobOffer, JSearchJob, SourceStatus } from "./types.js";
+import { buildApecSourceStatuses, buildIndeedJSearchStatuses, buildSourceStatuses } from "./sources.js";
+import type { ApecCollectResult, CollectResult, JobOffer, JSearchJob, SourceStatus } from "./types.js";
 
 export function processRawJobs(rawJobs: JSearchJob[]): JobOffer[] {
   const mapped = rawJobs.map(fromJSearchJob);
@@ -38,7 +39,8 @@ export function recountSourcesForOffers(offers: JobOffer[], base: SourceStatus[]
         remark.startsWith("non couverte") ||
         remark.startsWith("en attente") ||
         remark.includes("absent") ||
-        remark.startsWith("aucune offre")
+        remark.startsWith("aucune offre") ||
+        remark.startsWith("illisible")
       ) {
         remark = "";
       }
@@ -49,6 +51,7 @@ export function recountSourcesForOffers(offers: JobOffer[], base: SourceStatus[]
 
 export async function collectAndFilter(options?: Parameters<typeof collectJobs>[0]): Promise<{
   collect: CollectResult;
+  apec: ApecCollectResult;
   offers: JobOffer[];
   sources: SourceStatus[];
 }> {
@@ -56,14 +59,17 @@ export async function collectAndFilter(options?: Parameters<typeof collectJobs>[
   const jsearchOffers = processRawJobs(collect.rawJobs);
   const indeedStatuses = buildIndeedJSearchStatuses(collect.rawJobs, collect.failedQueries);
 
+  const apec = await collectApecOffers();
+  const apecStatuses = buildApecSourceStatuses(apec);
+
   const agent = loadAgentOffers();
   const agentOffers = filterAgentOffers(agent.offers);
 
-  const offers = dedupeOffers([...agentOffers, ...jsearchOffers]);
-  const mergedBase = mergeSourceStatuses([agent.sources, indeedStatuses]);
+  const offers = dedupeOffers([...agentOffers, ...jsearchOffers, ...apec.offers]);
+  const mergedBase = mergeSourceStatuses([agent.sources, indeedStatuses, apecStatuses]);
   const sources = recountSourcesForOffers(offers, mergedBase);
 
-  return { collect, offers, sources };
+  return { collect, apec, offers, sources };
 }
 
 /** Dry-run / tests : fixtures JSearch + offres-agent.json */

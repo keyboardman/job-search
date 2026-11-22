@@ -6,7 +6,7 @@
 |-------|--------|
 | Nom | Veille emploi graphiste-DA |
 | Déclencheur | Tous les jours à **08:00** fuseau **Europe/Paris** |
-| Instructions | Suivre `prompts/veille-emploi-graphiste-da.md` : (1) parcourir les 7 sources avec le modèle Cursor et écrire `data/offres-agent.json` ; (2) `npm run veille` pour Indeed via JSearch + fusion + Excel ; (3) déposer le fichier via MCP Google Drive ; (4) envoyer l’email Gmail aux destinataires de `src/mail.ts` avec le Excel en PJ ; (5) résumé FR |
+| Instructions | Suivre `prompts/veille-emploi-graphiste-da.md` : (1) parcourir les 6 sources modèle Cursor (dont Hellowork) → `data/offres-agent.json` ; (2) `npm run veille` (Indeed JSearch + Apec API.SH + fusion + Excel) ; (3) déposer via MCP Google Drive ; (4) email Gmail (`src/mail.ts`) avec Excel en PJ ; (5) résumé FR |
 | Outils | Navigateur / web ; MCP Google Drive ; MCP Gmail ; secret `RAPIDAPI_KEY` |
 | Repo | Ce dépôt `job-search` |
 

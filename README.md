@@ -6,13 +6,16 @@ Veille quotidienne d’offres graphiste et directeur·rice artistique en France.
 
 | Sources | Qui |
 |---------|-----|
-| Welcome to the Jungle, LinkedIn Emplois, France Travail, Hellowork, Apec, ProfilCulture, JobCulture | **Modèle Cursor** (Navigation / recherche) → `data/offres-agent.json` |
+| Welcome to the Jungle, LinkedIn Emplois, France Travail, Hellowork, ProfilCulture, JobCulture | **Modèle Cursor** (Navigation / recherche) → `data/offres-agent.json` |
 | **Indeed** (anti-bots) | **JSearch** RapidAPI (`/search-v2`) via `npm run veille` |
+| **Apec** | **APEC API by API.SH** RapidAPI (`/apec/v1/search`) via `npm run veille` |
 
 ## Prérequis
 
 - Node.js 20+
-- Clé **RapidAPI** JSearch (`RAPIDAPI_KEY` dans `.env`), abonnement actif
+- Clé **RapidAPI** (`RAPIDAPI_KEY` dans `.env`) avec abonnements :
+  - [JSearch](https://rapidapi.com/letscrape-6bRBa3QguO5/api/jsearch)
+  - [APEC API by API.SH](https://rapidapi.com/CaesarRodman/api/apec-api-by-api-sh)
 - MCP **Google Drive** (Cursor) pour le dossier « Veille emploi graphiste-DA »
 - MCP **Gmail** (Cursor) pour l’envoi du Excel aux destinataires (`src/mail.ts`)
 - Fuseau **Europe/Paris** pour le planning 08:00
@@ -38,13 +41,14 @@ npm install
 
 ## Lancer une veille
 
-1. (Agent Cursor) Remplir `data/offres-agent.json` en parcourant les 7 sources.
-2. Fusion + Indeed + Excel :
+1. (Agent Cursor) Remplir `data/offres-agent.json` en parcourant les 6 sources modèle.
+2. Fusion + Indeed + Apec + Excel :
 
 ```bash
-npm run veille          # JSearch Indeed + fusion agent → Excel → résumé
+npm run veille          # JSearch + APEC API.SH + fusion agent → Excel → résumé
 npm run veille:dry      # fixtures + offres-agent.json
 npm run jsearch:verify  # test API Indeed
+npm run apec:verify     # test APEC API by API.SH
 npm test
 ```
 

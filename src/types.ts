@@ -65,3 +65,42 @@ export interface CollectResult {
   retriedQueries: string[];
   errors: string[];
 }
+
+/** Offre liste — GET /apec/v1/search (APEC API by API.SH sur RapidAPI). */
+export interface ApecSearchJob {
+  id?: string;
+  title?: string;
+  url?: string;
+  company?: string;
+  location?: string;
+  salary?: string | null;
+  contract_type?: string | null;
+  snippet?: string | null;
+  published_at?: string | null;
+  remote_id?: number | null;
+}
+
+/** Détail — GET /apec/v1/job. */
+export interface ApecJobAd {
+  id?: string;
+  title?: string;
+  url?: string;
+  company?: string;
+  locations?: Array<{ id?: number; name?: string }>;
+  description?: string | null;
+  profile?: string | null;
+  apply_url?: string | null;
+  contract_type?: string | null;
+  published_at?: string | null;
+  modified_at?: string | null;
+  remote_id?: number | null;
+}
+
+export interface ApecCollectResult {
+  offers: JobOffer[];
+  jobsSeen: number;
+  pagesFetched: number;
+  detailsFetched: number;
+  failedSearches: string[];
+  errors: string[];
+}

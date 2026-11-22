@@ -43,7 +43,7 @@ async function main(): Promise<void> {
   const prompt = loadPrompt();
   console.log(`Prompt chargé (${prompt.length} caractères) depuis ${PATHS.prompt}`);
   console.log(
-    "Répartition : modèle Cursor → 7 sites (offres-agent.json) ; JSearch → Indeed uniquement.",
+    "Répartition : modèle Cursor → 6 sites (dont Hellowork) ; JSearch → Indeed ; APEC API by API.SH → Apec.",
   );
 
   if (args.summaryDemo) {
@@ -58,6 +58,7 @@ async function main(): Promise<void> {
   let offers: JobOffer[];
   let sources: SourceStatus[];
   let collectErrors: string[] = [];
+  let apecErrors: string[] = [];
 
   if (args.dryRun) {
     console.log("Mode dry-run : fixtures JSearch + data/offres-agent.json.");
@@ -65,16 +66,20 @@ async function main(): Promise<void> {
     offers = merged.offers;
     sources = merged.sources;
   } else {
-    const { collect, offers: o, sources: s } = await collectAndFilter();
+    const { collect, apec, offers: o, sources: s } = await collectAndFilter();
     offers = o;
     sources = s;
     collectErrors = collect.errors;
+    apecErrors = apec.errors;
     if (collect.retriedQueries.length) {
       console.log(`Requêtes Indeed retentées : ${collect.retriedQueries.join(" | ")}`);
     }
     if (collect.failedQueries.length) {
       console.log(`Requêtes Indeed encore en échec : ${collect.failedQueries.join(" | ")}`);
     }
+    console.log(
+      `Apec (API.SH) : ${apec.jobsSeen} offre(s) vues, ${apec.pagesFetched} page(s), ${apec.detailsFetched} détail(s), ${apec.offers.length} retenue(s).`,
+    );
   }
 
   const previous = loadMemory();
@@ -122,6 +127,10 @@ async function main(): Promise<void> {
   if (collectErrors.length) {
     console.log("\nErreurs collecte Indeed (JSearch) :");
     for (const e of collectErrors) console.log(`- ${e}`);
+  }
+  if (apecErrors.length) {
+    console.log("\nErreurs collecte Apec (API.SH) :");
+    for (const e of apecErrors) console.log(`- ${e}`);
   }
 }
 

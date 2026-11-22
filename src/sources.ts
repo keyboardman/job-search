@@ -1,4 +1,10 @@
-import { OBLIGATORY_SOURCES, type JSearchJob, type ObligatorySource, type SourceStatus } from "./types.js";
+import {
+  OBLIGATORY_SOURCES,
+  type ApecCollectResult,
+  type JSearchJob,
+  type ObligatorySource,
+  type SourceStatus,
+} from "./types.js";
 
 const PUBLISHER_PATTERNS: Array<{ source: ObligatorySource; patterns: RegExp[] }> = [
   {
@@ -26,6 +32,23 @@ export function mapPublisherToSource(publisher?: string, url?: string): string {
   return cleaned || "non précisé";
 }
 
+/** Statuts Apec issus d’APEC API by API.SH (RapidAPI). */
+export function buildApecSourceStatuses(collect: ApecCollectResult): SourceStatus[] {
+  const apecCount = collect.offers.filter((o) => o.sources.includes("Apec")).length;
+  const failed = collect.failedSearches.length > 0 && apecCount === 0;
+  let remark = "";
+  if (failed) {
+    remark = `illisible / ${collect.errors[0] ?? "échec APEC API"}`;
+  } else if (apecCount === 0) {
+    remark = "aucune offre via APEC API";
+  }
+
+  return OBLIGATORY_SOURCES.map((source) => {
+    if (source === "Apec") return { source, count: apecCount, remark };
+    return { source, count: 0, remark: "" };
+  });
+}
+
 /** Statuts pour un run JSearch centré Indeed (les autres sources viennent du modèle Cursor). */
 export function buildIndeedJSearchStatuses(jobs: JSearchJob[], failedQueries: string[]): SourceStatus[] {
   let indeedCount = 0;
@@ -34,7 +57,6 @@ export function buildIndeedJSearchStatuses(jobs: JSearchJob[], failedQueries: st
     if (mapped === "Indeed" || /indeed/i.test(job.job_publisher ?? "") || /indeed/i.test(job.job_apply_link ?? "")) {
       indeedCount += 1;
     } else if (!job.job_publisher) {
-      // query « via Indeed » : compter quand même si publisher vide
       indeedCount += 1;
     }
   }

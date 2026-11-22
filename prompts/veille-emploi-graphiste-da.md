@@ -16,15 +16,17 @@ Consulte toi-même (navigation / recherche web), sans inventer :
 - LinkedIn Emplois
 - France Travail
 - Hellowork
-- Apec
 - ProfilCulture
 - JobCulture
 
 Pour chaque site : recherche graphiste / DA, filtre 24 h si possible, applique les règles de localisation. Si trop lent, passe aux autres et reviens à la fin ; s’il reste illisible, note-le. Écris les offres retenues dans `data/offres-agent.json` (voir schéma ci-dessous).
 
-### Site via JSearch (anti-bots)
+### Sites via API RapidAPI (`npm run veille`)
 
-- **Indeed** uniquement — lancer `npm run veille:jsearch` (ou le run fusionné `npm run veille` après avoir rempli `offres-agent.json`).
+- **Indeed** — JSearch (`/search-v2`)
+- **Apec** — APEC API by API.SH (`/apec/v1/search`, host `apec-api-by-api-sh.p.rapidapi.com`)
+
+Ne pas re-parcourir Apec à la main sauf si l’API est en panne et que tu peux le lire autrement.
 
 Ne jamais inventer une offre, une date ou un détail. Écrire « non précisé » si l’info manque.
 
@@ -53,7 +55,7 @@ Ne jamais inventer une offre, une date ou un détail. Écrire « non précisé �
 }
 ```
 
-Lister les 7 sources « modèle Cursor » dans `sourcesStatus` même à zéro.
+Lister les 6 sources « modèle Cursor » dans `sourcesStatus` même à zéro (pas Apec / Indeed).
 
 ## Localisation
 
@@ -79,8 +81,8 @@ Lire `data/offres-veille.json` (jour précédent), signaler les nouveautés, pui
 ## Déroulement du run (agent Cursor)
 
 1. Lire ce prompt.
-2. Parcourir les 7 sources « modèle Cursor » → écrire `data/offres-agent.json`.
-3. Exécuter `npm run veille` (JSearch Indeed + fusion agent + filtres + Excel + mémoire + résumé).
+2. Parcourir les 6 sources « modèle Cursor » → écrire `data/offres-agent.json`.
+3. Exécuter `npm run veille` (JSearch Indeed + APEC API by API.SH + fusion agent + filtres + Excel + mémoire + résumé).
 4. Déposer le Excel via MCP Google Drive.
 5. Envoyer l’email Gmail aux destinataires actifs (`src/mail.ts`) avec le Excel en pièce jointe (voir `docs/email-send.md`).
 6. Résumer en français : nombre d’offres, 2–3 nouveautés, lien Drive, confirmation d’envoi email (ou zéro offre + sources).
