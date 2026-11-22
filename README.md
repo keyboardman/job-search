@@ -14,6 +14,7 @@ Veille quotidienne d’offres graphiste et directeur·rice artistique en France.
 - Node.js 20+
 - Clé **RapidAPI** JSearch (`RAPIDAPI_KEY` dans `.env`), abonnement actif
 - MCP **Google Drive** (Cursor) pour le dossier « Veille emploi graphiste-DA »
+- MCP **Gmail** (Cursor) pour l’envoi du Excel aux destinataires (`src/mail.ts`)
 - Fuseau **Europe/Paris** pour le planning 08:00
 
 ## Fichiers clés
@@ -24,6 +25,8 @@ Veille quotidienne d’offres graphiste et directeur·rice artistique en France.
 | `data/offres-agent.json` | Offres collectées par le modèle Cursor |
 | `data/offres-veille.json` | Mémoire du dernier run |
 | `config/schedule.md` | Automation 08:00 Europe/Paris |
+| `src/mail.ts` | Destinataires email (Stella commentée) |
+| `docs/email-send.md` | Envoi Gmail via MCP |
 
 ## Installation
 
@@ -45,7 +48,7 @@ npm run jsearch:verify  # test API Indeed
 npm test
 ```
 
-Classeur : `output/Veille graphiste-DA AAAA-MM-JJ.xlsx` — dépôt Drive : `docs/drive-upload.md`.
+Classeur : `output/Veille graphiste-DA AAAA-MM-JJ.xlsx` — dépôt Drive : `docs/drive-upload.md` — email : `docs/email-send.md`.
 
 ## Planning
 

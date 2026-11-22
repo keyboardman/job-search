@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { PATHS, ROOT } from "./config.js";
 import { writeWorkbook, workbookFileName, toSheetCsvPayload } from "./excel.js";
+import { activeRecipients, emailBody, emailSubject } from "./mail.js";
 import { loadMemory, markNewOffers, saveMemory } from "./memory.js";
 import { collectAndFilter, mergeFixtureAndAgent, processRawJobs } from "./pipeline.js";
 import { loadPrompt } from "./prompt.js";
@@ -104,6 +105,20 @@ async function main(): Promise<void> {
   const summary = buildSummary(offers, sources, driveLink);
   console.log("\n=== Résumé ===\n");
   console.log(summary);
+
+  const recipients = activeRecipients();
+  console.log("\n=== Email Gmail (MCP) ===\n");
+  if (recipients.length === 0) {
+    console.log("Aucun destinataire actif dans src/mail.ts — envoi ignoré.");
+  } else {
+    console.log(`À : ${recipients.join(", ")}`);
+    console.log(`Objet : ${emailSubject()}`);
+    console.log(`Pièce jointe : ${xlsxPath}`);
+    console.log("(Agent Cursor : envoyer via MCP Gmail send_message — voir docs/email-send.md)");
+    console.log("\n--- Corps ---\n");
+    console.log(emailBody(summary, driveLink));
+  }
+
   if (collectErrors.length) {
     console.log("\nErreurs collecte Indeed (JSearch) :");
     for (const e of collectErrors) console.log(`- ${e}`);

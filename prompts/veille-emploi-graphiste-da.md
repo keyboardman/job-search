@@ -68,6 +68,10 @@ Société, intitulé, bref descriptif (1-2 phrases), localisation, télétravail
 
 Classeur Excel `Veille graphiste-DA AAAA-MM-JJ.xlsx` (onglets Offres + Sources consultées), déposé dans Google Drive « Veille emploi graphiste-DA ».
 
+## Email
+
+Après création du Excel (et dépôt Drive), envoyer un email **depuis Gmail** (MCP Gmail `send_message`) aux destinataires actifs dans `src/mail.ts` (Stella commentée pour l’instant → seul `luc.moisan@gmail.com`). Joindre le `.xlsx`, objet `Veille emploi graphiste-DA — AAAA-MM-JJ`, corps = résumé + lien Drive. Détail : `docs/email-send.md`.
+
 ## Mémoire
 
 Lire `data/offres-veille.json` (jour précédent), signaler les nouveautés, puis enregistrer la liste du jour.
@@ -78,4 +82,5 @@ Lire `data/offres-veille.json` (jour précédent), signaler les nouveautés, pui
 2. Parcourir les 7 sources « modèle Cursor » → écrire `data/offres-agent.json`.
 3. Exécuter `npm run veille` (JSearch Indeed + fusion agent + filtres + Excel + mémoire + résumé).
 4. Déposer le Excel via MCP Google Drive.
-5. Résumer en français : nombre d’offres, 2–3 nouveautés, lien Drive (ou zéro offre + sources).
+5. Envoyer l’email Gmail aux destinataires actifs (`src/mail.ts`) avec le Excel en pièce jointe (voir `docs/email-send.md`).
+6. Résumer en français : nombre d’offres, 2–3 nouveautés, lien Drive, confirmation d’envoi email (ou zéro offre + sources).

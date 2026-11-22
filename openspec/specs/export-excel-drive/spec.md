@@ -37,3 +37,14 @@ Le système MUST déposer le fichier Excel dans le dossier Google Drive « Veill
 #### Scenario: Dépôt réussi
 - **WHEN** le classeur est prêt
 - **THEN** le fichier est présent dans le dossier Drive « Veille emploi graphiste-DA » et un lien accessible est disponible pour le résumé final
+
+### Requirement: Envoi email Gmail
+Après création du classeur Excel, le système MUST envoyer un email depuis le compte Gmail authentifié (MCP Gmail) aux destinataires actifs listés dans `src/mail.ts`, avec le fichier Excel en pièce jointe. Les destinataires commentés MUST être exclus.
+
+#### Scenario: Envoi aux destinataires actifs
+- **WHEN** le classeur du jour est prêt et au moins un destinataire est actif
+- **THEN** un email Gmail est envoyé à ces destinataires avec le `.xlsx` en pièce jointe et le résumé + lien Drive dans le corps
+
+#### Scenario: Destinataire commenté
+- **WHEN** `stella.moisan@gmail.com` est commentée dans `EMAIL_TO`
+- **THEN** l’email n’est pas adressé à Stella

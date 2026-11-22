@@ -32,7 +32,7 @@ Le modèle Cursor MUST collecter Welcome to the Jungle, LinkedIn Emplois, France
 - **THEN** les sept sources non-Indeed sont parcourues par le modèle et persistées dans `offres-agent.json` avant fusion
 
 ### Requirement: Résumé de fin de run
-En fin de run, le système MUST résumer en français le nombre d’offres retenues, les 2–3 nouveautés les plus intéressantes, et le lien vers le fichier Drive. S’il n’y a aucune offre, le système MUST le dire et lister les sources consultées.
+En fin de run, le système MUST résumer en français le nombre d’offres retenues, les 2–3 nouveautés les plus intéressantes, le lien vers le fichier Drive, et la confirmation d’envoi email (destinataires). S’il n’y a aucune offre, le système MUST le dire et lister les sources consultées.
 
 #### Scenario: Run avec offres
 - **WHEN** au moins une offre est retenue
