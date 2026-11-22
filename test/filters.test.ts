@@ -31,6 +31,27 @@ describe("filters", () => {
     assert.equal(locationAllowed("Lyon", "complet"), true);
   });
 
+  it("accepte les intitulés inclusifs et anglais de DA ou graphiste", () => {
+    assert.equal(
+      passesFilters({
+        title: "CDI - Directeur.trice Artistique",
+        summary: "Agence à Paris",
+        location: "Paris",
+        remote: "partiel",
+      }),
+      true,
+    );
+    assert.equal(
+      passesFilters({
+        title: "Senior Creative Designer",
+        summary: "Identité visuelle et print",
+        location: "Paris",
+        remote: "partiel",
+      }),
+      true,
+    );
+  });
+
   it("rejette présentiel Lyon", () => {
     assert.equal(
       passesFilters({

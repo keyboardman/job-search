@@ -1,14 +1,109 @@
 {
   "schemaVersion": 1,
-  "collectedAt": null,
+  "collectedAt": "2026-11-22T13:21:24Z",
   "sourcesStatus": [
-    { "source": "Welcome to the Jungle", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "LinkedIn Emplois", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "France Travail", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "Hellowork", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "Apec", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "ProfilCulture", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "JobCulture", "count": 0, "remark": "en attente collecte modèle Cursor" }
+    {
+      "source": "Welcome to the Jungle",
+      "count": 0,
+      "remark": "La recherche publique ne liste plus les offres (rendu client). Fiches vérifiées (Agence Gust, CNP Assurances, Savana, YAY) : publiées il y a 2 à 3 jours, hors fenêtre de 24 h."
+    },
+    {
+      "source": "LinkedIn Emplois",
+      "count": 3,
+      "remark": "Filtre dernières 24 h. Beaucoup de stages et d'annonces hors métier écartés."
+    },
+    {
+      "source": "France Travail",
+      "count": 1,
+      "remark": "Filtre date de création « un jour ». La fiche détail ne charge pas le corps ; retenu d'après le résultat de recherche (publié hier)."
+    },
+    {
+      "source": "Hellowork",
+      "count": 2,
+      "remark": "Filtre depuis 24 h."
+    },
+    {
+      "source": "Apec",
+      "count": 0,
+      "remark": "illisible : captcha DataDome (page et API recherche)."
+    },
+    {
+      "source": "ProfilCulture",
+      "count": 0,
+      "remark": "Liste générale triée par date : dernière annonce au 20/11/2026, aucune le 21 ou 22/11."
+    },
+    {
+      "source": "JobCulture",
+      "count": 0,
+      "remark": "Recherche graphiste : aucune annonce datée du 21 ou 22/11/2026 (plus récent ouvert : 10/11/2026)."
+    }
   ],
-  "offers": []
+  "offers": [
+    {
+      "company": "SIGIDURS",
+      "title": "Graphiste - S.I. Gestion Incinération des Déchets Urbains de la Région de Sarcelles H/F",
+      "summary": "Le Sigidurs recrute un ou une graphiste chargé·e de communication pour concevoir les supports print et digitaux (affiches, brochures, site, infographies). Télétravail de 2 à 3 jours par semaine.",
+      "location": "Sarcelles (95), Île-de-France",
+      "remote": "partiel",
+      "languages": "non précisé",
+      "date": "2026-11-22",
+      "sources": ["Hellowork"],
+      "urls": ["https://www.hellowork.com/fr-fr/emplois/84713172.html"]
+    },
+    {
+      "company": "Ville d'Asnières-sur-Seine",
+      "title": "Graphiste - Maquettiste - Asnières-Sur-Seine H/F",
+      "summary": "Au sein de la direction de la communication, création et mise en page des supports print et web de la ville (magazine municipal, affiches, réseaux), sur la suite Adobe.",
+      "location": "Asnières-sur-Seine (92), Île-de-France",
+      "remote": "non précisé",
+      "languages": "non précisé",
+      "date": "2026-11-22",
+      "sources": ["Hellowork"],
+      "urls": ["https://www.hellowork.com/fr-fr/emplois/84675885.html"]
+    },
+    {
+      "company": "non précisé",
+      "title": "Graphiste Chef (fe) de Production (H/F)",
+      "summary": "CDI à Paris. Le graphiste ou la graphiste chef·fe de production contribue à la réalisation de contenus visuels, de leur préparation à leur finalisation.",
+      "location": "Paris (75), Île-de-France",
+      "remote": "non précisé",
+      "languages": "non précisé",
+      "date": "2026-11-21",
+      "sources": ["France Travail"],
+      "urls": ["https://candidat.francetravail.fr/offres/recherche/detail/9072130"]
+    },
+    {
+      "company": "We Are Social",
+      "title": "CDI - Directeur.trice Artistique",
+      "summary": "Direction artistique de contenus social media et digitaux à Paris, de la conception à la production, avec encadrement d'assistants. Télétravail de 2 jours par semaine.",
+      "location": "Paris, Île-de-France",
+      "remote": "partiel",
+      "languages": "anglais (oral et écrit)",
+      "date": "2026-11-21",
+      "sources": ["LinkedIn Emplois"],
+      "urls": ["https://fr.linkedin.com/jobs/view/cdi-directeur-trice-artistique-at-we-are-social-4485910206"]
+    },
+    {
+      "company": "Brevo",
+      "title": "Senior Creative Designer",
+      "summary": "Au sein de l'équipe Brand à Paris, évolution de l'identité visuelle et création des supports de campagne (digital, social, print, événementiel). Organisation remote-friendly.",
+      "location": "Paris, Île-de-France",
+      "remote": "partiel",
+      "languages": "anglais professionnel (C1)",
+      "date": "2026-11-22",
+      "sources": ["LinkedIn Emplois"],
+      "urls": ["https://fr.linkedin.com/jobs/view/senior-creative-designer-at-brevo-4490834588"]
+    },
+    {
+      "company": "Jacquemus",
+      "title": "CDI - CREATIVE DESIGNER - BRAND CONCEPTS (H/F)",
+      "summary": "Conception de langages graphiques, de systèmes typographiques et de campagnes pour la maison, au studio image à Paris 8e. Maîtrise de Photoshop, Illustrator, InDesign, After Effects et Premiere.",
+      "location": "Paris 8e, Île-de-France",
+      "remote": "non précisé",
+      "languages": "non précisé",
+      "date": "2026-11-21",
+      "sources": ["LinkedIn Emplois"],
+      "urls": ["https://fr.linkedin.com/jobs/view/cdi-creative-designer-brand-concepts-h-f-at-jacquemus-4476297552"]
+    }
+  ]
 }
