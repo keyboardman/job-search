@@ -31,6 +31,27 @@ describe("filters", () => {
     assert.equal(locationAllowed("Lyon", "complet"), true);
   });
 
+  it("accepte infographiste et art director en Île-de-France", () => {
+    assert.equal(
+      passesFilters({
+        title: "Infographiste textile / Coloriste (H/F)",
+        summary: "Présentiel Bobigny",
+        location: "Bobigny (93)",
+        remote: "aucun",
+      }),
+      true,
+    );
+    assert.equal(
+      passesFilters({
+        title: "CDI - Art Director (F/M)",
+        summary: "Direction artistique branding",
+        location: "Paris",
+        remote: "non précisé",
+      }),
+      true,
+    );
+  });
+
   it("rejette présentiel Lyon", () => {
     assert.equal(
       passesFilters({

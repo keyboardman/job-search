@@ -1,13 +1,147 @@
 {
   "schemaVersion": 1,
-  "collectedAt": null,
+  "collectedAt": "2026-11-23T19:09:57Z",
   "sourcesStatus": [
-    { "source": "Welcome to the Jungle", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "LinkedIn Emplois", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "France Travail", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "Hellowork", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "ProfilCulture", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "JobCulture", "count": 0, "remark": "en attente collecte modèle Cursor" }
+    {
+      "source": "Welcome to the Jungle",
+      "count": 0,
+      "remark": "Pages métier graphiste et directeur artistique à Paris : rien sous 8 h (plus récent, 3 jours). La recherche dynamique ne liste pas les offres."
+    },
+    {
+      "source": "LinkedIn Emplois",
+      "count": 6,
+      "remark": "Filtre 8 h. Stages exclus. Directeur de création Publicis non retenu (hors intitulé DA)."
+    },
+    {
+      "source": "France Travail",
+      "count": 1,
+      "remark": "Pas de filtre 8 h. « Publié aujourd’hui » sans heure : HEC Jouy-en-Josas recoupée à 2 h sur LinkedIn ; Toulouse et Vosges hors zone."
+    },
+    {
+      "source": "Hellowork",
+      "count": 2,
+      "remark": "Tri par date. Gutenberg (10:15 et 10:21 UTC) hors fenêtre de 8 h. Stages exclus."
+    },
+    {
+      "source": "ProfilCulture",
+      "count": 0,
+      "remark": "Annonces datées du 23/11/2026 visibles : stages uniquement, sans horaire."
+    },
+    {
+      "source": "JobCulture",
+      "count": 0,
+      "remark": "Recherche graphiste : fiches les plus récentes début novembre 2026, rien le 23/11."
+    }
   ],
-  "offers": []
+  "offers": [
+    {
+      "company": "Aquent",
+      "title": "CDI - Art Director Art Director (F/M) [AQ-28101]",
+      "summary": "Aquent recrute à Paris un art director (3 à 8 ans) pour une agence de brand experience : systèmes d’identité visuelle, campagnes 360 et directions artistiques (branding, digital, événementiel, retail). Anglais courant exigé. Télétravail non précisé.",
+      "location": "Paris",
+      "remote": "non précisé",
+      "languages": "anglais, français",
+      "date": "2026-11-23",
+      "sources": [
+        "LinkedIn Emplois"
+      ],
+      "urls": [
+        "https://www.linkedin.com/jobs/view/4492643475"
+      ]
+    },
+    {
+      "company": "PUBLICIS LUXE",
+      "title": "CDI - Directeur Artistique Middle F/H/NB",
+      "summary": "Directeur artistique junior à Paris pour une marque de haute joaillerie : concepts et maquettes de campagnes 360 (graphisme, vidéo, réseaux sociaux, motion, 3D), sous la supervision d’un directeur artistique senior. Télétravail partiel (3 jours à l’agence, 2 jours à distance). Anglais requis pour présenter les projets.",
+      "location": "Paris",
+      "remote": "partiel",
+      "languages": "anglais",
+      "date": "2026-11-23",
+      "sources": [
+        "LinkedIn Emplois"
+      ],
+      "urls": [
+        "https://www.linkedin.com/jobs/view/4494027314"
+      ]
+    },
+    {
+      "company": "Havea",
+      "title": "Graphiste Vitavea International H/F",
+      "summary": "CDI à Paris 8e pour la marque Vitavea : exécution et création print, packaging et contenus vidéo (montage et motion), avec une pratique des outils d’IA générative. Télétravail occasionnel.",
+      "location": "Paris 8e (75)",
+      "remote": "partiel",
+      "languages": "non précisé",
+      "date": "2026-11-23",
+      "sources": [
+        "Hellowork"
+      ],
+      "urls": [
+        "https://www.hellowork.com/fr-fr/emplois/85792521.html"
+      ]
+    },
+    {
+      "company": "HEC Paris",
+      "title": "GRAPHISTE (H/F) - CDD",
+      "summary": "CDD à Jouy-en-Josas : création et production graphique print et digital des campagnes marketing des programmes diplômants, de la prise de brief à la livraison. Anglais requis. Télétravail non précisé.",
+      "location": "Jouy-en-Josas (78)",
+      "remote": "non précisé",
+      "languages": "anglais",
+      "date": "2026-11-23",
+      "sources": [
+        "LinkedIn Emplois",
+        "France Travail"
+      ],
+      "urls": [
+        "https://www.linkedin.com/jobs/view/4493677232",
+        "https://candidat.francetravail.fr/offres/recherche/detail/216TKBG"
+      ]
+    },
+    {
+      "company": "Galeries Lafayette",
+      "title": "Assistant Graphiste Sinophone H/F",
+      "summary": "CDD à Paris (Haussmann) : visuels print et digital et montages vidéo pour les marchés internationaux, coordination de shootings et contrôle des traductions. Chinois simplifié, anglais et français demandés. Télétravail non précisé.",
+      "location": "Paris (75)",
+      "remote": "non précisé",
+      "languages": "chinois simplifié, chinois traditionnel, anglais, français",
+      "date": "2026-11-23",
+      "sources": [
+        "Hellowork",
+        "LinkedIn Emplois"
+      ],
+      "urls": [
+        "https://www.hellowork.com/fr-fr/emplois/85777575.html",
+        "https://www.linkedin.com/jobs/view/4493664613"
+      ]
+    },
+    {
+      "company": "Média-Participations",
+      "title": "Graphiste Maquettiste F/H MAGNIFICAT",
+      "summary": "CDI à Paris pour la revue Magnificat : maquette, mise en page, photogravure et suivi des BAT. Au moins 2 ans d’expérience et maîtrise d’InDesign et Photoshop. Un jour de télétravail est envisageable une fois le poste acquis.",
+      "location": "Paris",
+      "remote": "partiel",
+      "languages": "non précisé",
+      "date": "2026-11-23",
+      "sources": [
+        "LinkedIn Emplois"
+      ],
+      "urls": [
+        "https://www.linkedin.com/jobs/view/4493758378"
+      ]
+    },
+    {
+      "company": "ID FRANCE",
+      "title": "Infographiste textile / Coloriste (H/F)",
+      "summary": "CDI en présentiel à Bobigny : recoloration et mise au point technique de dessins existants, préparation des fichiers d’impression textile, sans création de nouveaux motifs. Formation interne prévue.",
+      "location": "Bobigny (93)",
+      "remote": "aucun",
+      "languages": "non précisé",
+      "date": "2026-11-23",
+      "sources": [
+        "LinkedIn Emplois"
+      ],
+      "urls": [
+        "https://www.linkedin.com/jobs/view/4493751565"
+      ]
+    }
+  ]
 }
