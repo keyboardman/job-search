@@ -8,7 +8,7 @@
 | --- | --- |
 | Société | UNIVERSITE PARIS-SACLAY |
 | Intitulé | Graphiste (H/F) |
-| Descriptif | Le Groupe d'experts intergouvernemental sur l'évolution du climat (GIEC) a été créé par le Programme des Nations Unies pour l'environnement (UNEP) et l'Organisation météorologique mondiale (OMM) en... |
+| Descriptif | Vous souhaitez rejoindre une entreprise dynamique qui place la qualité de vie au travail au cœur de ses priorités ? Rejoignez une structure... |
 | Localisation | 91 - GIF SUR YVETTE |
 | Télétravail | non précisé |
 | Langues | non précisé |

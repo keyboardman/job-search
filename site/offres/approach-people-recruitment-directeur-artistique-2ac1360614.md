@@ -8,11 +8,11 @@
 | --- | --- |
 | Société | Approach People Recruitment |
 | Intitulé | Directeur Artistique Beauté H/F |
-| Descriptif | POSTE : Directeur Artistique Beauté H/F DESCRIPTION : Directeur Artistique Beauté (H/F) - Paris À propos du poste Notre client, une marque ou agence créative spécialisée dans l'univers de la... |
+| Descriptif | Directeur artistique beauté à Paris : définir et déployer des territoires créatifs pour une marque ou une agence spécialisée dans la beauté et le luxe. |
 | Localisation | Paris - 75 |
-| Télétravail | partiel |
+| Télétravail | non précisé |
 | Langues | non précisé |
 | Date | non précisé |
 | Sources | non précisé |
-| Lien | [https://www.hellowork.com/fr-fr/emplois/81360072.html](https://www.hellowork.com/fr-fr/emplois/81360072.html) |
+| Lien | [https://candidat.francetravail.fr/offres/recherche/detail/8412881](https://candidat.francetravail.fr/offres/recherche/detail/8412881) |
 | Nouveau | non |

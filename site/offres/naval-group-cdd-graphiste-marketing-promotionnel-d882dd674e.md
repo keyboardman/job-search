@@ -8,9 +8,9 @@
 | --- | --- |
 | Société | Naval Group |
 | Intitulé | CDD - Graphiste Marketing Promotionnel H/F |
-| Descriptif | CDD |
+| Descriptif | Naval Group recherche pour son site de Paris, un Graphiste Chargé de Marketing Promotionnel. Rattaché à la Direction des Ventes au sein de la direction du Marketing, vos missions s'organisent autour de deux volets. |
 | Localisation | Paris - 75 |
-| Télétravail | partiel |
+| Télétravail | non précisé |
 | Langues | non précisé |
 | Date | non précisé |
 | Sources | non précisé |

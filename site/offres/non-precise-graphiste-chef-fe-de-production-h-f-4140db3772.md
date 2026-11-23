@@ -8,7 +8,7 @@
 | --- | --- |
 | Société | non précisé |
 | Intitulé | Graphiste Chef (fe) de Production (H/F) |
-| Descriptif | CDI à Paris. Le graphiste ou la graphiste chef·fe de production contribue à la réalisation de contenus visuels, de leur préparation à leur finalisation. |
+| Descriptif | L’annonce décrit un poste de graphiste chef·fe de production à Paris, en CDI, qui contribue à la réalisation de contenus visuels, de leur préparation à leur finalisation, et prend en charge les étapes de production. Le nom de la société et le télétravail ne figurent pas dans le texte accessible. |
 | Localisation | Paris (75), Île-de-France |
 | Télétravail | non précisé |
 | Langues | non précisé |
