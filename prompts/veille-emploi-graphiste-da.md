@@ -85,7 +85,7 @@ Société, intitulé, bref descriptif (1-2 phrases), localisation, télétravail
 
 Synchroniser les offres dans la base Notion configurée (`config/notion.json`, secret `NOTION_TOKEN` dans `.env`). Upsert par `Offer id` sans écraser le suivi candidature déjà rempli. Détail : `docs/notion-sync.md`.
 
-Ne plus générer d’Excel ni déposer sur Google Drive. Ne plus régénérer `site/` / `pages:build`.
+Ne plus générer d’Excel ni déposer sur Google Drive. Ne plus générer de pages d’offres sur GitHub.
 
 ## Email
 

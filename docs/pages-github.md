@@ -1,7 +1,7 @@
-# Pages GitHub — déprécié
+# Pages GitHub — retiré
 
-La génération Markdown `site/` depuis les Excel Drive n’est **plus** dans le flux de veille.
+La génération des pages d’offres Markdown (`site/`) n’existe plus.
 
-Consultation des offres : base Notion (`docs/notion-sync.md`).
+Le script `npm run pages:build` et le module `src/pages/` ont été supprimés. La consultation des offres se fait dans la base Notion (`docs/notion-sync.md`).
 
-Le script `npm run pages:build` et le dossier `site/` peuvent rester en legacy ; ils ne sont plus mis à jour par le prompt de run.
+Le dossier `site/` déjà commité reste un historique ; il n’est plus régénéré.

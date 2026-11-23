@@ -48,9 +48,6 @@ export const PATHS = {
   memory: path.join(ROOT, "data", "offres-veille.json"),
   outputDir: path.join(ROOT, "output"),
   fixturesDir: path.join(ROOT, "test", "fixtures"),
-  /** Legacy cache Excel Drive (gitignoré) — plus utilisé par le flux nominal. */
-  driveXlsxDir: path.join(ROOT, "data", "drive-xlsx"),
-  siteDir: path.join(ROOT, "site"),
   notionConfig: path.join(ROOT, "config", "notion.json"),
 };
 
