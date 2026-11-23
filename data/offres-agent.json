@@ -1,13 +1,37 @@
 {
   "schemaVersion": 1,
-  "collectedAt": null,
+  "collectedAt": "2026-11-23T04:05:39Z",
   "sourcesStatus": [
-    { "source": "Welcome to the Jungle", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "LinkedIn Emplois", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "France Travail", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "Hellowork", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "ProfilCulture", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "JobCulture", "count": 0, "remark": "en attente collecte modèle Cursor" }
+    {
+      "source": "Welcome to the Jungle",
+      "count": 0,
+      "remark": "Recherches graphiste et directeur artistique : page servie sans liste d’offres (rendu client). Aucune annonce datée lisible dans les 8 h."
+    },
+    {
+      "source": "LinkedIn Emplois",
+      "count": 0,
+      "remark": "Filtre 8 h. Graphiste : 1 annonce, stage Station F (il y a 3 h), exclue. Directeur artistique, graphic designer et designer graphique : aucune offre au périmètre (intitulé et zone)."
+    },
+    {
+      "source": "France Travail",
+      "count": 0,
+      "remark": "Tri par date (graphiste, directeur artistique, direction artistique). Rien dans les 8 h. Plus récentes au périmètre : il y a 2 jours (graphiste chef de production, Paris ; maquettiste graphiste, Compiègne). Infographiste 3D à Cannes signalée publiée aujourd’hui : hors intitulé et hors zone (06), télétravail non précisé."
+    },
+    {
+      "source": "Hellowork",
+      "count": 0,
+      "remark": "Tri par date, France. Dans les 4 h : DA CIPAC à Ugine (73), présentiel hors Île-de-France / Oise / Aisne, exclue ; styliste infographiste Armand Thiery à Levallois, hors intitulé graphiste/DA ; infographiste Sportop à Nice en alternance, exclue. Offres graphiste suivantes : il y a 20 h."
+    },
+    {
+      "source": "ProfilCulture",
+      "count": 0,
+      "remark": "Liste des offres : 2 annonces au titre graphiste ou DA (Le Carré, Sainte-Maxime 83 ; festivals, Strasbourg). Date de publication non affichée, hors zone, télétravail non précisé. Rien clairement dans les 8 h."
+    },
+    {
+      "source": "JobCulture",
+      "count": 0,
+      "remark": "Recherche graphiste : dates visibles antérieures au 22/11 (ex. Graphiste Choisy-le-Roi, publiée le 17/11/2026). Aucune publication du 22 ou du 23/11/2026."
+    }
   ],
   "offers": []
 }
