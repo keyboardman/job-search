@@ -89,6 +89,16 @@ Classeur Excel `Veille graphiste-DA AAAA-MM-JJ-HH.xlsx` avec `HH` = créneau `04
 
 Après création du Excel (et dépôt Drive), envoyer un email **depuis Gmail** (MCP Gmail `send_message`) aux destinataires actifs dans `src/mail.ts`. Joindre le `.xlsx`, objet `Veille emploi graphiste-DA — AAAA-MM-JJ HHh`, corps = résumé + lien Drive. Détail : `docs/email-send.md`.
 
+## Pages GitHub (mise à jour du dépôt)
+
+Après Drive + email, publier les offres sur le site du dépôt (`site/`) pour GitHub Pages. Détail : `docs/pages-github.md`.
+
+1. Lire `config/drive.json` (`folderId`), lister le dossier Drive « Veille emploi graphiste-DA ».
+2. Télécharger **tous** les `.xlsx` de veille dans `data/drive-xlsx/` (créer le dossier si besoin). Ignorer Sheets, CSV, PDF, JSON.
+3. Lancer `npm run pages:build` — agrège les Excel, **déduplique** les offres (pas de doublon sur le récapitulatif), écrit `site/index.html` + `site/offres/*.html` avec les **dates en français** (ex. `22 novembre 2026`, pas `2026-11-22`).
+4. Committer uniquement les fichiers générés sous `site/` (et pousser si un remote est configuré), message du type : `pages: mise à jour offres veille AAAA-MM-JJ HHh`. Ne pas committer `data/drive-xlsx/`, `.env`, ni les secrets.
+5. Ne pas inventer d’offres pour le site : source exclusive = Excel Drive. Si aucun `.xlsx` téléchargeable, le noter dans le résumé et ne pas falsifier `site/`.
+
 ## Mémoire
 
 Lire `data/offres-veille.json` (run précédent), signaler les nouveautés, puis enregistrer la liste du run.
@@ -102,4 +112,5 @@ Lire `data/offres-veille.json` (run précédent), signaler les nouveautés, puis
    - **12:00** ou **20:00** → `npm run veille:agent` (fusion agent seule, sans RapidAPI)
 4. Déposer le Excel via MCP Google Drive.
 5. Envoyer l’email Gmail aux destinataires actifs (`src/mail.ts`) avec le Excel en pièce jointe (voir `docs/email-send.md`).
-6. Résumer en français : créneau, nombre d’offres, 2–3 nouveautés, lien Drive, confirmation d’envoi email (ou zéro offre + sources) ; préciser si RapidAPI a été utilisée (24 h) ou non, et que le modèle a filtré sur 8 h.
+6. Mettre à jour les Pages GitHub : télécharger les `.xlsx` Drive → `npm run pages:build` → commit (+ push) de `site/` (déduplication + dates FR ; voir section « Pages GitHub »).
+7. Résumer en français : créneau, nombre d’offres, 2–3 nouveautés, lien Drive, confirmation d’envoi email, confirmation de mise à jour GitHub Pages / commit `site/` (ou zéro offre + sources) ; préciser si RapidAPI a été utilisée (24 h) ou non, et que le modèle a filtré sur 8 h.

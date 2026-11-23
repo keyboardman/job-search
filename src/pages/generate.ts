@@ -11,6 +11,33 @@ function escapeHtml(s: string): string {
     .replace(/"/g, "&quot;");
 }
 
+const MONTHS_FR = [
+  "janvier",
+  "février",
+  "mars",
+  "avril",
+  "mai",
+  "juin",
+  "juillet",
+  "août",
+  "septembre",
+  "octobre",
+  "novembre",
+  "décembre",
+] as const;
+
+/** Affiche une date ISO `AAAA-MM-JJ` en français (`22 novembre 2026`). */
+export function formatDateFr(date: string): string {
+  const raw = date.trim();
+  if (!raw || raw === "non précisé") return raw || "non précisé";
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(raw);
+  if (!m) return raw;
+  const month = Number(m[2]);
+  const day = Number(m[3]);
+  if (month < 1 || month > 12 || day < 1 || day > 31) return raw;
+  return `${day} ${MONTHS_FR[month - 1]} ${m[1]}`;
+}
+
 const SITE_CSS = `/* Veille emploi graphiste / DA — pages GitHub */
 :root {
   --bg: #f6f3ee;
@@ -130,7 +157,7 @@ ${offers
       <td>${escapeHtml(offer.company)}</td>
       <td>${escapeHtml(offer.title)}</td>
       <td>${escapeHtml(offer.location)}</td>
-      <td>${escapeHtml(offer.date)}</td>
+      <td>${escapeHtml(formatDateFr(offer.date))}</td>
       <td><a href="./offres/${escapeHtml(slug)}.html">Détail</a></td>
     </tr>`,
   )
@@ -170,7 +197,7 @@ export function renderOfferHtml(offer: JobOffer, slug: string): string {
       <dt>Localisation</dt><dd>${escapeHtml(offer.location)}</dd>
       <dt>Télétravail</dt><dd>${escapeHtml(offer.remote)}</dd>
       <dt>Langues</dt><dd>${escapeHtml(offer.languages)}</dd>
-      <dt>Date</dt><dd>${escapeHtml(offer.date)}</dd>
+      <dt>Date</dt><dd>${escapeHtml(formatDateFr(offer.date))}</dd>
       <dt>Sources</dt><dd>${escapeHtml(offer.sources.join(", ") || "non précisé")}</dd>
       <dt>Lien</dt><dd>${lien}</dd>
       <dt>Nouveau</dt><dd>${offer.isNew ? "oui" : "non"}</dd>

@@ -5,7 +5,7 @@ import path from "node:path";
 import { after, before, describe, it } from "node:test";
 import { writeWorkbook } from "../src/excel.js";
 import { listXlsxFiles, loadOffersFromXlsxDir } from "../src/pages/aggregate.js";
-import { writeSitePages } from "../src/pages/generate.js";
+import { formatDateFr, writeSitePages } from "../src/pages/generate.js";
 import { readOffersFromWorkbook } from "../src/pages/read-workbook.js";
 import { offerSlug } from "../src/pages/slug.js";
 import type { JobOffer, SourceStatus } from "../src/types.js";
@@ -143,15 +143,24 @@ describe("pages — génération HTML", () => {
 
     const index = fs.readFileSync(result.indexPath, "utf8");
     assert.match(index, /Studio Nord/);
+    assert.match(index, /22 novembre 2026/);
     assert.match(index, /\.\/offres\/.+\.html/);
     assert.match(index, /\.\/assets\/style\.css/);
+    assert.doesNotMatch(index, />2026-11-22</);
 
     const slug = offerSlug(offers[0]);
     const detail = fs.readFileSync(path.join(tmp, "offres", `${slug}.html`), "utf8");
     assert.match(detail, /Création de supports digitaux/);
+    assert.match(detail, /22 novembre 2026/);
     assert.match(detail, /Retour au récapitulatif/);
     assert.match(detail, /\.\.\/index\.html/);
     assert.match(detail, /Nouveau<\/dt><dd>oui/);
+  });
+
+  it("formate les dates en français", () => {
+    assert.equal(formatDateFr("2026-11-22"), "22 novembre 2026");
+    assert.equal(formatDateFr("2026-01-01"), "1 janvier 2026");
+    assert.equal(formatDateFr("non précisé"), "non précisé");
   });
 
   it("écrase les pages précédentes à la régénération", () => {
