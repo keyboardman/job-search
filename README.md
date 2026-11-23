@@ -30,6 +30,8 @@ Veille d’offres graphiste et directeur·rice artistique en France — **toutes
 | `config/schedule.md` | Automation toutes les 8 h Europe/Paris |
 | `src/mail.ts` | Destinataires email |
 | `docs/email-send.md` | Envoi Gmail via MCP |
+| `docs/pages-github.md` | Pages GitHub (récap + détail) depuis Excel Drive |
+| `site/` | Site statique généré (`npm run pages:build`) |
 
 ## Installation
 
@@ -50,10 +52,23 @@ npm run veille:agent    # 12:00 / 20:00 — fusion agent seule (sans RapidAPI)
 npm run veille:dry      # fixtures + offres-agent.json
 npm run jsearch:verify  # test API Indeed
 npm run apec:verify     # test APEC API by API.SH
+npm run pages:build     # site GitHub depuis Excel Drive (`data/drive-xlsx/`)
 npm test
 ```
 
 Classeur : `output/Veille graphiste-DA AAAA-MM-JJ-HH.xlsx` (`HH` = 04 / 12 / 20) — dépôt Drive : `docs/drive-upload.md` — email : `docs/email-send.md`.
+
+## Pages GitHub
+
+Récapitulatif + détail par offre, source = **uniquement** les `.xlsx` du dossier Drive « Veille emploi graphiste-DA » (pas les JSON locaux). Voir `docs/pages-github.md`.
+
+```bash
+mkdir -p data/drive-xlsx
+# y déposer les Excel Drive (MCP Google Drive), puis :
+npm run pages:build
+```
+
+Sortie : `site/index.html` et `site/offres/*.html` — activer GitHub Pages sur le dossier `/site`.
 
 ## Planning
 

@@ -48,6 +48,9 @@ export const PATHS = {
   memory: path.join(ROOT, "data", "offres-veille.json"),
   outputDir: path.join(ROOT, "output"),
   fixturesDir: path.join(ROOT, "test", "fixtures"),
+  /** Cache local des Excel Drive (gitignoré) — source exclusive de `pages:build`. */
+  driveXlsxDir: path.join(ROOT, "data", "drive-xlsx"),
+  siteDir: path.join(ROOT, "site"),
 };
 
 export const DRIVE_FOLDER_NAME = "Veille emploi graphiste-DA";

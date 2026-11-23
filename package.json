@@ -12,7 +12,8 @@
     "veille:dry": "tsx src/run.ts --dry-run",
     "veille:summary-demo": "tsx src/run.ts --summary-demo",
     "jsearch:verify": "tsx src/jsearch/verify.ts",
-    "apec:verify": "tsx src/apec/verify.ts"
+    "apec:verify": "tsx src/apec/verify.ts",
+    "pages:build": "tsx src/pages/build.ts"
   },
   "engines": {
     "node": ">=20"
