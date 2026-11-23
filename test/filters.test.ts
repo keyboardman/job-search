@@ -31,6 +31,18 @@ describe("filters", () => {
     assert.equal(locationAllowed("Lyon", "complet"), true);
   });
 
+  it("accepte infographiste en Île-de-France", () => {
+    assert.equal(
+      passesFilters({
+        title: "Infographiste textile / Coloriste",
+        summary: "Préparation des fichiers d'impression",
+        location: "Bobigny (93)",
+        remote: "aucun",
+      }),
+      true,
+    );
+  });
+
   it("rejette présentiel Lyon", () => {
     assert.equal(
       passesFilters({
