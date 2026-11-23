@@ -37,6 +37,13 @@ export function createNotionClient(token: string) {
         `/databases/${databaseId}`,
       );
     },
+    updateDatabase(databaseId: string, properties: Record<string, unknown>) {
+      return request<{ id: string; properties?: Record<string, unknown> }>(
+        "PATCH",
+        `/databases/${databaseId}`,
+        { properties },
+      );
+    },
     queryByOfferId(databaseId: string, offerIdProp: string, offerId: string) {
       return request<{ results: Array<{ id: string; properties: Record<string, unknown> }> }>(
         "POST",

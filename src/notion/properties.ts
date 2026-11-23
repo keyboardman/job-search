@@ -1,16 +1,18 @@
 import type { JobOffer } from "../types.js";
 
+/** Champs suivi / candidature : ne jamais les écraser à l’update. */
 const FOLLOW_UP_KEYS = [
   "Date de candidature",
-  "Suivi",
-  "Relance RH via LinkedIn",
-  "Plateforme(s)",
-  "Autre plateforme (à préciser)",
+  "Statut",
+  "Relance Linkedin",
+  "Réponse",
+  "Observation",
+  "Type candidature",
 ] as const;
 
 export const OFFER_ID_PROP = "Offer id";
-/** Propriété titre Notion (workspace FR). */
-export const TITLE_PROP = "Nom";
+/** Propriété titre de la base Veille (schéma réel). */
+export const TITLE_PROP = "Intitulé";
 
 function richText(content: string) {
   const text = content.slice(0, 2000);
@@ -27,7 +29,7 @@ function checkbox(checked: boolean) {
 }
 
 function select(name: string) {
-  return { select: { name } };
+  return { select: { name: name.slice(0, 100) } };
 }
 
 function multiSelect(names: string[]) {
@@ -47,29 +49,35 @@ function dateProp(isoOrText: string) {
   return { date: null };
 }
 
-/** Propriétés veille écrites à chaque upsert (jamais les champs suivi humains). */
+function languagesToMultiSelect(languages: string) {
+  if (!languages || languages === "non précisé") {
+    return multiSelect(["non précisé"]);
+  }
+  return multiSelect(languages.split(/[,;/|]/).map((s) => s.trim()).filter(Boolean));
+}
+
+/** Propriétés veille écrites à chaque upsert. */
 export function offerToVeilleProperties(offer: JobOffer): Record<string, unknown> {
-  const props: Record<string, unknown> = {
-    [TITLE_PROP]: title(offer.company),
-    "Intitulé du poste": richText(offer.title),
+  return {
+    [TITLE_PROP]: title(offer.title),
+    Société: richText(offer.company || "non précisé"),
     Descriptif: richText(offer.summary || "non précisé"),
     Localisation: richText(offer.location || "non précisé"),
     Télétravail: select(offer.remote),
-    Langues: richText(offer.languages || "non précisé"),
-    "Date de publication": dateProp(offer.date),
+    Langues: languagesToMultiSelect(offer.languages || "non précisé"),
+    "Date de l’offre": dateProp(offer.date),
     Sources: multiSelect(offer.sources.length ? offer.sources : ["non précisé"]),
-    Lien: url(offer.urls[0]),
+    "Lien de l’offre": url(offer.urls[0]),
     Nouveau: checkbox(Boolean(offer.isNew)),
     [OFFER_ID_PROP]: richText(offer.id),
   };
-  return props;
 }
 
-/** Propriétés initiales à la création (suivi à vide / défaut). */
+/** Propriétés à la création (suivi laissé vide / défaut). */
 export function offerToCreateProperties(offer: JobOffer): Record<string, unknown> {
   return {
     ...offerToVeilleProperties(offer),
-    "Relance RH via LinkedIn": checkbox(false),
+    "Relance Linkedin": checkbox(false),
   };
 }
 
@@ -94,3 +102,9 @@ export function isFollowUpFilled(properties: Record<string, unknown>): boolean {
   }
   return false;
 }
+
+/** Propriétés à ajouter si absentes de la base. */
+export const REQUIRED_EXTRA_PROPERTIES: Record<string, Record<string, unknown>> = {
+  [OFFER_ID_PROP]: { rich_text: {} },
+  Nouveau: { checkbox: {} },
+};

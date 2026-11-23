@@ -3,9 +3,22 @@ import { createNotionClient, type NotionClient } from "./client.js";
 import { getNotionToken, loadNotionConfig } from "./config.js";
 import {
   OFFER_ID_PROP,
+  REQUIRED_EXTRA_PROPERTIES,
   offerToCreateProperties,
   offerToVeilleProperties,
 } from "./properties.js";
+
+async function ensureSchema(client: NotionClient, databaseId: string): Promise<void> {
+  const db = await client.retrieveDatabase(databaseId);
+  const existing = db.properties ?? {};
+  const toAdd: Record<string, unknown> = {};
+  for (const [name, def] of Object.entries(REQUIRED_EXTRA_PROPERTIES)) {
+    if (!existing[name]) toAdd[name] = def;
+  }
+  if (Object.keys(toAdd).length) {
+    await client.updateDatabase(databaseId, toAdd);
+  }
+}
 
 export interface NotionSyncResult {
   databaseUrl: string;
@@ -71,6 +84,18 @@ export async function syncOffersToNotion(offers: JobOffer[]): Promise<NotionSync
   }
 
   const client = createNotionClient(token);
+  try {
+    await ensureSchema(client, cfg.databaseId);
+  } catch (err) {
+    const msg = err instanceof Error ? err.message : String(err);
+    return {
+      databaseUrl: cfg.databaseUrl,
+      created: 0,
+      updated: 0,
+      errors: [`Schéma Notion : ${msg}`],
+    };
+  }
+
   let created = 0;
   let updated = 0;
   for (const offer of offers) {
