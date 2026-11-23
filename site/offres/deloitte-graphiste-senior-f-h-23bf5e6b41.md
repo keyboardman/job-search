@@ -8,9 +8,9 @@
 | --- | --- |
 | Société | Deloitte |
 | Intitulé | Graphiste Senior F/H |
-| Descriptif | L’agence interne dot. de Deloitte recherche un graphiste senior à Paris pour concevoir identités, supports print et digitaux, présentations et dispositifs de marque. |
+| Descriptif | Quel sera votre rôle dans la #TeamDeloitte ? dot. |
 | Localisation | La Défense |
-| Télétravail | non précisé |
+| Télétravail | partiel |
 | Langues | non précisé |
 | Date | non précisé |
 | Sources | non précisé |

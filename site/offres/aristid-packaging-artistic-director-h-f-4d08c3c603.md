@@ -8,7 +8,7 @@
 | --- | --- |
 | Société | ARISTID |
 | Intitulé | Packaging Artistic Director H/F |
-| Descriptif | CDI ; Télétravail partiel |
+| Descriptif | Sous la responsabilité du Packaging Creative Director, le/la Packaging Artistic Director a pour rôle de coordonner des projets clients variés, de la conception à la réalisation. En ce sens, il/elle conçoit, à partir d'un brief client, des réponses créatives liées à l'activité de la cellule en imaginant et développant… |
 | Localisation | Clichy - 92 |
 | Télétravail | partiel |
 | Langues | non précisé |

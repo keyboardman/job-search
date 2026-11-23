@@ -8,7 +8,7 @@
 | --- | --- |
 | Société | Thom Group |
 | Intitulé | Designer Graphique 360° H/F |
-| Descriptif | CDI |
+| Descriptif | Rejoignez l'équipe Marketing France et participez au rayonnement de nos marques Au sein d'un environnement multi-marques, vous contribuez au développement des marques Marc Orian, Trésor et Histoire d'Or à travers la création et le déploiement de campagnes de communication impactantes. Référent créatif pour Marc Orian… |
 | Localisation | Paris - 75 |
 | Télétravail | non précisé |
 | Langues | non précisé |

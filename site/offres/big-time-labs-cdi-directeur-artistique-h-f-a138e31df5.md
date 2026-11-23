@@ -8,7 +8,7 @@
 | --- | --- |
 | Société | Big Time Labs |
 | Intitulé | CDI Directeur Artistique H/F |
-| Descriptif | CDI |
+| Descriptif | En tant que Directeur / Directrice Artistique, vous serez responsable de définir et piloter la direction artistique des jeux de Big Time Labs, en collaboration avec les équipes de production. Notre jeu flagship est un Tactical RPG multijoueur mobile, actuellement en développement pour une sortie prévue en mars 2027. |
 | Localisation | Montrouge - 92 |
 | Télétravail | non précisé |
 | Langues | non précisé |

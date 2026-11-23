@@ -8,7 +8,7 @@
 | --- | --- |
 | Société | SAVANA |
 | Intitulé | CDI - Graphiste de production (Jeux de Société & Loisirs Créatifs) |
-| Descriptif | SAVANA, éditeur de jeux de société, recherche un graphiste de production à Paris (pas de télétravail) pour mettre en page les supports des jeux et livrer des fichiers prêts à imprimer. |
+| Descriptif | Nous recherchons un(e) passionné(e) de jeux de société et de production graphique qui intégrera l’équipe Produit pour absorber un fort volume de production et livrer des fichiers prêts à imprimer. En tant que Graphiste de production, tes principales missions seront les suivantes : 1. |
 | Localisation | Ville de Paris |
 | Télétravail | aucun |
 | Langues | non précisé |

@@ -8,7 +8,7 @@
 | --- | --- |
 | Société | We Are Social |
 | Intitulé | CDI - Directeur.trice Artistique |
-| Descriptif | Direction artistique de contenus social media et digitaux à Paris, de la conception à la production, avec encadrement d'assistants. Télétravail de 2 jours par semaine. |
+| Descriptif | L’agence recrute un·e directeur·rice artistique à Paris pour concevoir et produire des contenus social media et des campagnes (TikTok, Instagram, Facebook, YouTube), de la prise de brief à la réalisation, et accompagner des assistants DA. Télétravail flexible de 2 jours par semaine. |
 | Localisation | Paris, Île-de-France |
 | Télétravail | partiel |
 | Langues | anglais (oral et écrit) |

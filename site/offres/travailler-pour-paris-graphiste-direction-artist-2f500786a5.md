@@ -8,7 +8,7 @@
 | --- | --- |
 | Société | Travailler pour Paris |
 | Intitulé | Graphiste - Direction Artistique H/F |
-| Descriptif | CDI |
+| Descriptif | Comment et avec qui travaillez-vous ? A la suite de la libération de l'Espace Cardin par le Théâtre de la Ville fin 2023, la Maire de Paris a souhaité que la Ville reprenne ce lieu pour en faire un nouvel établissement nommé « Théâtre de la Concorde - Espace Cardin » dédié à la démocratie et à l'art. |
 | Localisation | Paris 8e - 75 |
 | Télétravail | non précisé |
 | Langues | non précisé |
