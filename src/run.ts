@@ -1,21 +1,14 @@
 import fs from "node:fs";
 import path from "node:path";
-import { PATHS, ROOT } from "./config.js";
-import { writeWorkbook, workbookFileName, toSheetCsvPayload } from "./excel.js";
-import { activeRecipients, emailBody, emailSubject } from "./mail.js";
+import { PATHS } from "./config.js";
+import { activeRecipients, emailBody, emailSubject, pickHighlightOffers } from "./mail.js";
 import { loadMemory, markNewOffers, saveMemory } from "./memory.js";
+import { loadNotionConfig, syncOffersToNotion } from "./notion/index.js";
 import { collectAndFilter, mergeFixtureAndAgent, processRawJobs } from "./pipeline.js";
 import { loadPrompt } from "./prompt.js";
 import { buildSourceStatuses } from "./sources.js";
 import { buildSummary } from "./summary.js";
 import type { JSearchJob, JobOffer, SourceStatus } from "./types.js";
-
-function loadDriveFolderUrl(): string | null {
-  const drivePath = path.join(ROOT, "config", "drive.json");
-  if (!fs.existsSync(drivePath)) return null;
-  const cfg = JSON.parse(fs.readFileSync(drivePath, "utf8")) as { folderUrl?: string };
-  return cfg.folderUrl ?? null;
-}
 
 function parseArgs(argv: string[]) {
   return {
@@ -24,6 +17,7 @@ function parseArgs(argv: string[]) {
     skipSave: argv.includes("--skip-save"),
     jsearchOnly: argv.includes("--jsearch-only"),
     skipRapidApi: argv.includes("--skip-rapidapi"),
+    skipNotion: argv.includes("--skip-notion"),
   };
 }
 
@@ -49,10 +43,13 @@ async function main(): Promise<void> {
       : "Répartition : modèle Cursor → 6 sites (dont Hellowork) ; JSearch → Indeed ; APEC API by API.SH → Apec.",
   );
 
+  const notionCfg = loadNotionConfig();
+  const notionUrl = notionCfg?.databaseUrl ?? null;
+
   if (args.summaryDemo) {
     const { offers, sources } = demoOffers();
     console.log("\n--- Résumé (avec offres fixtures) ---\n");
-    console.log(buildSummary(offers, sources, "https://drive.google.com/drive/folders/demo"));
+    console.log(buildSummary(offers, sources, notionUrl ?? "https://www.notion.so/demo"));
     console.log("\n--- Résumé (zéro offre) ---\n");
     console.log(buildSummary([], sources, null));
     return;
@@ -94,15 +91,6 @@ async function main(): Promise<void> {
   const previous = loadMemory();
   offers = markNewOffers(offers, previous);
 
-  const xlsxPath = await writeWorkbook(offers, sources);
-  console.log(`Excel écrit : ${xlsxPath}`);
-
-  const csv = toSheetCsvPayload(offers, sources);
-  const csvDir = path.join(PATHS.outputDir, "csv-fallback");
-  fs.mkdirSync(csvDir, { recursive: true });
-  fs.writeFileSync(path.join(csvDir, "offres.csv"), csv.offresCsv, "utf8");
-  fs.writeFileSync(path.join(csvDir, "sources.csv"), csv.sourcesCsv, "utf8");
-
   if (!args.skipSave && !args.dryRun) {
     saveMemory(offers);
     console.log(`Mémoire mise à jour : ${PATHS.memory}`);
@@ -110,16 +98,23 @@ async function main(): Promise<void> {
     console.log("Mémoire non modifiée (dry-run).");
   }
 
-  const driveLink = loadDriveFolderUrl();
-  const driveHint = driveLink
-    ? `Dossier Drive : ${driveLink}`
-    : `Déposer « ${workbookFileName()} » dans Drive « Veille emploi graphiste-DA » (voir docs/drive-upload.md).`;
-  console.log(driveHint);
+  let syncUrl = notionUrl;
+  if (args.skipNotion) {
+    console.log("Sync Notion ignorée (--skip-notion).");
+  } else {
+    console.log("\n=== Sync Notion ===\n");
+    const sync = await syncOffersToNotion(offers);
+    syncUrl = sync.databaseUrl || notionUrl;
+    console.log(`Créées : ${sync.created} · Mises à jour : ${sync.updated}`);
+    if (sync.databaseUrl) console.log(`Base : ${sync.databaseUrl}`);
+    for (const e of sync.errors) console.log(`- ${e}`);
+  }
 
-  const summary = buildSummary(offers, sources, driveLink);
+  const summary = buildSummary(offers, sources, syncUrl);
   console.log("\n=== Résumé ===\n");
   console.log(summary);
 
+  const highlights = pickHighlightOffers(offers);
   const recipients = activeRecipients();
   console.log("\n=== Email Gmail (MCP) ===\n");
   if (recipients.length === 0) {
@@ -127,10 +122,10 @@ async function main(): Promise<void> {
   } else {
     console.log(`À : ${recipients.join(", ")}`);
     console.log(`Objet : ${emailSubject()}`);
-    console.log(`Pièce jointe : ${xlsxPath}`);
+    console.log("Pièce jointe : aucune (Notion + highlights)");
     console.log("(Agent Cursor : envoyer via MCP Gmail send_message — voir docs/email-send.md)");
     console.log("\n--- Corps ---\n");
-    console.log(emailBody(summary, driveLink));
+    console.log(emailBody(summary, syncUrl, highlights));
   }
 
   if (collectErrors.length) {

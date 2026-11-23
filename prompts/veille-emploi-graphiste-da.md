@@ -81,23 +81,15 @@ Lister les 6 sources « modèle Cursor » dans `sourcesStatus` même à zéro (p
 
 Société, intitulé, bref descriptif (1-2 phrases), localisation, télétravail (complet / partiel / aucun / non précisé), langues demandées, date de publication ou de mise à jour, source(s), lien cliquable. Dédupliquer : une annonce sur plusieurs sites = une seule ligne listant toutes les sources.
 
-## Export
+## Export Notion
 
-Classeur Excel `Veille graphiste-DA AAAA-MM-JJ-HH.xlsx` avec `HH` = créneau `04` / `12` / `20` (onglets Offres + Sources consultées), déposé dans Google Drive « Veille emploi graphiste-DA ».
+Synchroniser les offres dans la base Notion configurée (`config/notion.json`, secret `NOTION_TOKEN` dans `.env`). Upsert par `Offer id` sans écraser le suivi candidature déjà rempli. Détail : `docs/notion-sync.md`.
+
+Ne plus générer d’Excel ni déposer sur Google Drive. Ne plus régénérer `site/` / `pages:build`.
 
 ## Email
 
-Après création du Excel (et dépôt Drive), envoyer un email **depuis Gmail** (MCP Gmail `send_message`) aux destinataires actifs dans `src/mail.ts`. Joindre le `.xlsx`, objet `Veille emploi graphiste-DA — AAAA-MM-JJ HHh`, corps = résumé + lien Drive. Détail : `docs/email-send.md`.
-
-## Pages GitHub (mise à jour du dépôt)
-
-Après Drive + email, publier les offres en Markdown dans `site/` (rendu natif GitHub, sans Pages). Détail : `docs/pages-github.md`.
-
-1. Lire `config/drive.json` (`folderId`), lister le dossier Drive « Veille emploi graphiste-DA ».
-2. Télécharger **tous** les `.xlsx` de veille dans `data/drive-xlsx/` (créer le dossier si besoin). Ignorer Sheets, CSV, PDF, JSON.
-3. Lancer `npm run pages:build` — agrège les Excel, **déduplique** les offres (pas de doublon sur le récapitulatif), écrit `site/README.md` + `site/offres/*.md` avec les **dates en français** (ex. `22 novembre 2026`, pas `2026-11-22`).
-4. Committer uniquement les fichiers générés sous `site/` (et pousser si un remote est configuré), message du type : `pages: mise à jour offres veille AAAA-MM-JJ HHh`. Ne pas committer `data/drive-xlsx/`, `.env`, ni les secrets.
-5. Ne pas inventer d’offres pour le site : source exclusive = Excel Drive. Si aucun `.xlsx` téléchargeable, le noter dans le résumé et ne pas falsifier `site/`.
+Après sync Notion, envoyer un email **depuis Gmail** (MCP Gmail `send_message`) aux destinataires actifs dans `src/mail.ts`. **Sans pièce jointe**. Objet `Veille emploi graphiste-DA — AAAA-MM-JJ HHh`, corps = résumé + jusqu’à 5 offres prioritaires (nouveautés puis dates récentes) + lien Notion. Détail : `docs/email-send.md`.
 
 ## Mémoire
 
@@ -108,9 +100,8 @@ Lire `data/offres-veille.json` (run précédent), signaler les nouveautés, puis
 1. Lire ce prompt et déterminer le créneau (04:00 / 12:00 / 20:00 Europe/Paris).
 2. Parcourir les 6 sources « modèle Cursor » (fenêtre **8 h**) → écrire `data/offres-agent.json`.
 3. Exécuter :
-   - **04:00** → `npm run veille` (JSearch Indeed + APEC API.SH, fenêtre **24 h** + fusion + Excel + mémoire + résumé)
+   - **04:00** → `npm run veille` (JSearch Indeed + APEC API.SH, fenêtre **24 h** + fusion + sync Notion + mémoire + résumé)
    - **12:00** ou **20:00** → `npm run veille:agent` (fusion agent seule, sans RapidAPI)
-4. Déposer le Excel via MCP Google Drive.
-5. Envoyer l’email Gmail aux destinataires actifs (`src/mail.ts`) avec le Excel en pièce jointe (voir `docs/email-send.md`).
-6. Mettre à jour le Markdown GitHub : télécharger les `.xlsx` Drive → `npm run pages:build` → commit (+ push) de `site/` (déduplication + dates FR ; voir section « Pages GitHub »).
-7. Résumer en français : créneau, nombre d’offres, 2–3 nouveautés, lien Drive, confirmation d’envoi email, confirmation de mise à jour Markdown / commit `site/` (ou zéro offre + sources) ; préciser si RapidAPI a été utilisée (24 h) ou non, et que le modèle a filtré sur 8 h.
+4. Vérifier la sync Notion (créées / mises à jour) ; si `NOTION_TOKEN` manquant, le noter.
+5. Envoyer l’email Gmail aux destinataires actifs (`src/mail.ts`) sans pièce jointe (voir `docs/email-send.md`).
+6. Résumer en français : créneau, nombre d’offres, 2–3 nouveautés, lien Notion, confirmation d’envoi email (ou zéro offre + sources) ; préciser si RapidAPI a été utilisée (24 h) ou non, et que le modèle a filtré sur 8 h.

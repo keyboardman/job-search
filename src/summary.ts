@@ -12,7 +12,7 @@ function scoreNew(o: JobOffer): number {
 export function buildSummary(
   offers: JobOffer[],
   sources: SourceStatus[],
-  driveLink?: string | null,
+  notionLink?: string | null,
 ): string {
   const lines: string[] = [];
   if (offers.length === 0) {
@@ -22,7 +22,7 @@ export function buildSummary(
       const extra = s.remark ? ` — ${s.remark}` : "";
       lines.push(`- ${s.source} : ${s.count}${extra}`);
     }
-    if (driveLink) lines.push(`Fichier Drive : ${driveLink}`);
+    if (notionLink) lines.push(`Base Notion : ${notionLink}`);
     return lines.join("\n");
   }
 
@@ -37,10 +37,10 @@ export function buildSummary(
       lines.push(`- ${o.title} chez ${o.company} (${o.location}, télétravail ${o.remote})`);
     }
   }
-  if (driveLink) {
-    lines.push(`Fichier Drive : ${driveLink}`);
+  if (notionLink) {
+    lines.push(`Base Notion : ${notionLink}`);
   } else {
-    lines.push("Lien Drive : non précisé (dépôt à faire via MCP Google Drive).");
+    lines.push("Lien Notion : non précisé (voir config/notion.json).");
   }
   return lines.join("\n");
 }

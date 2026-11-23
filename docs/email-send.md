@@ -2,16 +2,11 @@
 
 ## Objectif
 
-Après création de `output/Veille graphiste-DA AAAA-MM-JJ-HH.xlsx` (`HH` = 04 / 12 / 20), envoyer un email depuis le compte Gmail authentifié (MCP Gmail) aux destinataires actifs.
+Après synchronisation Notion, envoyer un email depuis le compte Gmail authentifié (MCP Gmail) aux destinataires actifs — **sans pièce jointe Excel**.
 
 ## Destinataires
 
-Liste dans `src/mail.ts` (`EMAIL_TO`) :
-
-- `stella.moisan@gmail.com` — commentée pour l’instant
-- `luc.moisan@gmail.com` — active
-
-Pour (ré)activer Stella : décommenter sa ligne dans `EMAIL_TO`.
+Liste dans `src/mail.ts` (`EMAIL_TO`). Commenter une adresse pour l’exclure.
 
 ## Flux (agent Cursor + MCP Gmail)
 
@@ -20,14 +15,11 @@ Pour (ré)activer Stella : décommenter sa ligne dans `EMAIL_TO`.
 3. Appeler MCP Gmail `send_message` avec :
    - `to` : destinataires actifs
    - `subject` : `Veille emploi graphiste-DA — AAAA-MM-JJ HHh` (date + créneau 04 / 12 / 20 Europe/Paris)
-   - `body` : résumé texte + lien Drive + mention de la pièce jointe (pas de Markdown)
-   - `attachments` : un élément
-     - `filename` : nom du `.xlsx`
-     - `mimeType` : `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`
-     - `content` : contenu du fichier en **base64**
+   - `body` : résumé + jusqu’à 5 offres prioritaires (nouveautés puis dates récentes) + lien Notion (pas de Markdown)
+   - **pas** de `attachments`
 4. Confirmer l’envoi dans le résumé final (id / viewUrl si renvoyés).
 
 ## Prérequis
 
 - MCP **Gmail** authentifié dans Cursor (`plugin-gmail-gmail`).
-- Fichier Excel déjà écrit sous `output/`.
+- Base Notion synchronisée (ou au moins `config/notion.json` renseigné pour le lien).

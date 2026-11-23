@@ -48,12 +48,15 @@ export const PATHS = {
   memory: path.join(ROOT, "data", "offres-veille.json"),
   outputDir: path.join(ROOT, "output"),
   fixturesDir: path.join(ROOT, "test", "fixtures"),
-  /** Cache local des Excel Drive (gitignoré) — source exclusive de `pages:build`. */
+  /** Legacy cache Excel Drive (gitignoré) — plus utilisé par le flux nominal. */
   driveXlsxDir: path.join(ROOT, "data", "drive-xlsx"),
   siteDir: path.join(ROOT, "site"),
+  notionConfig: path.join(ROOT, "config", "notion.json"),
 };
 
+/** @deprecated Remplacé par Notion (`config/notion.json`). */
 export const DRIVE_FOLDER_NAME = "Veille emploi graphiste-DA";
+export const NOTION_DATABASE_NAME = "Veille emploi graphiste-DA";
 export const JSEARCH_HOST = "jsearch.p.rapidapi.com";
 /** Endpoint actuel RapidAPI JSearch (ex-/search obsolète → 404). */
 export const JSEARCH_SEARCH_URL = `https://${JSEARCH_HOST}/search-v2`;

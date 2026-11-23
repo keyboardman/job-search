@@ -98,13 +98,14 @@ describe("summary & excel", () => {
         isNew: true,
       },
     ];
-    const withOffers = buildSummary(offers, sources as SourceStatus[], "https://drive.example/file");
+    const withOffers = buildSummary(offers, sources as SourceStatus[], "https://notion.example/db");
     assert.match(withOffers, /1 offre/);
     assert.match(withOffers, /Directeur artistique/);
-    assert.match(withOffers, /drive\.example/);
+    assert.match(withOffers, /notion\.example/);
+    assert.match(withOffers, /Base Notion/);
   });
 
-  it("écrit un xlsx nommé correctement avec créneau", async () => {
+  it("écrit un xlsx nommé correctement avec créneau (legacy)", async () => {
     const dir = fs.mkdtempSync(path.join(os.tmpdir(), "veille-xlsx-"));
     // 03:00 UTC = 04:00 Europe/Paris (CET en novembre)
     const d = new Date("2026-11-22T03:00:00Z");

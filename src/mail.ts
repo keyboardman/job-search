@@ -1,10 +1,9 @@
-import fs from "node:fs";
-import path from "node:path";
-import { parisDateString, parisScheduleSlot } from "./excel.js";
+import { parisDateString, parisScheduleSlot } from "./schedule.js";
+import type { JobOffer } from "./types.js";
 
 /**
  * Destinataires du mail de veille (envoi via MCP Gmail par l’agent Cursor).
- * Décommenter Stella quand elle doit recevoir le fichier.
+ * Commenter une adresse pour l’exclure.
  */
 export const EMAIL_TO = [
   "stella.moisan@gmail.com",
@@ -16,7 +15,26 @@ export function emailSubject(d = new Date()): string {
   return `Veille emploi graphiste-DA — ${parisDateString(d)} ${slot}h`;
 }
 
-export function emailBody(summary: string, driveLink?: string | null): string {
+function sortHighlights(offers: JobOffer[]): JobOffer[] {
+  return [...offers].sort((a, b) => {
+    if (Boolean(a.isNew) !== Boolean(b.isNew)) return a.isNew ? -1 : 1;
+    if (a.date === "non précisé" && b.date === "non précisé") return 0;
+    if (a.date === "non précisé") return 1;
+    if (b.date === "non précisé") return -1;
+    return b.date.localeCompare(a.date);
+  });
+}
+
+/** Jusqu’à 5 offres : nouveautés d’abord, puis dates les plus récentes. */
+export function pickHighlightOffers(offers: JobOffer[], limit = 5): JobOffer[] {
+  return sortHighlights(offers).slice(0, limit);
+}
+
+export function emailBody(
+  summary: string,
+  notionLink?: string | null,
+  highlights: JobOffer[] = [],
+): string {
   const lines = [
     "Bonjour,",
     "",
@@ -24,25 +42,19 @@ export function emailBody(summary: string, driveLink?: string | null): string {
     "",
     summary,
   ];
-  if (driveLink) {
-    lines.push("", `Dossier Drive : ${driveLink}`);
+  if (highlights.length) {
+    lines.push("", "Offres à regarder en priorité :");
+    for (const o of highlights) {
+      const link = o.urls[0] ? ` — ${o.urls[0]}` : "";
+      const tag = o.isNew ? " [nouveau]" : "";
+      lines.push(`- ${o.company} — ${o.title}${tag}${link}`);
+    }
   }
-  lines.push("", "Le fichier Excel est en pièce jointe.", "", "— Agent veille emploi");
+  if (notionLink) {
+    lines.push("", `Base Notion : ${notionLink}`);
+  }
+  lines.push("", "— Agent veille emploi");
   return lines.join("\n");
-}
-
-/** Prépare la pièce jointe pour MCP Gmail `send_message`. */
-export function excelAttachment(filePath: string): {
-  filename: string;
-  mimeType: string;
-  content: string;
-} {
-  const content = fs.readFileSync(filePath).toString("base64");
-  return {
-    filename: path.basename(filePath),
-    mimeType: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-    content,
-  };
 }
 
 export function activeRecipients(): string[] {
