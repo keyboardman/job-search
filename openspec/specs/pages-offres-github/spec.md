@@ -40,7 +40,7 @@ Le système MUST publier une page de détail par offre distincte, avec au minimu
 - **THEN** un lien permet de revenir à la page récapitulatif
 
 ### Requirement: Publication dans le dépôt GitHub
-Le système MUST écrire la page récapitulatif et les pages de détail dans le dépôt GitHub, de façon consultable via GitHub Pages (ou équivalent servi depuis le dépôt). Une régénération MUST écraser les pages précédentes pour refléter l’état courant des Excel Drive.
+Le système MUST écrire la page récapitulatif et les pages de détail en Markdown dans le dépôt GitHub, consultables directement via le rendu natif GitHub (sans GitHub Pages obligatoire). Une régénération MUST écraser les pages précédentes pour refléter l’état courant des Excel Drive.
 
 #### Scenario: Régénération à jour
 - **WHEN** de nouveaux Excel ont été déposés dans Drive et la génération est relancée

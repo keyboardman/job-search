@@ -18,7 +18,7 @@ Une automation avec cron `0 4,12,20 * * *` (fuseau Europe/Paris), ou trois autom
 |-------|--------|
 | Nom | Veille emploi graphiste-DA |
 | Déclencheur | Tous les jours à **04:00**, **12:00** et **20:00** fuseau **Europe/Paris** (toutes les 8 h) |
-| Instructions | Suivre `prompts/veille-emploi-graphiste-da.md` : (1) parcourir les 6 sources modèle Cursor (offres des **8 dernières heures**) → `data/offres-agent.json` ; (2) à **04:00** `npm run veille` (RapidAPI 24 h), à **12:00** / **20:00** `npm run veille:agent` ; (3) déposer via MCP Google Drive ; (4) email Gmail (`src/mail.ts`) avec Excel en PJ ; (5) Pages GitHub : télécharger les `.xlsx` Drive → `npm run pages:build` → commit/push `site/` (dédup + dates FR) ; (6) résumé FR |
+| Instructions | Suivre `prompts/veille-emploi-graphiste-da.md` : (1) parcourir les 6 sources modèle Cursor (offres des **8 dernières heures**) → `data/offres-agent.json` ; (2) à **04:00** `npm run veille` (RapidAPI 24 h), à **12:00** / **20:00** `npm run veille:agent` ; (3) déposer via MCP Google Drive ; (4) email Gmail (`src/mail.ts`) avec Excel en PJ ; (5) Markdown GitHub : télécharger les `.xlsx` Drive → `npm run pages:build` → commit/push `site/` (README.md + offres/*.md, dédup + dates FR) ; (6) résumé FR |
 | Outils | Navigateur / web ; MCP Google Drive ; MCP Gmail ; secret `RAPIDAPI_KEY` (créneau 04:00 uniquement) |
 | Repo | Ce dépôt `job-search` |
 

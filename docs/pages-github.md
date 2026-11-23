@@ -2,7 +2,9 @@
 
 ## Objectif
 
-Publier dans le dépôt une page récapitulatif (`site/index.html`) et une page de détail par offre (`site/offres/<slug>.html`), alimentées **uniquement** par les fichiers Excel `.xlsx` du dossier Drive **Veille emploi graphiste-DA**.
+Publier dans le dépôt un récapitulatif Markdown (`site/README.md`) et une fiche Markdown par offre (`site/offres/<slug>.md`), alimentées **uniquement** par les fichiers Excel `.xlsx` du dossier Drive **Veille emploi graphiste-DA**.
+
+Les fichiers sont visibles **directement sur GitHub** (rendu Markdown natif) — pas besoin d’activer GitHub Pages.
 
 Les JSON locaux (`data/offres-agent.json`, `data/offres-veille.json`) ne sont **pas** une source pour ces pages.
 
@@ -29,7 +31,7 @@ Créer le dossier au besoin :
 mkdir -p data/drive-xlsx
 ```
 
-### 2. Générer le site
+### 2. Générer le Markdown
 
 ```bash
 npm run pages:build
@@ -39,14 +41,13 @@ npm run pages:build -- --input data/drive-xlsx --out site
 
 La commande échoue clairement si le dossier d’entrée est absent ou ne contient aucun `.xlsx`.
 
-Les offres sont **dédupliquées** entre tous les Excel lus. Les dates s’affichent **en français** sur le site (ex. `22 novembre 2026`).
+Les offres sont **dédupliquées** entre tous les Excel lus. Les dates s’affichent **en français** (ex. `22 novembre 2026`).
 
-### 3. Committer et publier
+### 3. Committer
 
-1. Committer le dossier `site/` (HTML + CSS générés) — typiquement après chaque run de veille (voir le prompt).
-2. Sur GitHub : **Settings → Pages → Build and deployment** → Source = Deploy from a branch, dossier **`/site`** (ou racine si vous servez autrement).
-3. Après déploiement, l’URL Pages pointe vers le récapitulatif ; chaque offre a sa page détail.
+1. Committer le dossier `site/` (Markdown généré) — typiquement après chaque run de veille (voir le prompt).
+2. Sur GitHub, ouvrir `site/README.md` pour le récapitulatif ; chaque offre a sa fiche dans `site/offres/`.
 
 ## Régénération
 
-Après de nouveaux dépôts Excel dans Drive, répéter téléchargement → `npm run pages:build` → commit de `site/`. Une régénération écrase les pages détail précédentes (liste à jour, sans doublons).
+Après de nouveaux dépôts Excel dans Drive, répéter téléchargement → `npm run pages:build` → commit de `site/`. Une régénération écrase les fiches détail précédentes (et retire d’éventuels anciens HTML).

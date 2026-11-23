@@ -68,7 +68,7 @@ mkdir -p data/drive-xlsx
 npm run pages:build
 ```
 
-Sortie : `site/index.html` et `site/offres/*.html` (dédupliquées, dates en français) — activer GitHub Pages sur le dossier `/site`. Chaque run de veille (prompt) régénère et commit `site/` après le dépôt Drive.
+Sortie : `site/README.md` et `site/offres/*.md` (dédupliquées, dates en français) — visibles directement sur GitHub. Chaque run de veille (prompt) régénère et commit `site/` après le dépôt Drive.
 
 ## Planning
 

@@ -112,7 +112,7 @@ describe("pages — agrégation multi-xlsx", () => {
   });
 });
 
-describe("pages — génération HTML", () => {
+describe("pages — génération Markdown", () => {
   let tmp: string;
 
   before(() => {
@@ -123,7 +123,7 @@ describe("pages — génération HTML", () => {
     fs.rmSync(tmp, { recursive: true, force: true });
   });
 
-  it("écrit index, CSS et pages détail avec liens relatifs", () => {
+  it("écrit README.md et pages détail .md avec liens relatifs", () => {
     const offers = [
       sampleOffer(),
       sampleOffer({
@@ -137,24 +137,26 @@ describe("pages — génération HTML", () => {
       }),
     ];
     const result = writeSitePages(offers, tmp);
+    assert.equal(result.indexPath, path.join(tmp, "README.md"));
     assert.ok(fs.existsSync(result.indexPath));
-    assert.ok(fs.existsSync(path.join(tmp, "assets", "style.css")));
+    assert.ok(!fs.existsSync(path.join(tmp, "assets")));
+    assert.ok(!fs.existsSync(path.join(tmp, "index.html")));
     assert.equal(result.offerPaths.length, 2);
+    assert.ok(result.offerPaths.every((p) => p.endsWith(".md")));
 
     const index = fs.readFileSync(result.indexPath, "utf8");
     assert.match(index, /Studio Nord/);
     assert.match(index, /22 novembre 2026/);
-    assert.match(index, /\.\/offres\/.+\.html/);
-    assert.match(index, /\.\/assets\/style\.css/);
-    assert.doesNotMatch(index, />2026-11-22</);
+    assert.match(index, /\.\/offres\/.+\.md/);
+    assert.doesNotMatch(index, /2026-11-22/);
 
     const slug = offerSlug(offers[0]);
-    const detail = fs.readFileSync(path.join(tmp, "offres", `${slug}.html`), "utf8");
+    const detail = fs.readFileSync(path.join(tmp, "offres", `${slug}.md`), "utf8");
     assert.match(detail, /Création de supports digitaux/);
     assert.match(detail, /22 novembre 2026/);
     assert.match(detail, /Retour au récapitulatif/);
-    assert.match(detail, /\.\.\/index\.html/);
-    assert.match(detail, /Nouveau<\/dt><dd>oui/);
+    assert.match(detail, /\.\.\/README\.md/);
+    assert.match(detail, /\| Nouveau \| oui \|/);
   });
 
   it("formate les dates en français", () => {
@@ -166,11 +168,11 @@ describe("pages — génération HTML", () => {
   it("écrase les pages précédentes à la régénération", () => {
     const first = writeSitePages([sampleOffer({ company: "Ancien" })], tmp);
     const oldSlug = first.slugs[0];
-    assert.ok(fs.existsSync(path.join(tmp, "offres", `${oldSlug}.html`)));
+    assert.ok(fs.existsSync(path.join(tmp, "offres", `${oldSlug}.md`)));
 
     const second = writeSitePages([sampleOffer({ company: "Nouveau Studio" })], tmp);
     assert.equal(second.slugs.length, 1);
-    assert.ok(!fs.existsSync(path.join(tmp, "offres", `${oldSlug}.html`)));
+    assert.ok(!fs.existsSync(path.join(tmp, "offres", `${oldSlug}.md`)));
     const index = fs.readFileSync(second.indexPath, "utf8");
     assert.match(index, /Nouveau Studio/);
     assert.doesNotMatch(index, /Ancien/);
