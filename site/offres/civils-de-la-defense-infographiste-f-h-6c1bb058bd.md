@@ -10,7 +10,7 @@
 | Intitulé | INFOGRAPHISTE F/H |
 | Descriptif | Descriptif de l'organisation Le ministère des armées assure la protection du territoire, de la population et des intérêts français. Il est également impliqué dans les missions de service public. |
 | Localisation | Ville de Paris |
-| Télétravail | non précisé |
+| Télétravail | aucun |
 | Langues | non précisé |
 | Date | non précisé |
 | Sources | non précisé |

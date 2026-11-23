@@ -8,7 +8,7 @@
 | --- | --- |
 | Société | Manpower |
 | Intitulé | Maquettiste Graphiste Opérateur Machine H/F |
-| Descriptif | Manpower Compiègne recrute en CDI, pour un client du secteur de l’édition et de la presse, un·e maquettiste graphiste opérateur machine. Le nom du client et le détail des missions au-delà de cette introduction n’étaient pas accessibles. |
+| Descriptif | Manpower à Compiègne recrute pour un acteur de l'édition et de la presse un ou une maquettiste graphiste opérateur machine. Le corps de la fiche détail ne s'est pas chargé. |
 | Localisation | Compiègne (60), Oise |
 | Télétravail | non précisé |
 | Langues | non précisé |
