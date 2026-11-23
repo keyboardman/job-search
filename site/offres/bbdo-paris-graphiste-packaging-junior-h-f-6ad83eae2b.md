@@ -10,7 +10,7 @@
 | Intitulé | Graphiste packaging junior (H/F) |
 | Descriptif | BBDO Paris recherche un(e) Graphiste packaging / un(e) Assistant(e) DA packaging pour rejoindre notre équipe créative sur un client majeur de la food. Vous développerez et déclinerez des univers graphiques forts et cohérents, sous la supervision du Directeur de Création Adjoint. |
 | Localisation | Paris |
-| Télétravail | non précisé |
+| Télétravail | partiel |
 | Langues | non précisé |
 | Date | non précisé |
 | Sources | non précisé |

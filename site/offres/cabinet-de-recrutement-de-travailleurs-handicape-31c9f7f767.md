@@ -8,7 +8,7 @@
 | --- | --- |
 | Société | Cabinet de recrutement de travailleurs handicapés |
 | Intitulé | Graphiste Confirmé & Chef de Projet Créatif H/F |
-| Descriptif | CDD ; 6 mois |
+| Descriptif | Défi RH, cabinet de recrutement dédié à l'emploi des Travailleurs Handicapés recherche, pour l'un de ses clients, dans le secteur des Télécoms : Graphiste confirmé & chef de projet créatif F/H À ce titre, vos missions sont les suivantes : · Concevoir et décliner des concepts créatifs et des identités visuelles… |
 | Localisation | Issy-les-Moulineaux - 92 |
 | Télétravail | non précisé |
 | Langues | non précisé |

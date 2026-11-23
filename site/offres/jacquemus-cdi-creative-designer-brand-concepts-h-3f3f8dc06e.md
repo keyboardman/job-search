@@ -2,13 +2,13 @@
 
 # CDI - CREATIVE DESIGNER - BRAND CONCEPTS (H/F)
 
-**Jacquemus**
+**JACQUEMUS**
 
 | Champ | Valeur |
 | --- | --- |
-| Société | Jacquemus |
+| Société | JACQUEMUS |
 | Intitulé | CDI - CREATIVE DESIGNER - BRAND CONCEPTS (H/F) |
-| Descriptif | Conception de langages graphiques, de systèmes typographiques et de campagnes pour la maison, au studio image à Paris 8e. Maîtrise de Photoshop, Illustrator, InDesign, After Effects et Premiere. |
+| Descriptif | Recherches créatives et graphiques pour le studio image, rue de Lisbonne à Paris 8e. Maîtrise de Photoshop, Illustrator, InDesign, After Effects et Premiere. |
 | Localisation | Paris 8e, Île-de-France |
 | Télétravail | non précisé |
 | Langues | non précisé |

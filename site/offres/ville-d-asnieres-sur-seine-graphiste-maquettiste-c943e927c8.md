@@ -8,7 +8,7 @@
 | --- | --- |
 | Société | Ville d'Asnières-sur-Seine |
 | Intitulé | Graphiste - Maquettiste - Asnières-Sur-Seine H/F |
-| Descriptif | Au sein de la direction de la communication, création et mise en page des supports print et web de la ville (magazine municipal, affiches, réseaux), sur la suite Adobe. |
+| Descriptif | Au sein de la direction de la communication, création et mise en page des supports print et web de la ville (magazine, affiches, réseaux sociaux), sur la suite Adobe. |
 | Localisation | Asnières-sur-Seine (92), Île-de-France |
 | Télétravail | non précisé |
 | Langues | non précisé |

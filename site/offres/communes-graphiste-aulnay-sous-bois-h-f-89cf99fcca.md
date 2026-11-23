@@ -8,9 +8,9 @@
 | --- | --- |
 | Société | Communes |
 | Intitulé | Graphiste - Aulnay-Sous-Bois H/F |
-| Descriptif | Fonctionnaire |
+| Descriptif | Le graphiste a pour principales missions de concevoir, réaliser et superviser la création graphique des supports et outils de communication de la ville (affiches, flyers, livret, journal de la ville, journal interne, web, production de supports vidéos....) Il garantit la cohérence entre le fond du message et ses… |
 | Localisation | Aulnay-sous-Bois - 93 |
-| Télétravail | partiel |
+| Télétravail | non précisé |
 | Langues | non précisé |
 | Date | non précisé |
 | Sources | non précisé |

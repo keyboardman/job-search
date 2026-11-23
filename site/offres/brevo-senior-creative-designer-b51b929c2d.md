@@ -8,7 +8,7 @@
 | --- | --- |
 | Société | Brevo |
 | Intitulé | Senior Creative Designer |
-| Descriptif | Au sein de l'équipe Brand à Paris, évolution de l'identité visuelle et création des supports de campagne (digital, social, print, événementiel). Organisation remote-friendly. |
+| Descriptif | Au sein de l'équipe de marque à Paris, évolution de l'identité visuelle et création des supports de campagne (digital, social, print, événementiel). Organisation présentée comme remote-friendly. |
 | Localisation | Paris, Île-de-France |
 | Télétravail | partiel |
 | Langues | anglais professionnel (C1) |
