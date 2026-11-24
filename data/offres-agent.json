@@ -1,13 +1,55 @@
 {
   "schemaVersion": 1,
-  "collectedAt": null,
+  "collectedAt": "2026-11-24T03:07:47Z",
   "sourcesStatus": [
-    { "source": "Welcome to the Jungle", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "LinkedIn Emplois", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "France Travail", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "Hellowork", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "ProfilCulture", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "JobCulture", "count": 0, "remark": "en attente collecte modèle Cursor" }
+    {
+      "source": "Welcome to the Jungle",
+      "count": 1,
+      "remark": "Pages métier emploi-graphiste et emploi-directeur-artistique lues (recherche générale en shell client). 1 offre publiée le 24/11 à 00:21 UTC (il y a environ 3 h). Page DA : plus récent le 22/11 (stage, hors fenêtre)."
+    },
+    {
+      "source": "LinkedIn Emplois",
+      "count": 1,
+      "remark": "Fenêtre 24 h puis conservation des offres clairement < 8 h. Magnificat affiché « il y a 16 heures » sur LinkedIn, retenu car republie sur WTTJ dans les 8 h. Aucune autre offre graphiste/DA < 8 h en zone. Aquent Art Director « il y a 8 heures » déjà vu au créneau 20 h (~19h15 Paris), hors fenêtre stricte. Graphic Designer Cannes 4 h, présentiel hors IDF/60/02."
+    },
+    {
+      "source": "France Travail",
+      "count": 0,
+      "remark": "Tri par date, mots-clés graphiste et directeur artistique. Plus récent : « publié hier » (HEC Jouy-en-Josas, ~10 h sur LinkedIn). Rien clairement < 8 h."
+    },
+    {
+      "source": "Hellowork",
+      "count": 0,
+      "remark": "Tri par date, graphiste / directeur artistique / graphic designer, France. En zone, plus récent graphiste : Havea Paris 8e il y a 11 h. Infographiste Synergie Nevers il y a 8 h, intérim sur site (58), hors zone."
+    },
+    {
+      "source": "ProfilCulture",
+      "count": 0,
+      "remark": "Mots-clés graphiste et directeur artistique. Dates au jour, maximum 23/11/26 sans heure ; les annonces graphiste de ce jour sont des stages. Rien clairement < 8 h."
+    },
+    {
+      "source": "JobCulture",
+      "count": 0,
+      "remark": "Pages métier graphiste (20 fiches) et directeur artistique (1 stage). Pas d’heure sur les listes. Fiche la plus récente consultée publiée le 16/09/2026 ; graphiste Beauvais le 07/08/2026. Rien < 8 h."
+    }
   ],
-  "offers": []
+  "offers": [
+    {
+      "company": "Média-Participations",
+      "title": "Graphiste Maquettiste F/H MAGNIFICAT",
+      "summary": "CDI à Paris 19e, rattaché au directeur marketing de Magnificat : conception graphique des documents de promotion print et web, et mise en page d’une partie des livres. Télétravail occasionnel (1 à 2 jours) envisagé une fois le poste acquis.",
+      "location": "Paris 19e (57 Rue Gaston Tessier, 75019)",
+      "remote": "partiel",
+      "languages": "non précisé",
+      "date": "2026-11-24",
+      "sources": [
+        "Welcome to the Jungle",
+        "LinkedIn Emplois"
+      ],
+      "urls": [
+        "https://www.welcometothejungle.com/fr/companies/media-participations/jobs/graphiste-maquettiste-f-h-magnificat_paris",
+        "https://fr.linkedin.com/jobs/view/graphiste-maquettiste-f-h-magnificat-at-m%C3%A9dia-participations-4493758378"
+      ]
+    }
+  ]
 }

@@ -1,5 +1,17 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-22T12:27:29.597Z",
-  "offers": []
+  "updatedAt": "2026-11-24T03:08:51.844Z",
+  "offers": [
+    {
+      "id": "970553e776969eef",
+      "company": "Média-Participations",
+      "title": "Graphiste Maquettiste F/H MAGNIFICAT",
+      "location": "Paris 19e (57 Rue Gaston Tessier, 75019)",
+      "date": "2026-11-24",
+      "urls": [
+        "https://www.welcometothejungle.com/fr/companies/media-participations/jobs/graphiste-maquettiste-f-h-magnificat_paris",
+        "https://fr.linkedin.com/jobs/view/graphiste-maquettiste-f-h-magnificat-at-m%C3%A9dia-participations-4493758378"
+      ]
+    }
+  ]
 }
