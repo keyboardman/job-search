@@ -1,5 +1,37 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-22T12:27:29.597Z",
-  "offers": []
+  "updatedAt": "2026-11-24T19:12:19.192Z",
+  "offers": [
+    {
+      "id": "a3a45e1a95bb08d8",
+      "company": "Groupe Bon Marché",
+      "title": "CDD - Graphiste Evènementiel (F/H)",
+      "location": "Paris",
+      "date": "2026-11-24",
+      "urls": [
+        "https://www.linkedin.com/jobs/view/4469461563"
+      ]
+    },
+    {
+      "id": "eabcef08e07c8b3f",
+      "company": "CY Cergy Paris Université",
+      "title": "Graphiste, chargé de communication H/F",
+      "location": "Cergy (95), Val-d'Oise",
+      "date": "2026-11-24",
+      "urls": [
+        "https://www.linkedin.com/jobs/view/4493031715"
+      ]
+    },
+    {
+      "id": "66f61fd053433cec",
+      "company": "Groupe Eduneo",
+      "title": "Motion designer senior — Direction artistique et narration H/F (Freelance)",
+      "location": "Reims (51), France",
+      "date": "2026-11-24",
+      "urls": [
+        "https://www.linkedin.com/jobs/view/4494369577",
+        "https://www.hellowork.com/fr-fr/emplois/85824978.html"
+      ]
+    }
+  ]
 }
