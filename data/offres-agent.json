@@ -1,13 +1,74 @@
 {
   "schemaVersion": 1,
-  "collectedAt": null,
+  "collectedAt": "2026-11-24T19:12:18Z",
   "sourcesStatus": [
-    { "source": "Welcome to the Jungle", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "LinkedIn Emplois", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "France Travail", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "Hellowork", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "ProfilCulture", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "JobCulture", "count": 0, "remark": "en attente collecte modèle Cursor" }
+    {
+      "source": "Welcome to the Jungle",
+      "count": 0,
+      "remark": "Pages métier graphiste et directeur artistique lues : rien sous 8 h (plus récent, Magnificat, il y a 19 h). La recherche générale ne liste plus les offres."
+    },
+    {
+      "source": "LinkedIn Emplois",
+      "count": 3,
+      "remark": "Filtre 8 h. Stages, hors intitulé et hors zone écartés (Nîmes sur site, Cesson-Sévigné en télétravail partiel)."
+    },
+    {
+      "source": "France Travail",
+      "count": 0,
+      "remark": "Rien en heures sur graphiste (Paris) ni directeur artistique. « Publié aujourd'hui » sans heure : DA à Amilly (45), hors zone."
+    },
+    {
+      "source": "Hellowork",
+      "count": 1,
+      "remark": "Tri par date, France. Sous 8 h écartés : hors zone (Cesson-Sévigné, Plérin, Roubaix en télétravail partiel) ou hors intitulé."
+    },
+    {
+      "source": "ProfilCulture",
+      "count": 0,
+      "remark": "Annonces graphiste datées du 24/11/2026 : stages (FETART, Emmanuel Guillaud), sans heure. Pas de DA non-stage dans la fenêtre."
+    },
+    {
+      "source": "JobCulture",
+      "count": 0,
+      "remark": "Recherches graphiste et directeur artistique : aucune annonce du 24/11/2026. Plus récente lue : publiée le 23/11/2026 (Lyon, hors zone)."
+    }
   ],
-  "offers": []
+  "offers": [
+    {
+      "company": "Groupe Bon Marché",
+      "title": "CDD - Graphiste Evènementiel (F/H)",
+      "summary": "CDD à Paris, au sein de la Direction Artistique et Image, pour créer les identités visuelles et les supports print et digitaux des événements du Bon Marché, puis suivre leur pose avec les scénographes. La suite Adobe et le motion design sont demandés.",
+      "location": "Paris",
+      "remote": "non précisé",
+      "languages": "non précisé",
+      "date": "2026-11-24",
+      "sources": ["LinkedIn Emplois"],
+      "urls": ["https://www.linkedin.com/jobs/view/4469461563"]
+    },
+    {
+      "company": "CY Cergy Paris Université",
+      "title": "Graphiste, chargé de communication H/F",
+      "summary": "CDD de 3 mois à Cergy pour réaliser les supports de communication print et digitaux de CY Tech (réseaux sociaux, brochures, affiches, supports événementiels) et participer à la communication interne ainsi qu'à l'organisation d'événements.",
+      "location": "Cergy (95), Val-d'Oise",
+      "remote": "non précisé",
+      "languages": "non précisé",
+      "date": "2026-11-24",
+      "sources": ["LinkedIn Emplois"],
+      "urls": ["https://www.linkedin.com/jobs/view/4493031715"]
+    },
+    {
+      "company": "Groupe Eduneo",
+      "title": "Motion designer senior — Direction artistique et narration H/F (Freelance)",
+      "summary": "Mission freelance en télétravail complet pour l'école à distance EDAA : concevoir la direction artistique et la narration des projets de référence d'une nouvelle formation en motion design, et transmettre cette démarche à des débutants.",
+      "location": "Reims (51), France",
+      "remote": "complet",
+      "languages": "non précisé",
+      "date": "2026-11-24",
+      "sources": ["LinkedIn Emplois", "Hellowork"],
+      "urls": [
+        "https://www.linkedin.com/jobs/view/4494369577",
+        "https://www.hellowork.com/fr-fr/emplois/85824978.html"
+      ]
+    }
+  ]
 }
