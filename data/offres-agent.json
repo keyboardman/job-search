@@ -1,13 +1,53 @@
 {
   "schemaVersion": 1,
-  "collectedAt": null,
+  "collectedAt": "2026-11-24T11:10:35Z",
   "sourcesStatus": [
-    { "source": "Welcome to the Jungle", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "LinkedIn Emplois", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "France Travail", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "Hellowork", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "ProfilCulture", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "JobCulture", "count": 0, "remark": "en attente collecte modèle Cursor" }
+    {
+      "source": "Welcome to the Jungle",
+      "count": 1,
+      "remark": "Pages métier graphiste, infographiste et directeur artistique : rien sous 8 h. Fiche Magnificat published_at 2026-11-24T00:21:59Z (environ 11 h), hors fenêtre ; même annonce retenue via LinkedIn (3 h) et Hellowork (7 h)."
+    },
+    {
+      "source": "LinkedIn Emplois",
+      "count": 1,
+      "remark": "Filtre 8 h (France, télétravail, graphic designer, art director, pagination). 1 retenue : Graphiste Maquettiste Livremploi / Média-Participations, Paris, il y a 3 h. Exclus : stages (Lacoste, Essilor) et intitulés hors périmètre (création graphique Lagardère, motion, UX). Oise et Aisne : liste vide."
+    },
+    {
+      "source": "France Travail",
+      "count": 0,
+      "remark": "Tri par date. « Publié aujourd'hui » sans heure : Gutenberg Boulogne (Hellowork : il y a 1 jour, hors 8 h) et directrice artistique Amilly (45, hors zone). Infographiste : plus récent « publié hier ». Rien retenu."
+    },
+    {
+      "source": "Hellowork",
+      "count": 1,
+      "remark": "Tri par date, France, Île-de-France, Oise, Aisne, maquettiste et direction artistique. 1 retenue : Graphiste Maquettiste Paris, il y a 7 h (publiée le 24/11/2026). Exclus hors zone : ETG Plérin (22, 3 h), Nice (7 h), Région AURA Lyon (7 h), Pays de la Loire Nantes (7 h). DA : rien sous 8 h."
+    },
+    {
+      "source": "ProfilCulture",
+      "count": 0,
+      "remark": "Recherches graphiste et directeur artistique. Annonces du 24/11 sans heure : stages (FETART Paris 19e, Emmanuel Guillaud). Rien retenu."
+    },
+    {
+      "source": "JobCulture",
+      "count": 0,
+      "remark": "Recherche graphiste et page métier directeur artistique. Pas d'heure affichée ; codes les plus récents au 23/11 (Auvergne-Rhône-Alpes, Nice, Pays de la Loire), hors zone. Rien retenu."
+    }
   ],
-  "offers": []
+  "offers": [
+    {
+      "company": "Média-Participations",
+      "title": "Graphiste Maquettiste F/H MAGNIFICAT",
+      "summary": "CDI pour Magnificat, à Paris 19e : conception des supports de promotion print et web, mise en page d'ouvrages et préparation des fichiers d'impression. Au moins 2 ans d'expérience et maîtrise d'InDesign et de Photoshop ; télétravail occasionnel de 1 à 2 jours.",
+      "location": "Paris 19e (57 Rue Gaston Tessier, 75019)",
+      "remote": "partiel",
+      "languages": "non précisé",
+      "date": "2026-11-24",
+      "sources": ["Welcome to the Jungle", "LinkedIn Emplois", "Hellowork"],
+      "urls": [
+        "https://www.welcometothejungle.com/fr/companies/media-participations/jobs/graphiste-maquettiste-f-h-magnificat_paris",
+        "https://www.linkedin.com/jobs/view/4494103249",
+        "https://www.hellowork.com/fr-fr/emplois/85814689.html"
+      ]
+    }
+  ]
 }
