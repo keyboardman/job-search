@@ -1,13 +1,37 @@
 {
   "schemaVersion": 1,
-  "collectedAt": null,
+  "collectedAt": "2026-11-25T11:10:21Z",
   "sourcesStatus": [
-    { "source": "Welcome to the Jungle", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "LinkedIn Emplois", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "France Travail", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "Hellowork", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "ProfilCulture", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "JobCulture", "count": 0, "remark": "en attente collecte modèle Cursor" }
+    {
+      "source": "Welcome to the Jungle",
+      "count": 0,
+      "remark": "Page métier graphiste lue (tri récent). Une offre dans les 8 h : GRAPHISTE / DESIGNER MULTIMEDIA, CMA Grand Est, Laxou (54), publiée 2026-11-25T10:51:33Z, télétravail ponctuel 1-2 j — hors zone. Magnificat (Paris 19e) publiée 2026-11-24T00:21:59Z, hors fenêtre. Page métier directeur artistique : plus récente le 22/11. Pages infographiste et art director sans liste d’offres."
+    },
+    {
+      "source": "LinkedIn Emplois",
+      "count": 0,
+      "remark": "Filtre 8 h (f_TPR=r28800), requêtes graphiste, directeur artistique, direction artistique, infographiste, Paris et télétravail. Rien de retenu. Vues puis exclues : Designer graphique multimédia CMA Grand Est Laxou (4494901576, quelques minutes, hors zone), Brand and Graphic Designer Hager Obernai (4494489523, ~4 h, télétravail partiel), Visual Creative Maker BETC Pantin (4494781115, ~6 h, intitulé hors périmètre), stages. Graphiste Cergy (4493031715) il y a 17 h. Paris 8 h : stages et hors intitulé uniquement."
+    },
+    {
+      "source": "France Travail",
+      "count": 0,
+      "remark": "Pas de filtre 8 h : « publié aujourd’hui » sans heure, non retenu sans recoupement. Vitavea Paris 8e (9161454) = Hellowork il y a 1 jour ; Cergy (9160683) = LinkedIn il y a 17 h ; Laxou (216WDVQ) hors zone ; Hager Obernai (9174306) hors zone ; Plérin 22 hors zone ; DA Roubaix (9170177, 59) sans télétravail. Infographiste et maquettiste : plus récent « hier »."
+    },
+    {
+      "source": "Hellowork",
+      "count": 0,
+      "remark": "Tri par date, mots-clés graphiste, directeur artistique, infographiste, graphic designer, maquettiste. Sous 8 h : Hager Obernai (85858272, 5 h, télétravail jusqu’à 2 j/semaine, 67), stage Thales Vélizy (85856847, 8 h), DA mairie de Perpignan (85857996, 5 h, 66, pas de télétravail), intervenant artistique Montreuil (85857610, 5 h, hors intitulé). Vitavea (85792521) il y a 1 jour. Suite à partir de 11 h."
+    },
+    {
+      "source": "ProfilCulture",
+      "count": 0,
+      "remark": "Pas d’heure. Graphiste : plus récent le 24/11/26 (dont stages). Mot-clé directeur le 25/11/26 : direction et administration, pas graphiste ni DA. DA de festivals à Strasbourg datée du 12/11/26."
+    },
+    {
+      "source": "JobCulture",
+      "count": 0,
+      "remark": "Pas d’heure affichée. Recherche graphiste : code le plus récent 23/11/2026 (hors zone). Recherche directeur artistique : code le plus récent 24/11/2026, intitulés hors DA. Page métier DA : un stage. Rien daté du 25/11/2026."
+    }
   ],
   "offers": []
 }
