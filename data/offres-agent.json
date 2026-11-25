@@ -1,13 +1,71 @@
 {
   "schemaVersion": 1,
-  "collectedAt": null,
+  "collectedAt": "2026-11-25T03:09:00Z",
   "sourcesStatus": [
-    { "source": "Welcome to the Jungle", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "LinkedIn Emplois", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "France Travail", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "Hellowork", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "ProfilCulture", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "JobCulture", "count": 0, "remark": "en attente collecte modèle Cursor" }
+    {
+      "source": "Welcome to the Jungle",
+      "count": 0,
+      "remark": "Pages métier graphiste et directeur artistique lues. Plus récent graphiste : Magnificat, « hier », hors fenêtre 8 h. Plus récent DA : stage il y a 3 jours. La recherche /jobs ne liste pas les offres."
+    },
+    {
+      "source": "LinkedIn Emplois",
+      "count": 1,
+      "remark": "Filtre 8 h (f_TPR=r28800) : graphiste, directeur artistique, art director, infographiste, maquettiste, Oise, Aisne, télétravail. Retenu : Celine, Digital Content Art Director, Paris, il y a 2 h. Exclus : stages, Montréal, Visual Creative Maker Pantin (intitulé hors cible, 6 h)."
+    },
+    {
+      "source": "France Travail",
+      "count": 0,
+      "remark": "Recherches graphiste et directeur artistique. Plus récent affiché : « publié hier » sans heure, donc hors fenêtre 8 h à 04 h (Graphiste concepteur Manpower Saint-Brieuc ; DA Mairie d’Amilly, 45)."
+    },
+    {
+      "source": "Hellowork",
+      "count": 2,
+      "remark": "Listes graphiste (France, Île-de-France, Oise, Aisne) et directeur artistique Île-de-France, tri par date. Retenus : Graphiste Alfortville (publié 2026-11-25T00:10Z) et Directeur artistique chef de projet Paris 18e, Vene (2026-11-25T00:05Z). Exclus sous 8 h : stages, Perpignan, Auxerre, motion designer Betclic."
+    },
+    {
+      "source": "ProfilCulture",
+      "count": 0,
+      "remark": "Listes Île-de-France et communication lues. Date la plus récente 24/11/26 sans heure (hors fenêtre 8 h) ; pas d’offre graphiste ou DA non stage dans cette fenêtre."
+    },
+    {
+      "source": "JobCulture",
+      "count": 0,
+      "remark": "Recherches graphiste et directeur artistique. Plus récente lue : 2 graphistes Région Auvergne-Rhône-Alpes, publiée le 23/11/2026."
+    }
   ],
-  "offers": []
+  "offers": [
+    {
+      "company": "Ville d'Alfortville",
+      "title": "Graphiste - Alfortville H/F",
+      "summary": "Rattaché à la direction de la communication, le poste conçoit les supports print de la ville (affiches, flyers, plaquettes) et les décline sur le site et les réseaux. Maîtrise d’InDesign, Photoshop et Illustrator demandée. Offre publiée sous le compte Communes.",
+      "location": "Alfortville (94), Île-de-France",
+      "remote": "non précisé",
+      "languages": "non précisé",
+      "date": "2026-11-25",
+      "sources": ["Hellowork"],
+      "urls": ["https://www.hellowork.com/fr-fr/emplois/84779723.html"]
+    },
+    {
+      "company": "Vene Recrutement et Intérim",
+      "title": "Directeur Artistique Chef de Projet Paris H/F",
+      "summary": "Intérim de 6 mois à Paris 18e pour une agence d’architecture intérieure : direction artistique et pilotage de projets haut de gamme (hôtellerie de luxe, palaces, restauration). Le client recruteur n’est pas nommé.",
+      "location": "Paris 18e (75), Île-de-France",
+      "remote": "non précisé",
+      "languages": "non précisé",
+      "date": "2026-11-25",
+      "sources": ["Hellowork"],
+      "urls": ["https://www.hellowork.com/fr-fr/emplois/85851026.html"]
+    },
+    {
+      "company": "Celine",
+      "title": "DIGITAL CONTENT ART DIRECTOR (F/M/X)",
+      "summary": "Sous la direction du Head of Creative Image, le poste décline la vision créative de Celine sur le digital, surtout les réseaux sociaux, et pilote des contenus originaux. Anglais et français exigés, suite Adobe, temps plein à Paris 75002.",
+      "location": "Paris 75002, Île-de-France",
+      "remote": "non précisé",
+      "languages": "anglais et français",
+      "date": "2026-11-25",
+      "sources": ["LinkedIn Emplois"],
+      "urls": ["https://www.linkedin.com/jobs/view/digital-content-art-director-f-m-x-at-celine-4494442708"]
+    }
+  ]
 }
