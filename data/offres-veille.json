@@ -1,5 +1,46 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-22T12:27:29.597Z",
-  "offers": []
+  "updatedAt": "2026-11-25T19:07:44.900Z",
+  "offers": [
+    {
+      "id": "ff3b4841760795f0",
+      "company": "Havas France (Prose On Pixels)",
+      "title": "Directeur Artistique IA (H/F/X) — CDD de 6 mois",
+      "location": "Pantin (93), Île-de-France",
+      "date": "2026-11-25",
+      "urls": [
+        "https://www.welcometothejungle.com/fr/companies/havas-sa/jobs/prose-on-pixels-directeur-rice-artistique-ia-cdd-de-6-mois_pantin"
+      ]
+    },
+    {
+      "id": "9bd2d46aae500aff",
+      "company": "Bureau Veritas",
+      "title": "Graphic Designer F-M-D H/F",
+      "location": "Courbevoie (92), Île-de-France",
+      "date": "2026-11-25",
+      "urls": [
+        "https://www.hellowork.com/fr-fr/emplois/85873377.html"
+      ]
+    },
+    {
+      "id": "66397e03107ea18c",
+      "company": "Bacanha",
+      "title": "Graphiste illustrateur",
+      "location": "Croissy-Beaubourg (77), Île-de-France",
+      "date": "2026-11-25",
+      "urls": [
+        "https://www.linkedin.com/jobs/view/graphiste-illustrateur-at-bacanha-4494655070"
+      ]
+    },
+    {
+      "id": "01c7943626ff429f",
+      "company": "Compagnie de Phalsbourg",
+      "title": "Graphiste H/F",
+      "location": "Paris",
+      "date": "2026-11-25",
+      "urls": [
+        "https://www.linkedin.com/jobs/view/graphiste-h-f-at-compagnie-de-phalsbourg-4494643573"
+      ]
+    }
+  ]
 }

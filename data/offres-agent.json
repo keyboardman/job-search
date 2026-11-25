@@ -1,13 +1,82 @@
 {
   "schemaVersion": 1,
-  "collectedAt": null,
+  "collectedAt": "2026-11-25T19:07:07Z",
   "sourcesStatus": [
-    { "source": "Welcome to the Jungle", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "LinkedIn Emplois", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "France Travail", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "Hellowork", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "ProfilCulture", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "JobCulture", "count": 0, "remark": "en attente collecte modèle Cursor" }
+    {
+      "source": "Welcome to the Jungle",
+      "count": 1,
+      "remark": "Pages métier graphiste et directeur artistique. Dans les 8 h : Directeur Artistique IA Prose On Pixels (12:00Z). Exclus : GRAPHISTE CMA Laxou publié 10:51Z (hors fenêtre et Meurthe-et-Moselle, télétravail non complet) ; Visual Creative Maker BETC Pantin (12:00Z, hors intitulé)."
+    },
+    {
+      "source": "LinkedIn Emplois",
+      "count": 2,
+      "remark": "Filtre 8 h (f_TPR=r28800), mots-clés graphiste, infographiste, directeur/directrice artistique, maquettiste, art director. Retenus : Bacanha et Compagnie de Phalsbourg. Exclus : stage Piscines d’Alsace, alternance Havas Infographiste Junior, hors zone (Laxou, Gerflor Drôme, Mommenheim) et hors intitulé."
+    },
+    {
+      "source": "France Travail",
+      "count": 0,
+      "remark": "Recherche graphiste et directeur artistique. Pas d’heure à la minute : le seul « publié aujourd’hui » graphiste est CMA Laxou (216WDVQ), déjà hors fenêtre précise ; DA « publié aujourd’hui » = La Redoute Roubaix (59), hors zone."
+    },
+    {
+      "source": "Hellowork",
+      "count": 1,
+      "remark": "Tri par date. Dans les 8 h et en zone : Graphic Designer Bureau Veritas, Courbevoie, publié 15:08Z. Exclus : DA édition Nantes (44, télétravail non précisé), graphiste Marvejols (48), alternance, stages, et Designer Graphique Mistertemp’ (conception 3D de stands, hors métier PAO)."
+    },
+    {
+      "source": "ProfilCulture",
+      "count": 0,
+      "remark": "Mots-clés graphiste et directeur-artistique. Le 25/11/26 sans heure : stages ou hors intitulé (post-production, conservatoire, opéra). Graphiste le plus récent non stage lu le 24/11/26, hors fenêtre de 8 h."
+    },
+    {
+      "source": "JobCulture",
+      "count": 0,
+      "remark": "Recherche graphiste et directeur artistique. Aucune annonce du 25/11/2026 ; codes les plus récents lus le 23/11/2026 (Pays de la Loire, Auvergne-Rhône-Alpes, Nice), hors fenêtre."
+    }
   ],
-  "offers": []
+  "offers": [
+    {
+      "company": "Havas France (Prose On Pixels)",
+      "title": "Directeur Artistique IA (H/F/X) — CDD de 6 mois",
+      "summary": "CDD de 6 mois au réseau de production Prose On Pixels (Havas / BETC), à Pantin : concevoir des concepts visuels qui mêlent direction artistique et outils d’IA générative, avec les équipes créatives et les clients. Télétravail fréquent.",
+      "location": "Pantin (93), Île-de-France",
+      "remote": "partiel",
+      "languages": "français, anglais",
+      "date": "2026-11-25",
+      "sources": ["Welcome to the Jungle"],
+      "urls": ["https://www.welcometothejungle.com/fr/companies/havas-sa/jobs/prose-on-pixels-directeur-rice-artistique-ia-cdd-de-6-mois_pantin"]
+    },
+    {
+      "company": "Bureau Veritas",
+      "title": "Graphic Designer F-M-D H/F",
+      "summary": "CDI au siège, équipe Strategy & Innovation à Courbevoie : conception graphique et mise en forme de présentations et de rapports pour la direction, le conseil et les relations investisseurs.",
+      "location": "Courbevoie (92), Île-de-France",
+      "remote": "non précisé",
+      "languages": "anglais courant, français apprécié",
+      "date": "2026-11-25",
+      "sources": ["Hellowork"],
+      "urls": ["https://www.hellowork.com/fr-fr/emplois/85873377.html"]
+    },
+    {
+      "company": "Bacanha",
+      "title": "Graphiste illustrateur",
+      "summary": "Graphiste confirmé pour concevoir et décliner l’identité visuelle de Bacanha sur les supports print, digitaux, packaging et réseaux sociaux, de l’idée jusqu’aux fichiers livrés.",
+      "location": "Croissy-Beaubourg (77), Île-de-France",
+      "remote": "non précisé",
+      "languages": "non précisé",
+      "date": "2026-11-25",
+      "sources": ["LinkedIn Emplois"],
+      "urls": ["https://www.linkedin.com/jobs/view/graphiste-illustrateur-at-bacanha-4494655070"]
+    },
+    {
+      "company": "Compagnie de Phalsbourg",
+      "title": "Graphiste H/F",
+      "summary": "Graphiste au Studio Design : identités visuelles, images et vidéos (y compris outils d’IA générative), de la recherche d’images jusqu’aux fichiers prêts à imprimer ou à diffuser.",
+      "location": "Paris",
+      "remote": "non précisé",
+      "languages": "non précisé",
+      "date": "2026-11-25",
+      "sources": ["LinkedIn Emplois"],
+      "urls": ["https://www.linkedin.com/jobs/view/graphiste-h-f-at-compagnie-de-phalsbourg-4494643573"]
+    }
+  ]
 }

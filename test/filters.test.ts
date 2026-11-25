@@ -31,6 +31,26 @@ describe("filters", () => {
     assert.equal(locationAllowed("Lyon", "complet"), true);
   });
 
+  it("accepte graphic designer, infographiste, art director et directeur·rice", () => {
+    for (const title of [
+      "Graphic Designer F-M-D H/F",
+      "Infographiste textile",
+      "Digital Content Art Director",
+      "Directeur·rice Artistique",
+    ]) {
+      assert.equal(
+        passesFilters({
+          title,
+          summary: "",
+          location: "Paris",
+          remote: "aucun",
+        }),
+        true,
+        title,
+      );
+    }
+  });
+
   it("rejette présentiel Lyon", () => {
     assert.equal(
       passesFilters({
