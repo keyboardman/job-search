@@ -31,6 +31,48 @@ describe("filters", () => {
     assert.equal(locationAllowed("Lyon", "complet"), true);
   });
 
+  it("accepte art director, designer graphique et maquettiste en Île-de-France", () => {
+    assert.equal(
+      passesFilters({
+        title: "Senior Art Director",
+        summary: "Campagnes digitales",
+        location: "Paris",
+        remote: "non précisé",
+      }),
+      true,
+    );
+    assert.equal(
+      passesFilters({
+        title: "Designer graphique confirmé",
+        summary: "Édition",
+        location: "Ville de Paris",
+        remote: "non précisé",
+      }),
+      true,
+    );
+    assert.equal(
+      passesFilters({
+        title: "Maquettiste en édition financière",
+        summary: "Mise en page",
+        location: "Neuilly-sur-Seine (92)",
+        remote: "non précisé",
+      }),
+      true,
+    );
+  });
+
+  it("rejette brand designer", () => {
+    assert.equal(
+      passesFilters({
+        title: "Brand Designer",
+        summary: "Marque",
+        location: "Paris",
+        remote: "non précisé",
+      }),
+      false,
+    );
+  });
+
   it("rejette présentiel Lyon", () => {
     assert.equal(
       passesFilters({

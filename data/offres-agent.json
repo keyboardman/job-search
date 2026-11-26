@@ -1,13 +1,104 @@
 {
   "schemaVersion": 1,
-  "collectedAt": null,
+  "collectedAt": "2026-11-26T19:13:08Z",
   "sourcesStatus": [
-    { "source": "Welcome to the Jungle", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "LinkedIn Emplois", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "France Travail", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "Hellowork", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "ProfilCulture", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "JobCulture", "count": 0, "remark": "en attente collecte modèle Cursor" }
+    {
+      "source": "Welcome to the Jungle",
+      "count": 0,
+      "remark": "recherche publique sans liste (compte requis) : 63 résultats pour graphiste et 2597 pour directeur artistique, aucune fiche ni date ; pages d’offres derrière un WAF"
+    },
+    {
+      "source": "LinkedIn Emplois",
+      "count": 5,
+      "remark": "filtre 8 h (f_TPR=r28800) ; exclus stages, alternances, brand designer, product designer, maquettiste PLV physique et graphiste présentiel en Gironde"
+    },
+    {
+      "source": "France Travail",
+      "count": 0,
+      "remark": "« publié aujourd’hui » sans heure : graphiste CCBM à Saint-Aubin-de-Blaye (33) et infographiste à Marseille (13), hors zone ; rien d’autre clairement dans les 8 h"
+    },
+    {
+      "source": "Hellowork",
+      "count": 1,
+      "remark": "1 retenue sous 8 h ; exclus stages, Gerflor à Saint-Paul-Trois-Châteaux (26), infographiste à Saint-Paul (974) et annonces d’environ 19 h (Make Up For Ever, Celine)"
+    },
+    {
+      "source": "ProfilCulture",
+      "count": 0,
+      "remark": "dates au jour sans heure ; le 26/11/26 : stages (Vuibert, Designers Unit) ou hors métier graphique"
+    },
+    {
+      "source": "JobCulture",
+      "count": 0,
+      "remark": "tri par date : fiches les plus récentes lues publiées le 16/09/2026 et le 03/09/2026 ; DA sénior web/print du 19/10/2026 hors fenêtre"
+    }
   ],
-  "offers": []
+  "offers": [
+    {
+      "company": "Havas Life Paris",
+      "title": "DIRECTEUR ARTISTIQUE (CONFIRMÉ / SENIOR) - F/H",
+      "summary": "Directeur·rice artistique confirmé·e ou senior pour le studio de création de Havas Life Paris, sur des campagnes de communication santé. L’annonce décrit un CDD de 7 mois avec poursuite en CDI envisagée, et mentionne aussi un contrat CDI dans les avantages.",
+      "location": "Puteaux (92)",
+      "remote": "non précisé",
+      "languages": "anglais professionnel",
+      "date": "2026-11-26",
+      "sources": ["LinkedIn Emplois"],
+      "urls": ["https://www.linkedin.com/jobs/view/4495542483"]
+    },
+    {
+      "company": "AKQA",
+      "title": "Senior Art Director",
+      "summary": "Senior art director chez AKQA à Paris, pour concevoir et diriger des idées, campagnes et livrables de design. L’annonce est rédigée en anglais ; le télétravail et une exigence de langue explicite ne sont pas précisés.",
+      "location": "Paris",
+      "remote": "non précisé",
+      "languages": "non précisé",
+      "date": "2026-11-26",
+      "sources": ["LinkedIn Emplois"],
+      "urls": ["https://www.linkedin.com/jobs/view/4479845496"]
+    },
+    {
+      "company": "LTD",
+      "title": "Assistant de Direction Artistique - Luxe H/F",
+      "summary": "Mission d’intérim d’assistant·e de direction artistique, à pourvoir en février 2027, pour accompagner l’identité visuelle d’une maison de luxe à Pantin. Français et anglais exigés ; télétravail non précisé.",
+      "location": "Pantin (93)",
+      "remote": "non précisé",
+      "languages": "français, anglais",
+      "date": "2026-11-26",
+      "sources": ["Hellowork"],
+      "urls": ["https://www.hellowork.com/fr-fr/emplois/85914302.html"]
+    },
+    {
+      "company": "PwC France",
+      "title": "Maquettiste en édition financière - CDD - H/F",
+      "summary": "CDD de 4 à 6 mois pour mettre en page des documents financiers réglementés sur InDesign, au sein de l’équipe Content & Design de PwC à Neuilly-sur-Seine. Un test d’anglais fait partie du recrutement ; télétravail non précisé.",
+      "location": "Neuilly-sur-Seine (92)",
+      "remote": "non précisé",
+      "languages": "anglais (test au recrutement)",
+      "date": "2026-11-26",
+      "sources": ["LinkedIn Emplois"],
+      "urls": ["https://www.linkedin.com/jobs/view/4495514534"]
+    },
+    {
+      "company": "Publicis Conseil",
+      "title": "Directeur Artistique senior H/F - CDI",
+      "summary": "Directeur·rice artistique senior en CDI chez Publicis Conseil à Paris, sur les campagnes internationales du groupe Garnier, du brief jusqu’à la production print et vidéo. Anglais courant demandé ; télétravail non précisé.",
+      "location": "Paris",
+      "remote": "non précisé",
+      "languages": "anglais courant",
+      "date": "2026-11-26",
+      "sources": ["LinkedIn Emplois"],
+      "urls": ["https://www.linkedin.com/jobs/view/4468027288"]
+    },
+    {
+      "company": "AGENCE CIMAYA",
+      "title": "Designer graphique confirmé·e Édition corporate & production graphique",
+      "summary": "Designer graphique confirmé·e pour la production éditoriale (rapports, magazines, supports corporate) et la mise en page InDesign chez l’agence CIMAYA à Paris. Télétravail et langues non précisés.",
+      "location": "Ville de Paris",
+      "remote": "non précisé",
+      "languages": "non précisé",
+      "date": "2026-11-26",
+      "sources": ["LinkedIn Emplois"],
+      "urls": ["https://www.linkedin.com/jobs/view/4495274840"]
+    }
+  ]
 }

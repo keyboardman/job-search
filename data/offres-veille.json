@@ -1,5 +1,66 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-22T12:27:29.597Z",
-  "offers": []
+  "updatedAt": "2026-11-26T19:13:38.202Z",
+  "offers": [
+    {
+      "id": "03341372fe837079",
+      "company": "Havas Life Paris",
+      "title": "DIRECTEUR ARTISTIQUE (CONFIRMÉ / SENIOR) - F/H",
+      "location": "Puteaux (92)",
+      "date": "2026-11-26",
+      "urls": [
+        "https://www.linkedin.com/jobs/view/4495542483"
+      ]
+    },
+    {
+      "id": "7bf4066a625094cd",
+      "company": "AKQA",
+      "title": "Senior Art Director",
+      "location": "Paris",
+      "date": "2026-11-26",
+      "urls": [
+        "https://www.linkedin.com/jobs/view/4479845496"
+      ]
+    },
+    {
+      "id": "3101153bb859f31e",
+      "company": "LTD",
+      "title": "Assistant de Direction Artistique - Luxe H/F",
+      "location": "Pantin (93)",
+      "date": "2026-11-26",
+      "urls": [
+        "https://www.hellowork.com/fr-fr/emplois/85914302.html"
+      ]
+    },
+    {
+      "id": "4850f0a3b774b5a1",
+      "company": "PwC France",
+      "title": "Maquettiste en édition financière - CDD - H/F",
+      "location": "Neuilly-sur-Seine (92)",
+      "date": "2026-11-26",
+      "urls": [
+        "https://www.linkedin.com/jobs/view/4495514534"
+      ]
+    },
+    {
+      "id": "9bdc3d03e45c7e85",
+      "company": "Publicis Conseil",
+      "title": "Directeur Artistique senior H/F - CDI",
+      "location": "Paris",
+      "date": "2026-11-26",
+      "urls": [
+        "https://www.linkedin.com/jobs/view/4468027288"
+      ]
+    },
+    {
+      "id": "f8056f4ea9a0b7f3",
+      "company": "AGENCE CIMAYA",
+      "title": "Designer graphique confirmé·e Édition corporate & production graphique",
+      "location": "Ville de Paris",
+      "date": "2026-11-26",
+      "urls": [
+        "https://www.linkedin.com/jobs/view/4495274840"
+      ]
+    }
+  ]
 }
