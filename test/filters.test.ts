@@ -31,6 +31,42 @@ describe("filters", () => {
     assert.equal(locationAllowed("Lyon", "complet"), true);
   });
 
+  it("accepte un designer digital à Paris", () => {
+    assert.equal(
+      passesFilters({
+        title: "Designer Digital Junior H/F - CDI",
+        summary: "Campagnes digitales et déclinaisons",
+        location: "Paris 8e (75)",
+        remote: "partiel",
+      }),
+      true,
+    );
+  });
+
+  it("accepte un art director", () => {
+    assert.equal(
+      passesFilters({
+        title: "Digital Content Art Director",
+        summary: "Contenus digitaux",
+        location: "Paris",
+        remote: "non précisé",
+      }),
+      true,
+    );
+  });
+
+  it("rejette un lead brand designer", () => {
+    assert.equal(
+      passesFilters({
+        title: "Lead Brand Designer - CDI (H/F)",
+        summary: "Identité visuelle et management d’un graphiste junior",
+        location: "Paris",
+        remote: "partiel",
+      }),
+      false,
+    );
+  });
+
   it("rejette présentiel Lyon", () => {
     assert.equal(
       passesFilters({

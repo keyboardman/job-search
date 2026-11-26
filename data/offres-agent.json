@@ -1,13 +1,52 @@
 {
   "schemaVersion": 1,
-  "collectedAt": null,
+  "collectedAt": "2026-11-26T11:13:37Z",
   "sourcesStatus": [
-    { "source": "Welcome to the Jungle", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "LinkedIn Emplois", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "France Travail", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "Hellowork", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "ProfilCulture", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "JobCulture", "count": 0, "remark": "en attente collecte modèle Cursor" }
+    {
+      "source": "Welcome to the Jungle",
+      "count": 0,
+      "remark": "Fenêtre depuis 2026-11-26T03:04Z. Aucune offre graphiste/DA. Écartés : Lead Brand Designer Kameleoon (Paris, télétravail partiel, publiée 2026-11-26T08:51:02Z, hors intitulé) ; Product Designer Galadrim (UX)."
+    },
+    {
+      "source": "LinkedIn Emplois",
+      "count": 1,
+      "remark": "Filtre 8 h. 1 retenue (Sisley, affichée il y a environ 30 min). Écartés : stages et alternances ; Gerflor infographiste à Saint-Paul-Trois-Châteaux (1 h, hors zone, télétravail non indiqué) ; Opérateur PAO Champagne Lanson à Reims (stage, 3 h) ; Lead Brand Designer Kameleoon (hors intitulé)."
+    },
+    {
+      "source": "France Travail",
+      "count": 0,
+      "remark": "Tri par date. « Publié aujourd’hui » sans heure : CCBM à Saint-Aubin-de-Blaye (33), alternance à Chassieu (69), infographiste à Marseille (13), consultant PLM à Nanterre (hors intitulé). Aucun graphiste/DA en Île-de-France, Oise ou Aisne clairement dans les 8 h."
+    },
+    {
+      "source": "Hellowork",
+      "count": 1,
+      "remark": "Tri par date. Aucun graphiste/DA publié dans les 8 h. La fiche Sisley 85875054 (datePosted 2026-11-25T15:35:51Z) est la même annonce, retenue via la mise à jour LinkedIn. Make Up For Ever et Celine vers 11 h, hors fenêtre. Paid media Sisley (2026-11-26T04:49:44Z) hors intitulé."
+    },
+    {
+      "source": "ProfilCulture",
+      "count": 0,
+      "remark": "Annonces du 26/11/26 sans heure : stages ou hors intitulé (communication, community manager, archiviste). Aucun graphiste/DA."
+    },
+    {
+      "source": "JobCulture",
+      "count": 0,
+      "remark": "Codes graphiste les plus récents au 23/11/2026. Directeur·rice artistique sénior web et print publiée le 19/10/2026."
+    }
   ],
-  "offers": []
+  "offers": [
+    {
+      "company": "Sisley",
+      "title": "Designer Digital Junior H/F - CDI",
+      "summary": "CDI au département création de contenu à Paris 8e : campagnes digitales (bannières, réseaux sociaux, visuels produits, landing pages et newsletters) pour l’Europe et l’international, avec Figma, Photoshop et le motion. LinkedIn l’affiche dans l’heure ; la même fiche Hellowork est datée du 2026-11-25 à 15:35 UTC. Télétravail possible, avec un bureau à Paris.",
+      "location": "Paris 8e (75)",
+      "remote": "partiel",
+      "languages": "non précisé",
+      "date": "2026-11-26",
+      "sources": ["LinkedIn Emplois", "Hellowork"],
+      "urls": [
+        "https://www.linkedin.com/jobs/view/designer-digital-junior-h-f-cdi-at-sisley-paris-4493817272",
+        "https://www.hellowork.com/fr-fr/emplois/85875054.html"
+      ]
+    }
+  ]
 }

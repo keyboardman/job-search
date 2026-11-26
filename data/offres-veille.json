@@ -1,5 +1,17 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-22T12:27:29.597Z",
-  "offers": []
+  "updatedAt": "2026-11-26T11:13:54.767Z",
+  "offers": [
+    {
+      "id": "779aad4f84c94111",
+      "company": "Sisley",
+      "title": "Designer Digital Junior H/F - CDI",
+      "location": "Paris 8e (75)",
+      "date": "2026-11-26",
+      "urls": [
+        "https://www.linkedin.com/jobs/view/designer-digital-junior-h-f-cdi-at-sisley-paris-4493817272",
+        "https://www.hellowork.com/fr-fr/emplois/85875054.html"
+      ]
+    }
+  ]
 }
