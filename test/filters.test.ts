@@ -31,6 +31,48 @@ describe("filters", () => {
     assert.equal(locationAllowed("Lyon", "complet"), true);
   });
 
+  it("accepte art director et graphic designer en Île-de-France", () => {
+    assert.equal(
+      passesFilters({
+        title: "Digital Content Art Director",
+        summary: "Contenus digitaux à Paris",
+        location: "Paris 75002",
+        remote: "non précisé",
+      }),
+      true,
+    );
+    assert.equal(
+      passesFilters({
+        title: "Graphic Designer",
+        summary: "Studio à Boulogne-Billancourt",
+        location: "Boulogne-Billancourt 92",
+        remote: "non précisé",
+      }),
+      true,
+    );
+    assert.equal(
+      passesFilters({
+        title: "Infographiste H/F",
+        summary: "PAO",
+        location: "Paris",
+        remote: "aucun",
+      }),
+      true,
+    );
+  });
+
+  it("rejette la conception de stands 3D", () => {
+    assert.equal(
+      passesFilters({
+        title: "Designer Graphique H/F",
+        summary: "Designers 3D : concevoir des stands et pop-up stores.",
+        location: "Paris 18e",
+        remote: "complet",
+      }),
+      false,
+    );
+  });
+
   it("rejette présentiel Lyon", () => {
     assert.equal(
       passesFilters({

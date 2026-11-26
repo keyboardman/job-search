@@ -1,13 +1,60 @@
 {
   "schemaVersion": 1,
-  "collectedAt": null,
+  "collectedAt": "2026-11-26T03:11:02Z",
   "sourcesStatus": [
-    { "source": "Welcome to the Jungle", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "LinkedIn Emplois", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "France Travail", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "Hellowork", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "ProfilCulture", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "JobCulture", "count": 0, "remark": "en attente collecte modèle Cursor" }
+    {
+      "source": "Welcome to the Jungle",
+      "count": 0,
+      "remark": "Pages métier graphiste et directeur artistique. Aucune offre graphiste/DA publiée après 2026-11-25T19:03Z. Plus récent DA : Havas France Prose On Pixels, 2026-11-25T12:00:04Z (hors fenêtre). Lead Brand Designer Kameleoon, 2026-11-25T19:07:50Z, hors intitulé."
+    },
+    {
+      "source": "LinkedIn Emplois",
+      "count": 0,
+      "remark": "Filtre 8 h (r28800) : aucun intitulé graphiste/DA. En 24 h, les graphistes les plus récents sont à 8–12 h (Bacanha, Compagnie de Phalsbourg, hors fenêtre ; Gerflor Saint-Paul-Trois-Châteaux, présentiel, hors zone)."
+    },
+    {
+      "source": "France Travail",
+      "count": 0,
+      "remark": "Graphiste : plus récent « publié hier », sans heure. Directeur artistique : pas d’offre « publié aujourd’hui ». Rien de clairement daté dans les 8 h."
+    },
+    {
+      "source": "Hellowork",
+      "count": 2,
+      "remark": "Tri par date. Retenues publiées le 26/11 vers 00:52 UTC. Exclues dans les 8 h : stages (Givenchy, Dior, PSG Boulogne), Roanne 42 télétravail partiel, Marvejols 48 présentiel, Mistertemp’ conception de stands 3D."
+    },
+    {
+      "source": "ProfilCulture",
+      "count": 0,
+      "remark": "Recherches graphiste, directeur artistique et directrice artistique. Aucune annonce au 26/11/2026. Les dates au 25/11 sont sans heure (hors fenêtre 8 h) ; intitulés vus hors métier ou stages."
+    },
+    {
+      "source": "JobCulture",
+      "count": 0,
+      "remark": "Pages métier graphiste et directeur artistique, et recherche graphiste. Aucune offre au 25 ou 26/11/2026. Code le plus récent lu : 23/11/2026."
+    }
   ],
-  "offers": []
+  "offers": [
+    {
+      "company": "Make Up For Ever",
+      "title": "CDI - Directeur Artistique Senior H/F",
+      "summary": "CDI à Levallois-Perret. Rattaché(e) au directeur création et image, le poste consiste à décliner les concepts de la marque en campagnes print, digital et social, et à piloter la conception jusqu’à la production.",
+      "location": "Levallois-Perret (92300), Hauts-de-Seine",
+      "remote": "non précisé",
+      "languages": "français, anglais",
+      "date": "2026-11-26",
+      "sources": ["Hellowork"],
+      "urls": ["https://www.hellowork.com/fr-fr/emplois/85890778.html"]
+    },
+    {
+      "company": "Celine",
+      "title": "Digital Content Art Director F - M - X H/F",
+      "summary": "CDI à Paris (75002). Direction artistique des contenus digitaux : identité de marque sur les réseaux sociaux et le web, sélection des visuels et architecture des feeds.",
+      "location": "Paris (75002)",
+      "remote": "non précisé",
+      "languages": "anglais, français",
+      "date": "2026-11-26",
+      "sources": ["Hellowork"],
+      "urls": ["https://www.hellowork.com/fr-fr/emplois/85890712.html"]
+    }
+  ]
 }
