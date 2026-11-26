@@ -1,5 +1,26 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-22T12:27:29.597Z",
-  "offers": []
+  "updatedAt": "2026-11-26T03:12:47.983Z",
+  "offers": [
+    {
+      "id": "69e4a84f615f5644",
+      "company": "Make Up For Ever",
+      "title": "CDI - Directeur Artistique Senior H/F",
+      "location": "Levallois-Perret (92300), Hauts-de-Seine",
+      "date": "2026-11-26",
+      "urls": [
+        "https://www.hellowork.com/fr-fr/emplois/85890778.html"
+      ]
+    },
+    {
+      "id": "1f0e4c9f98e33d15",
+      "company": "Celine",
+      "title": "Digital Content Art Director F - M - X H/F",
+      "location": "Paris (75002)",
+      "date": "2026-11-26",
+      "urls": [
+        "https://www.hellowork.com/fr-fr/emplois/85890712.html"
+      ]
+    }
+  ]
 }
