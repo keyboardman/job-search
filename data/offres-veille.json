@@ -1,5 +1,17 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-22T12:27:29.597Z",
-  "offers": []
+  "updatedAt": "2026-11-27T03:09:26.750Z",
+  "offers": [
+    {
+      "id": "8b2f191887d6c455",
+      "company": "Havas Life Paris",
+      "title": "Directeur artistique confirmé / senior F/H",
+      "location": "Puteaux, Hauts-de-Seine",
+      "date": "2026-11-26",
+      "urls": [
+        "https://www.welcometothejungle.com/fr/companies/havas-sa/jobs/havas-life-paris-cdd-directeur-artistique-confirme-senior-f-h_puteaux",
+        "https://www.linkedin.com/jobs/view/4495542483"
+      ]
+    }
+  ]
 }

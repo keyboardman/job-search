@@ -1,13 +1,52 @@
 {
   "schemaVersion": 1,
-  "collectedAt": null,
+  "collectedAt": "2026-11-27T03:20:00Z",
   "sourcesStatus": [
-    { "source": "Welcome to the Jungle", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "LinkedIn Emplois", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "France Travail", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "Hellowork", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "ProfilCulture", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "JobCulture", "count": 0, "remark": "en attente collecte modèle Cursor" }
+    {
+      "source": "Welcome to the Jungle",
+      "count": 1,
+      "remark": "Pages métier graphiste et directeur artistique (liste de recherche sans fiches). Fenêtre 8 h depuis 2026-11-26T19:03Z : 1 offre, publiée 2026-11-26T22:00:18Z. Hors fenêtre : Lead Brand Designer Kameleoon 08:51Z, Visual Creative Maker BETC 2026-11-25."
+    },
+    {
+      "source": "LinkedIn Emplois",
+      "count": 1,
+      "remark": "Filtre 8 h (f_TPR=r28800). Même annonce Havas Life Paris affichée « 8 hours ago » (fiche 4495542483). Autres résultats : stages ou hors intitulé (webdesigner, communication). Requête « graphiste » France d’abord bloquée, rejeu Paris lisible."
+    },
+    {
+      "source": "France Travail",
+      "count": 0,
+      "remark": "Graphiste : plus récent « publié hier » sans heure (hors fenêtre 8 h). Directeur artistique : à partir de « il y a 2 jours ». Rien « aujourd’hui » ni en heures."
+    },
+    {
+      "source": "Hellowork",
+      "count": 0,
+      "remark": "Sous 8 h : stages (Hermès 85930919, Boardriders, Agatha, Ysé), hors zone (Crit infographiste Maubourguet 65, datePosted 2026-11-27T01:01:44Z ; graphiste La Roche-sur-Yon 85), hors métier (styliste Celio Saint-Ouen, formateur 3D Montigny-le-Bretonneux). DA : plus récentes « il y a 1 jour »."
+    },
+    {
+      "source": "ProfilCulture",
+      "count": 0,
+      "remark": "26/11/26 sans heure, donc hors fenêtre 8 h. Graphiste : stage Designers Unit Montreuil. DA : hors intitulé (enseignement artistique, programmation, régie)."
+    },
+    {
+      "source": "JobCulture",
+      "count": 0,
+      "remark": "Page métier graphiste et recherche directeur artistique : aucune offre datée du 26 ou 27/11/2026. Codes graphiste lus jusqu’en août 2026 ; DA sénior web/print déjà connue en octobre."
+    }
   ],
-  "offers": []
+  "offers": [
+    {
+      "company": "Havas Life Paris",
+      "title": "Directeur artistique confirmé / senior F/H",
+      "summary": "CDD de 7 mois (poursuite en CDI envisagée) pour le studio de création de Havas Life Paris, agence de communication santé du réseau Havas. Conception et déclinaison de campagnes (print, digital, social, vidéo) ; 1 à 2 jours de télétravail indiqués dans les avantages, alors que le champ télétravail de la fiche est « non spécifié ».",
+      "location": "Puteaux, Hauts-de-Seine",
+      "remote": "partiel",
+      "languages": "anglais professionnel",
+      "date": "2026-11-26",
+      "sources": ["Welcome to the Jungle", "LinkedIn Emplois"],
+      "urls": [
+        "https://www.welcometothejungle.com/fr/companies/havas-sa/jobs/havas-life-paris-cdd-directeur-artistique-confirme-senior-f-h_puteaux",
+        "https://www.linkedin.com/jobs/view/4495542483"
+      ]
+    }
+  ]
 }
