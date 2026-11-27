@@ -1,13 +1,52 @@
 {
   "schemaVersion": 1,
-  "collectedAt": null,
+  "collectedAt": "2026-11-27T11:07:10Z",
   "sourcesStatus": [
-    { "source": "Welcome to the Jungle", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "LinkedIn Emplois", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "France Travail", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "Hellowork", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "ProfilCulture", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "JobCulture", "count": 0, "remark": "en attente collecte modèle Cursor" }
+    {
+      "source": "Welcome to the Jungle",
+      "count": 0,
+      "remark": "Recherche publique HTTP 202, liste illisible. Fiche Passage du Désir (graphiste / DA junior, Marseille, pas de télétravail) lue « il y a 14 jours », hors fenêtre."
+    },
+    {
+      "source": "LinkedIn Emplois",
+      "count": 1,
+      "remark": "Filtre 8 h. Retenu : Galileo DA 360 senior (4495092090). Exclus : bénévolat Les initiés Cergy ; stages ; hors métier (Creative Maker, Art Manager, UX, gig Begun Art Director pour entraîner un modèle)."
+    },
+    {
+      "source": "France Travail",
+      "count": 0,
+      "remark": "Pas d’heure. « Publié aujourd’hui » hors zone : infographiste Creysse 24 (216YBJF) et DA Matt Design Grenoble 38. Graphiste : plus récent « publié hier »."
+    },
+    {
+      "source": "Hellowork",
+      "count": 1,
+      "remark": "Retenu : Galileo 85935856, datePosted 2026-11-27T10:31:39Z. Exclus sous 8 h : graphiste Haras national du Pin, Le Pin-au-Haras 61, présentiel (85935462) ; stage Hermès Anjou (85930919, il y a 8 h)."
+    },
+    {
+      "source": "ProfilCulture",
+      "count": 0,
+      "remark": "27/11/26 : accueil, éclairage, comptabilité, hors intitulé. Graphiste/DA au 26/11/26 : stages, sans heure, hors fenêtre."
+    },
+    {
+      "source": "JobCulture",
+      "count": 0,
+      "remark": "27/11/2026 : événementiel, presse, enseignement, marketing digital, médiation — hors intitulé. Aucun graphiste ni DA à cette date."
+    }
   ],
-  "offers": []
+  "offers": [
+    {
+      "company": "Galileo Global Education",
+      "title": "Directeur Artistique 360 - Senior H/F",
+      "summary": "CDI cadre à Paris 12e, au sein de la Content Factory, pour définir la direction artistique d’écoles d’art et de création et piloter les campagnes print, digital, photo et vidéo. Prise de poste en janvier 2027. Le télétravail figure parmi les avantages, sans nombre de jours précisé.",
+      "location": "Paris 12e (75012)",
+      "remote": "partiel",
+      "languages": "non précisé",
+      "date": "2026-11-27",
+      "sources": ["LinkedIn Emplois", "Hellowork"],
+      "urls": [
+        "https://www.linkedin.com/jobs/view/directeur-artistique-360-senior-h-f-x-at-galileo-global-education-4495092090",
+        "https://www.hellowork.com/fr-fr/emplois/85935856.html"
+      ]
+    }
+  ]
 }

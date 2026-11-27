@@ -1,5 +1,17 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-22T12:27:29.597Z",
-  "offers": []
+  "updatedAt": "2026-11-27T11:07:16.795Z",
+  "offers": [
+    {
+      "id": "f7c84d87981e8011",
+      "company": "Galileo Global Education",
+      "title": "Directeur Artistique 360 - Senior H/F",
+      "location": "Paris 12e (75012)",
+      "date": "2026-11-27",
+      "urls": [
+        "https://www.linkedin.com/jobs/view/directeur-artistique-360-senior-h-f-x-at-galileo-global-education-4495092090",
+        "https://www.hellowork.com/fr-fr/emplois/85935856.html"
+      ]
+    }
+  ]
 }
