@@ -1,13 +1,71 @@
 {
   "schemaVersion": 1,
-  "collectedAt": null,
+  "collectedAt": "2026-11-27T19:20:00Z",
   "sourcesStatus": [
-    { "source": "Welcome to the Jungle", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "LinkedIn Emplois", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "France Travail", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "Hellowork", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "ProfilCulture", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "JobCulture", "count": 0, "remark": "en attente collecte modèle Cursor" }
+    {
+      "source": "Welcome to the Jungle",
+      "count": 0,
+      "remark": "Pages métier graphiste et directeur artistique lues : dernière publication 2026-11-26T22:00:18Z, hors fenêtre 8 h (depuis 2026-11-27T11:03Z). La recherche jobs ne liste pas les annonces."
+    },
+    {
+      "source": "LinkedIn Emplois",
+      "count": 2,
+      "remark": "Filtre 8 h. 2 offres retenues. Exclus : stages, brand designer, Legallais Caen (télétravail partiel), Autajon Caudan (présentiel), Exhibit Group Carros (sur site)."
+    },
+    {
+      "source": "France Travail",
+      "count": 0,
+      "remark": "Pas de filtre horaire. « Publié aujourd’hui » sans heure : graphiste Haras du Pin (61) et DA Matt Design Grenoble (38), hors zone. Non retenus."
+    },
+    {
+      "source": "Hellowork",
+      "count": 1,
+      "remark": "Tri par date. 1 offre retenue (télétravail complet). Exclus sous 8 h : LPEV graphiste Allier (télétravail partiel), Celad motion designer (hors intitulé). Galileo 10:31Z hors fenêtre."
+    },
+    {
+      "source": "ProfilCulture",
+      "count": 0,
+      "remark": "27/11/26 sans heure : hors intitulé, ou Galileo DA 360 déjà daté 10:31Z (hors 8 h). Graphiste Designers Unit daté 26/11/26."
+    },
+    {
+      "source": "JobCulture",
+      "count": 0,
+      "remark": "Recherche graphiste et directeur artistique. Codes les plus récents au 26/11/2026, hors fenêtre 8 h ou hors intitulé. Aucun code du 27/11/2026."
+    }
   ],
-  "offers": []
+  "offers": [
+    {
+      "company": "Hôtel Le Florian",
+      "title": "Direction Artistique Création Graphique et Déclinaisons H/F",
+      "summary": "Le FIFES, festival de cinéma écologique et social, cherche un·e graphiste indépendant·e ou un duo créatif pour concevoir l’affiche et la décliner sur les supports imprimés et numériques. Mission freelance à temps plein, télétravail complet.",
+      "location": "Cannes (06), France",
+      "remote": "complet",
+      "languages": "non précisé",
+      "date": "2026-11-27",
+      "sources": ["Hellowork"],
+      "urls": ["https://www.hellowork.com/fr-fr/emplois/85942111.html"]
+    },
+    {
+      "company": "Generik Paris",
+      "title": "CDI - Graphiste Packaging & Print (H/F)",
+      "summary": "CDI au sein du groupe Mélanine (marques Generik, BBHair, Flean’Up) : conception et suivi de production des packagings et outils d’aide à la vente. Organisation hybride entre Méré, Paris et le télétravail.",
+      "location": "Méré (78), Île-de-France",
+      "remote": "partiel",
+      "languages": "non précisé",
+      "date": "2026-11-27",
+      "sources": ["LinkedIn Emplois"],
+      "urls": ["https://www.linkedin.com/jobs/view/cdi-graphiste-packaging-print-h-f-at-generik-paris-4491696957"]
+    },
+    {
+      "company": "Givaudan",
+      "title": "Graphiste designer photographe",
+      "summary": "Au studio innovation Fragrance & Beauty à Argenteuil : concepts graphiques, illustrations et présentations multimédias pour le marketing et les clients. Expérience 1 à 2 ans, anglais avancé exigé. Télétravail non indiqué.",
+      "location": "Argenteuil (95), Île-de-France",
+      "remote": "non précisé",
+      "languages": "anglais avancé exigé",
+      "date": "2026-11-27",
+      "sources": ["LinkedIn Emplois"],
+      "urls": ["https://www.linkedin.com/jobs/view/graphiste-designer-photographe-at-givaudan-4495853019"]
+    }
+  ]
 }

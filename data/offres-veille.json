@@ -1,5 +1,36 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-22T12:27:29.597Z",
-  "offers": []
+  "updatedAt": "2026-11-27T19:09:19.927Z",
+  "offers": [
+    {
+      "id": "135d34cb3915aaea",
+      "company": "Hôtel Le Florian",
+      "title": "Direction Artistique Création Graphique et Déclinaisons H/F",
+      "location": "Cannes (06), France",
+      "date": "2026-11-27",
+      "urls": [
+        "https://www.hellowork.com/fr-fr/emplois/85942111.html"
+      ]
+    },
+    {
+      "id": "b00daf1d1462cd7a",
+      "company": "Generik Paris",
+      "title": "CDI - Graphiste Packaging & Print (H/F)",
+      "location": "Méré (78), Île-de-France",
+      "date": "2026-11-27",
+      "urls": [
+        "https://www.linkedin.com/jobs/view/cdi-graphiste-packaging-print-h-f-at-generik-paris-4491696957"
+      ]
+    },
+    {
+      "id": "2f965a4d0bbb1feb",
+      "company": "Givaudan",
+      "title": "Graphiste designer photographe",
+      "location": "Argenteuil (95), Île-de-France",
+      "date": "2026-11-27",
+      "urls": [
+        "https://www.linkedin.com/jobs/view/graphiste-designer-photographe-at-givaudan-4495853019"
+      ]
+    }
+  ]
 }
