@@ -1,13 +1,37 @@
 {
   "schemaVersion": 1,
-  "collectedAt": null,
+  "collectedAt": "2026-11-28T11:06:11Z",
   "sourcesStatus": [
-    { "source": "Welcome to the Jungle", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "LinkedIn Emplois", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "France Travail", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "Hellowork", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "ProfilCulture", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "JobCulture", "count": 0, "remark": "en attente collecte modèle Cursor" }
+    {
+      "source": "Welcome to the Jungle",
+      "count": 0,
+      "remark": "page de recherche sans liste d’offres ; fiches lues hors fenêtre 8 h (Havas Life published_at 2026-11-26T22:00:18Z, « il y a 1 jour »)"
+    },
+    {
+      "source": "LinkedIn Emplois",
+      "count": 0,
+      "remark": "filtre 8 h : stages, FANTASTIC Lyon (télétravail non précisé, hors zone) ou hors intitulé"
+    },
+    {
+      "source": "France Travail",
+      "count": 0,
+      "remark": "graphiste : plus récent « publié hier » ; DA « aujourd’hui » sans heure hors fenêtre (Galileo, 27/11) ou hors métier (DA 3D architecture)"
+    },
+    {
+      "source": "Hellowork",
+      "count": 0,
+      "remark": "sous 8 h : hors zone (Châteaurenard, Marseille télétravail 1 j, Sainte-Cécile-les-Vignes) ou stages ; Île-de-France la plus récente à 10 h"
+    },
+    {
+      "source": "ProfilCulture",
+      "count": 0,
+      "remark": "dates au plus tard le 27/11/26, sans heure"
+    },
+    {
+      "source": "JobCulture",
+      "count": 0,
+      "remark": "annonces du 28/11 hors intitulé (médiation, bibliothèques) ; pas de graphiste ni de DA du jour"
+    }
   ],
   "offers": []
 }
