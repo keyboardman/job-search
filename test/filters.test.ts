@@ -31,6 +31,39 @@ describe("filters", () => {
     assert.equal(locationAllowed("Lyon", "complet"), true);
   });
 
+  it("accepte Art Director et directeur·rice artistique à Paris", () => {
+    assert.equal(
+      passesFilters({
+        title: "CDI - Art Director (F/M)",
+        summary: "Direction de création à Paris",
+        location: "Paris",
+        remote: "non précisé",
+      }),
+      true,
+    );
+    assert.equal(
+      passesFilters({
+        title: "Directeur·rice artistique",
+        summary: "Studio à Paris",
+        location: "Paris",
+        remote: "aucun",
+      }),
+      true,
+    );
+  });
+
+  it("rejette un brand designer", () => {
+    assert.equal(
+      passesFilters({
+        title: "Senior Brand Designer",
+        summary: "Identité visuelle",
+        location: "Paris",
+        remote: "partiel",
+      }),
+      false,
+    );
+  });
+
   it("rejette présentiel Lyon", () => {
     assert.equal(
       passesFilters({

@@ -1,13 +1,49 @@
 {
   "schemaVersion": 1,
-  "collectedAt": null,
+  "collectedAt": "2026-11-28T19:12:40Z",
   "sourcesStatus": [
-    { "source": "Welcome to the Jungle", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "LinkedIn Emplois", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "France Travail", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "Hellowork", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "ProfilCulture", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "JobCulture", "count": 0, "remark": "en attente collecte modèle Cursor" }
+    {
+      "source": "Welcome to the Jungle",
+      "count": 0,
+      "remark": "Pages métier et index trié par date (France) lus. Aucune offre graphiste, DA ou PAO dans les 8 h. Hors intitulé dans la fenêtre : UI & Brand Designer, Ed.ai, Paris, télétravail partiel, publiée le 2026-11-28T15:14:49Z."
+    },
+    {
+      "source": "LinkedIn Emplois",
+      "count": 1,
+      "remark": "Filtre 8 h. Recherches graphiste (2 pages), directeur artistique, art director, infographiste, graphic designer et maquettiste. 1 offre retenue."
+    },
+    {
+      "source": "France Travail",
+      "count": 0,
+      "remark": "Listes graphiste, infographiste et directeur artistique lues. Les mentions « publié aujourd’hui » sont sans heure : hors zone, hors intitulé, ou déjà datées hors fenêtre (Galileo DA 360, Hellowork « il y a 1 jour »). Aucune offre clairement dans les 8 h."
+    },
+    {
+      "source": "Hellowork",
+      "count": 0,
+      "remark": "Recherches graphiste, directeur artistique, PAO, infographiste, graphic designer, art director et maquettiste, tri par date. Plus récent : 9 h (Châteaurenard et Marseille, hors zone). Rien dans les 8 h."
+    },
+    {
+      "source": "ProfilCulture",
+      "count": 0,
+      "remark": "Rubriques graphisme, art/design, édition et Île-de-France. Pas de date 28/11/26 ; plus récent le 27/11/26, hors fenêtre de 8 h."
+    },
+    {
+      "source": "JobCulture",
+      "count": 0,
+      "remark": "Recherches graphiste, directeur artistique et direction artistique, plus la page Île-de-France. Aucun code du 28/11/2026 ; les codes du 27/11/2026 sont hors métier (enseignement artistique)."
+    }
   ],
-  "offers": []
+  "offers": [
+    {
+      "company": "Aquent",
+      "title": "CDI - Art Director Art Director (F/M) [AQ-28704]",
+      "summary": "Aquent recrute en CDI un directeur artistique à Paris pour une agence de brand experience d’un grand groupe de communication. Le poste, rattaché à la direction de création, porte les identités de marque et les campagnes 360, avec 3 à 8 ans d’expérience en direction artistique.",
+      "location": "Paris",
+      "remote": "non précisé",
+      "languages": "anglais courant exigé, français apprécié (version anglaise ; la version française indique français et anglais courants)",
+      "date": "2026-11-28",
+      "sources": ["LinkedIn Emplois"],
+      "urls": ["https://fr.linkedin.com/jobs/view/cdi-art-director-art-director-f-m-aq-28704-at-aquent-4494241851"]
+    }
+  ]
 }
