@@ -1,13 +1,49 @@
 {
   "schemaVersion": 1,
-  "collectedAt": null,
+  "collectedAt": "2026-11-28T03:07:42Z",
   "sourcesStatus": [
-    { "source": "Welcome to the Jungle", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "LinkedIn Emplois", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "France Travail", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "Hellowork", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "ProfilCulture", "count": 0, "remark": "en attente collecte modèle Cursor" },
-    { "source": "JobCulture", "count": 0, "remark": "en attente collecte modèle Cursor" }
+    {
+      "source": "Welcome to the Jungle",
+      "count": 0,
+      "remark": "Pages métier graphiste et directeur artistique lues. Dernières publications 2026-11-26T08:51:02Z et 2026-11-26T22:00:18Z, hors fenêtre 8 h (depuis 2026-11-27T19:02Z). La recherche HTML ne liste pas les offres."
+    },
+    {
+      "source": "LinkedIn Emplois",
+      "count": 0,
+      "remark": "Filtre 8 h. Seule offre au titre graphiste : stage Atlasformen Paris (4495337560, il y a 4 h), exclue. Autres résultats : stages, alternances ou hors intitulé. Requête directeur artistique en HTTP 429."
+    },
+    {
+      "source": "France Travail",
+      "count": 0,
+      "remark": "Tri par date. Graphiste : plus récent « publié hier » sans heure, hors fenêtre 8 h. DA : Directeur artistique 3D architecture, asap.work, Paris 9e (9282839), publié aujourd’hui, hors métier (architecte Rhino)."
+    },
+    {
+      "source": "Hellowork",
+      "count": 1,
+      "remark": "Filtre site « depuis 24 h » ; ne sont retenues que les offres clairement dans les 8 h. Exclus sous 8 h : stages, Graphiste Legallais Caen télétravail partiel (85953207, 2026-11-28T00:33:18Z, 14), opérateur PAO Nice (84913492), DA des chœurs de l’Opéra de Nice (84919979)."
+    },
+    {
+      "source": "ProfilCulture",
+      "count": 0,
+      "remark": "Rubrique Art / Design : annonces au 27/11/26 sans heure (dont Galileo DA 360, déjà hors fenêtre). Pas de 28/11. Recherche par mot-clé sans liste datée."
+    },
+    {
+      "source": "JobCulture",
+      "count": 0,
+      "remark": "Codes graphiste les plus récents au 25/11/2026 (La Roche-sur-Yon). Aucune annonce au 27/11 ni au 28/11."
+    }
   ],
-  "offers": []
+  "offers": [
+    {
+      "company": "Fédération Française de Handball",
+      "title": "Graphiste Designer Junior H/F",
+      "summary": "CDD à la Maison du Handball, à Créteil : conception et déclinaison des supports print et digitaux de la FFHandball (campagnes, affiches, réseaux sociaux, événementiel). Annonce publiée par Métiers du sport ; profil avec 3 ans d’expérience et la suite Adobe.",
+      "location": "Créteil (94)",
+      "remote": "partiel",
+      "languages": "non précisé",
+      "date": "2026-11-28",
+      "sources": ["Hellowork"],
+      "urls": ["https://www.hellowork.com/fr-fr/emplois/84888745.html"]
+    }
+  ]
 }
