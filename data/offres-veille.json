@@ -1,5 +1,16 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-22T12:27:29.597Z",
-  "offers": []
+  "updatedAt": "2026-11-28T19:12:52.369Z",
+  "offers": [
+    {
+      "id": "692b7dd84cba69ed",
+      "company": "Aquent",
+      "title": "CDI - Art Director Art Director (F/M) [AQ-28704]",
+      "location": "Paris",
+      "date": "2026-11-28",
+      "urls": [
+        "https://fr.linkedin.com/jobs/view/cdi-art-director-art-director-f-m-aq-28704-at-aquent-4494241851"
+      ]
+    }
+  ]
 }
