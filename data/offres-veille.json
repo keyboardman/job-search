@@ -1,5 +1,16 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-22T12:27:29.597Z",
-  "offers": []
+  "updatedAt": "2026-11-28T03:08:24.297Z",
+  "offers": [
+    {
+      "id": "f2449db4033982c5",
+      "company": "Fédération Française de Handball",
+      "title": "Graphiste Designer Junior H/F",
+      "location": "Créteil (94)",
+      "date": "2026-11-28",
+      "urls": [
+        "https://www.hellowork.com/fr-fr/emplois/84888745.html"
+      ]
+    }
+  ]
 }
